@@ -131,6 +131,15 @@ The 0.2.0 builder's map filtering and removal of foreign lighting references are
 original. Installed Coliseum names informed replacement concrete/wall materials;
 no material images or Respawn asset files are distributed.
 
+Lighting schema/plane facts were checked against **snake-biscuits/bsp_tool**,
+commit `655627ea8704353ac14bd753df8ca05c15838eda` (GPL-3.0), including its Respawn
+branch definitions and `bsp_tool/lightmaps/titanfall*.py`. This informed original
+inspection, point-light record emission, controlled atlas probes and offline
+direct-light tools. No GPL-3.0 implementation was copied or incorporated; the
+research checkout stays ignored. Local TF1 Angel City and TF2 Coliseum/Glitch
+provide byte-size/layout evidence. See [RESPAWN_LIGHTING.md](RESPAWN_LIGHTING.md)
+for attribution, results, encoding uncertainties and engine-validation limits.
+
 For each incorporation, add the exact upstream commit/release, original authors,
 license and preserved notice locations, affected local files, modifications,
 target build and validation evidence here. Keep each tool's identity in release

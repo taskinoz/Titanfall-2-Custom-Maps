@@ -1,5 +1,9 @@
 # Quake E1M1 changelog
 
+## 0.2.1 (2026-10-07)
+
+Fixes the surface vertex ranges (`first_vertex` relative to the material sort, inclusive `num_vertices`) that crashed grapples and impact queries.
+
 ## 0.2.0 (2026-10-07)
 
 Doors removed to leave openings, triggers, liquids, buttons and lifts dropped, 24 pilot spawns, Coliseum replacement materials, dropship intro and evac disabled. Crashed when grappling.

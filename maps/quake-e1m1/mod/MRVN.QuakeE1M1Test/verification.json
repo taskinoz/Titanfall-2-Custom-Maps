@@ -1,5 +1,5 @@
 {
-  "path": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\northstar-e1m1-0.2.0\\compile\\mp_quake_e1m1.bsp",
+  "path": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\northstar-e1m1-0.2.1-final\\compile\\mp_quake_e1m1.bsp",
   "version": 37,
   "counts": {
     "1": 511,
@@ -57,7 +57,7 @@
   "files": {
     "maps/mp_quake_e1m1.bsp": {
       "bytes": 2262036,
-      "sha256": "1fe59295484df423737bed017a437dbf4be7747ca1600e1b3477c20aca3825ab"
+      "sha256": "59d0753f1b4045811ac34ff599c326a64c91ef3f28484ee0272c0d894ca0e40a"
     },
     "maps/mp_quake_e1m1_env.ent": {
       "bytes": 12,

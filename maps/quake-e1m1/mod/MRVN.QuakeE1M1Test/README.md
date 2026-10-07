@@ -3,12 +3,24 @@
 This is a geometry/compiler test, **not a complete playable Quake port**. The BSP
 has selected format validation and independently verified VPK bytes. Engine
 Version 0.1.1 loaded and rendered on the user's Northstar installation, with white
-developer surfaces, incorrect shadows and blocked passages. The 0.2.0 changes
-below still require an engine retest. The compiler still
+developer surfaces, incorrect shadows and blocked passages. Version 0.2.0 also
+loaded but crashed when grappling a surface. Version 0.2.1 corrects the mesh
+surface vertex fields described below and still requires an engine retest. The compiler still
 emits placeholder lighting and other incomplete structures; loading can fail or
 crash. No navigation mesh or Quake gameplay is included.
 
 ## Installation and testing
+
+Version 0.2.1 fixes two compiler errors in surface ranges: `first_vertex` must be
+relative to the material-sort base, and `num_vertices` is the last local index,
+read inclusively by the engine. Triangle rendering used a separate, correct index
+path, so the previous build could render while impact/decal queries read outside
+the vertex buffer. The October 7 grapple dump faults at `engine.dll + 0xae74e`;
+its surface record matches mesh 42, whose sort starts at vertex 4,984. The previous
+offset added that base twice. See `RESPAWN_SURFACE_CRASH.md` for the evidence.
+This fixes the demonstrated invalid range; the earlier explosion/particle crashes
+have not yet been matched to a dump. Retest grapples, bullet impacts, grenade
+explosions and surface particles after restarting Northstar.
 
 Copy the entire `MRVN.QuakeE1M1Test` folder into `Titanfall2/R2Northstar/mods`, then
 restart Northstar. Enable `MRVN.QuakeE1M1Test` in the Mods menu if necessary.
