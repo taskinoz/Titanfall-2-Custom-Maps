@@ -13,6 +13,12 @@ restart Northstar. Enable `MRVN.QuakeE1M1Test` in the Mods menu if necessary.
 This adds `mp_quake_e1m1`; it does not replace the retail Coliseum BSP. Use a local
 test session. Other clients would need the same mod to join this map.
 
+Version 0.1.1 includes identical loose BSP/entity files under `mod/maps` alongside
+the VPK. Northstar's map-command discovery enumerates loose mod BSPs, but does not
+enumerate maps inside mod VPKs. Version 0.1.0 lacked the loose files and was rejected
+as `not found or invalid` before any engine BSP loading. Restart Northstar after
+updating, then `maps quake` should list `(MOD) mp_quake_e1m1`.
+
 Open the developer console (launch Northstar with `-console` if needed), then run:
 
 ```text
@@ -59,7 +65,10 @@ of `R2Northstar/mods` while the game is closed.
 - Mod structure, VPK mounting and RPAK alias behavior:
   [Northstar documentation](https://docs.northstar.tf/Modding/guides/gettingstarted/),
   [RPAK documentation](https://docs.northstar.tf/Modding/guides/tools/rpakmodding/),
-  [NorthstarLauncher mod manager](https://github.com/R2Northstar/NorthstarLauncher/blob/main/primedev/mods/modmanager.cpp).
+  [NorthstarLauncher mod manager](https://github.com/R2Northstar/NorthstarLauncher/blob/42c635aef4929a8c8eaf4ee790efb6fa34ac56cc/primedev/mods/modmanager.cpp)
+  and [map discovery](https://github.com/R2Northstar/NorthstarLauncher/blob/42c635aef4929a8c8eaf4ee790efb6fa34ac56cc/primedev/util/printmaps.cpp),
+  source commit `42c635aef4929a8c8eaf4ee790efb6fa34ac56cc` (MIT), inspected locally
+  to diagnose the 0.1.0 map-command rejection. No source or binary is bundled.
   No Northstar code is copied into the test script. Checked against the local
   Northstar 1.31.13 installation; no script VM or engine validation was performed.
 

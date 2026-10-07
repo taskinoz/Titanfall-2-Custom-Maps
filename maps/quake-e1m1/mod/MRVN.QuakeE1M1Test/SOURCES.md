@@ -116,6 +116,12 @@ consulted for mounting and asset aliases; no Northstar implementation was copied
 The package uses installed Coliseum materials through an alias and includes no
 Respawn RPAK assets. Engine compatibility remains unverified.
 
+NorthstarLauncher commit `42c635aef4929a8c8eaf4ee790efb6fa34ac56cc` (MIT) was
+inspected locally for `primedev/util/printmaps.cpp` and filesystem mounting.
+Its map discovery ignores maps within mod VPKs and enumerates loose `mod/maps`
+BSPs. This informed the original adapter's 0.1.1 packaging fix, adding identical
+loose map/entity members. No Northstar implementation is incorporated or bundled.
+
 For each incorporation, add the exact upstream commit/release, original authors,
 license and preserved notice locations, affected local files, modifications,
 target build and validation evidence here. Keep each tool's identity in release
