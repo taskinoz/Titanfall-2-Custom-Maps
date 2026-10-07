@@ -1,0 +1,62 @@
+{
+  "path": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\northstar-e1m1-release\\compile\\mp_quake_e1m1.bsp",
+  "version": 37,
+  "counts": {
+    "1": 541,
+    "2": 1,
+    "3": 6813,
+    "14": 1,
+    "30": 115,
+    "71": 0,
+    "72": 0,
+    "73": 30052,
+    "74": 0,
+    "79": 45018,
+    "80": 1,
+    "81": 1,
+    "82": 1,
+    "85": 1,
+    "86": 177,
+    "87": 2685,
+    "88": 2685,
+    "89": 0,
+    "90": 0,
+    "91": 1,
+    "92": 1257,
+    "93": 540,
+    "94": 8082,
+    "95": 8082
+  },
+  "issues": [],
+  "brushes_adapted": 1257,
+  "pilot_spawn_entities": 24,
+  "level": "mp_quake_e1m1",
+  "ingame_tested": false,
+  "vpk_round_trip": "all members byte-identical via pg9182/tf2vpk",
+  "files": {
+    "maps/mp_quake_e1m1.bsp": {
+      "bytes": 2413740,
+      "sha256": "78f66bba0920f802c8cc468ee31cbc7871c07ac8ecfcfa81114c9a4c75c145a0"
+    },
+    "maps/mp_quake_e1m1_env.ent": {
+      "bytes": 12,
+      "sha256": "08eb502c40c2e9470124fa40ee44317a47f3661da4dd97ea9639a112b59b0711"
+    },
+    "maps/mp_quake_e1m1_fx.ent": {
+      "bytes": 12,
+      "sha256": "08eb502c40c2e9470124fa40ee44317a47f3661da4dd97ea9639a112b59b0711"
+    },
+    "maps/mp_quake_e1m1_script.ent": {
+      "bytes": 12,
+      "sha256": "08eb502c40c2e9470124fa40ee44317a47f3661da4dd97ea9639a112b59b0711"
+    },
+    "maps/mp_quake_e1m1_snd.ent": {
+      "bytes": 12,
+      "sha256": "08eb502c40c2e9470124fa40ee44317a47f3661da4dd97ea9639a112b59b0711"
+    },
+    "maps/mp_quake_e1m1_spawn.ent": {
+      "bytes": 3416,
+      "sha256": "4676f626e0dcf3c245943bbfbf1922116db16e74d38042f2ce48b2adf7f8e715"
+    }
+  }
+}
