@@ -1,8 +1,10 @@
 # Experimental Northstar E1M1 test
 
-This is a geometry/compiler test, **not a verified playable Quake port**. The BSP
+This is a geometry/compiler test, **not a complete playable Quake port**. The BSP
 has selected format validation and independently verified VPK bytes. Engine
-loading, rendering and collision have not yet been tested. The compiler still
+Version 0.1.1 loaded and rendered on the user's Northstar installation, with white
+developer surfaces, incorrect shadows and blocked passages. The 0.2.0 changes
+below still require an engine retest. The compiler still
 emits placeholder lighting and other incomplete structures; loading can fail or
 crash. No navigation mesh or Quake gameplay is included.
 
@@ -32,13 +34,25 @@ is experimental and needs an engine test. If the loading screen completes, use
 pilot hull. `mat_fullbright 1` may help inspect the placeholder lighting if the
 engine exposes that debug setting. Unsupported commands can simply be omitted.
 
-All original Quake entity behavior is removed. Brush entities are folded into
-static world geometry; doors, elevators, water and triggers do not retain their
-Quake behavior. Twenty-four pilot spawn entities use the six source spawn
-locations for both teams and both initial/respawn classes. Geometry uses the
-installed Coliseum `world/dev/dev_gray_512` material instead of Quake textures.
+Version 0.2.0 retains world/static wall geometry, discards solid trigger volumes,
+removes doors to leave openings accessible, and omits liquid volumes, buttons and
+moving platforms. No Quake game logic is implemented; elevators remain absent.
+Twenty-four pilot spawn entities use the six source spawn locations for both
+teams and both initial/respawn classes. Geometry now uses installed Coliseum
+concrete and Boomtown wall materials instead of the plain developer material;
+these are replacement materials, not original Quake textures.
 An RPAK alias requests the installed Coliseum assets; no Respawn assets are
-redistributed. The custom level script does not run Coliseum's arena setup.
+redistributed. The custom level script disables the dropship intro (the first
+test produced an empty-dropship-array error) and evac epilogue. Two client menu
+scene/camera anchors sit away from gameplay at approximately `(8192,8192,0)`;
+Northstar creates its existing menu environment/model around those anchors.
+
+The builder removes the compiler's unrelated hard-coded world-light and CSM
+shadow-tree references for this test. This does **not** implement lighting:
+lightmap headers/data remain placeholders, and correct dynamic lighting, probes,
+CSM generation and static baking remain unfinished. Textured surfaces may still
+look dark or incorrect. Do not treat this revision as a lighting compatibility
+result. Real lightmaps require the compiler's lighting pipeline to be implemented.
 
 If loading fails, preserve the newest `R2Northstar/logs` log and any crash report.
 Check for `MRVN.QuakeE1M1Test`, `mp_quake_e1m1`, VPK mount errors, RPAK errors,

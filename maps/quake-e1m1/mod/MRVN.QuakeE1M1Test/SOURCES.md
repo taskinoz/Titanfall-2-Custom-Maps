@@ -122,6 +122,15 @@ Its map discovery ignores maps within mod VPKs and enumerates loose `mod/maps`
 BSPs. This informed the original adapter's 0.1.1 packaging fix, adding identical
 loose map/entity members. No Northstar implementation is incorporated or bundled.
 
+The local Northstar 1.31.13 `sh_menu_models.gnut`, `_lf_maps_shared.gnut` and
+`_classic_mp_dropship_intro.gnut` were inspected for menu anchor names, the
+no-intro API and the empty intro-dropship failure. The installed lobby entity
+partition informed the `info_target_clientside` / `script_name` schema; only
+schema facts are used with newly placed anchors, not a copied map partition.
+The 0.2.0 builder's map filtering and removal of foreign lighting references are
+original. Installed Coliseum names informed replacement concrete/wall materials;
+no material images or Respawn asset files are distributed.
+
 For each incorporation, add the exact upstream commit/release, original authors,
 license and preserved notice locations, affected local files, modifications,
 target build and validation evidence here. Keep each tool's identity in release

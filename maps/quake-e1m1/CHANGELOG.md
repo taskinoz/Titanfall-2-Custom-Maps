@@ -1,5 +1,9 @@
 # Quake E1M1 changelog
 
+## 0.2.0 (2026-10-07)
+
+Doors removed to leave openings, triggers, liquids, buttons and lifts dropped, 24 pilot spawns, Coliseum replacement materials, dropship intro and evac disabled. Crashed when grappling.
+
 ## 0.1.1 (2026-10-07)
 
 Loose BSP and entity files under `mod/maps` so Northstar's map command can find the map. First version to load: white developer surfaces, wrong shadows, blocked passages.
