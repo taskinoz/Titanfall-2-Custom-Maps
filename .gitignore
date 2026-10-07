@@ -1,0 +1,15 @@
+# Compiled maps, packages and local build output stay out of Git.
+# Player downloads are GitHub release assets.
+output/
+releases/
+__pycache__/
+*.bsp
+*.stbsp
+*.rpak
+*.starpak
+*.vpk
+*.zip
+*.packaging
+*.log
+.env
+.env.*

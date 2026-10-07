@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.map text eol=lf
+*.ent text eol=lf
+*.nut text eol=lf
+*.ps1 text eol=crlf
+*.txt -text
+*.png binary
+*.svg text eol=lf
