@@ -1,0 +1,617 @@
+{
+  "pak": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\quake-materials\\project\\build\\quake_textures.rpak",
+  "template": "world/concrete/concrete_plates_plain_wet_bm",
+  "template_pak": "C:\\Users\\Tristan\\AppData\\Local\\Temp\\claude\\C--Users-Tristan-GitHub-MRVN-Radiant\\0d83475a-6bb1-4d69-be24-6b4b3cf1d104\\scratchpad\\rpak-work\\mp_coliseum.rpak.raw",
+  "materials": {
+    "world/quake/basebutn3": "0x4D42EFCCE3020F46",
+    "world/quake/basebutn3_colpass": "0x8B9E88BE76A2639F",
+    "world/quake/comp1_1": "0xB03E2F9402031BB6",
+    "world/quake/comp1_1_colpass": "0x62BEF0F49CC70E94",
+    "world/quake/comp1_2": "0xA839C7929488BDBA",
+    "world/quake/comp1_2_colpass": "0x24C4B1CFC1FE2A26",
+    "world/quake/comp1_3": "0x88143CF1DC66B87",
+    "world/quake/comp1_3_colpass": "0xDF3415518212735F",
+    "world/quake/comp1_4": "0x68C8C00BF17220A0",
+    "world/quake/comp1_4_colpass": "0x5E38D63E26CD4B75",
+    "world/quake/comp1_5": "0x61F81C3C0D75A08D",
+    "world/quake/comp1_5_colpass": "0x81431509C142A951",
+    "world/quake/comp1_6": "0xC10BD447199D1C53",
+    "world/quake/comp1_6_colpass": "0xBC6F6BE2B708AE16",
+    "world/quake/crate0_side": "0xBCE4E13D47146860",
+    "world/quake/crate0_side_colpass": "0x8E2257A43614AE22",
+    "world/quake/crate0_top": "0xBF16690230E57151",
+    "world/quake/crate0_top_colpass": "0x70693717D06E78F6",
+    "world/quake/door02_1": "0x5E1FE35B26BEA9C7",
+    "world/quake/door02_1_colpass": "0x5E082A987B62AB17",
+    "world/quake/ecop1_1": "0xB8A6A0E527488920",
+    "world/quake/ecop1_1_colpass": "0xC1A8C38273AB5485",
+    "world/quake/ecop1_4": "0xAC4D4385DA58244B",
+    "world/quake/ecop1_4_colpass": "0x79CB96561D21349A",
+    "world/quake/ecop1_6": "0xC94DCD11C40B4172",
+    "world/quake/ecop1_6_colpass": "0xF02D7DC6B337CCD9",
+    "world/quake/edoor01_1": "0xBE64E97491AEBDE5",
+    "world/quake/edoor01_1_colpass": "0xD2434243873B2EAB",
+    "world/quake/ground1_2": "0xC884587A4A3B9CF1",
+    "world/quake/ground1_2_colpass": "0x10EC51DF3A0E0FA9",
+    "world/quake/ground1_6": "0x154D35B9CD0DFDDE",
+    "world/quake/ground1_6_colpass": "0x283C15BF7F04C810",
+    "world/quake/key01_3": "0x3BEA7BE05BB1A603",
+    "world/quake/key01_3_colpass": "0xB0630C7CCA37E86",
+    "world/quake/plat_side1": "0xE55E2C3ECDD952D",
+    "world/quake/plat_side1_colpass": "0xBE5A4CDC70D0C482",
+    "world/quake/plat_stem": "0xD093E7DD7FF1987E",
+    "world/quake/plat_stem_colpass": "0x34A3FC666148ABE",
+    "world/quake/plat_top1": "0x2FEFC6E0B4E82182",
+    "world/quake/plat_top1_colpass": "0x3D482200F1E4A863",
+    "world/quake/plus0basebtn": "0xE0538E4498A7BBD6",
+    "world/quake/plus0basebtn_colpass": "0x1873B31649754D98",
+    "world/quake/plus0planet": "0xFCA595FACD86F0EA",
+    "world/quake/plus0planet_colpass": "0x9A1F8ABFC278A1EC",
+    "world/quake/plus0slip": "0x6FD46742F4FDBDC",
+    "world/quake/plus0slip_colpass": "0xA83F5348EF9A81D9",
+    "world/quake/plus0slipbot": "0x6A7B302DEEB4F0CE",
+    "world/quake/plus0slipbot_colpass": "0x992FCD0BDBB75E92",
+    "world/quake/plus0sliptop": "0xA0A61A2DF6589AF7",
+    "world/quake/plus0sliptop_colpass": "0x6DF317DCC2A85FF3",
+    "world/quake/sfloor4_2": "0x8F7D68CCF58E41AB",
+    "world/quake/sfloor4_2_colpass": "0x2276A43B0B12E916",
+    "world/quake/sfloor4_5": "0xC8708E820BE65AB7",
+    "world/quake/sfloor4_5_colpass": "0x4723002C1E7A25E3",
+    "world/quake/slip1": "0x54B991361C5248E1",
+    "world/quake/slip1_colpass": "0xD27F5589F8064B34",
+    "world/quake/slipbotsd": "0x105B05515EA1930D",
+    "world/quake/slipbotsd_colpass": "0xE122948458F0091A",
+    "world/quake/sliplite": "0x901CA28944972896",
+    "world/quake/sliplite_colpass": "0x53C0ED7BC817E7FA",
+    "world/quake/slipside": "0x10F75FC448077DCF",
+    "world/quake/slipside_colpass": "0xC267157B6DB57190",
+    "world/quake/sliptopsd": "0xF1AC656E82D61613",
+    "world/quake/sliptopsd_colpass": "0xB716AADC1EF666DC",
+    "world/quake/switch_1": "0x7D4AE8278C037374",
+    "world/quake/switch_1_colpass": "0x661A78ABD9799537",
+    "world/quake/tech01_1": "0xE7112DD6FABC2E7",
+    "world/quake/tech01_1_colpass": "0x9C742088CA76705D",
+    "world/quake/tech01_6": "0x32C6929B6BEDDBBF",
+    "world/quake/tech01_6_colpass": "0x6500C720F5BCCD72",
+    "world/quake/tech01_7": "0x72C4EE8CA2E6288",
+    "world/quake/tech01_7_colpass": "0xDA4F96227DBAB0F4",
+    "world/quake/tech01_9": "0xAF5DE56A7A9C64D2",
+    "world/quake/tech01_9_colpass": "0x308113436BC9047",
+    "world/quake/tech04_1": "0xC1E3378C14596AC3",
+    "world/quake/tech04_1_colpass": "0xF21EFACF14003280",
+    "world/quake/tech04_2": "0x95FC02CCF8F817CA",
+    "world/quake/tech04_2_colpass": "0xB832A0FE40E1067C",
+    "world/quake/tech04_3": "0x69EE5587945E2C0E",
+    "world/quake/tech04_3_colpass": "0x160A3FD8E78BA25F",
+    "world/quake/tech07_2": "0x84FDA3373CF02030",
+    "world/quake/tech07_2_colpass": "0x21770763DBA0BD9C",
+    "world/quake/tech08_1": "0x40267BB18692A1BF",
+    "world/quake/tech08_1_colpass": "0x7F817C2E2C1E15F2",
+    "world/quake/tech09_3": "0x4B03C5F1DB00094F",
+    "world/quake/tech09_3_colpass": "0x35C58AD521C97C37",
+    "world/quake/tech10_1": "0xBCEF61F4277F0326",
+    "world/quake/tech10_1_colpass": "0xC7A9AB9778E6F445",
+    "world/quake/tech10_3": "0x654770FC14BDF251",
+    "world/quake/tech10_3_colpass": "0x2206B57841713233",
+    "world/quake/tech11_2": "0xB9F20B82D8024DA2",
+    "world/quake/tech11_2_colpass": "0x5A8BFCC8CE0EFD94",
+    "world/quake/tlight01": "0xA3EE6A7A8359319C",
+    "world/quake/tlight01_colpass": "0x2A6B26DA0626CAC0",
+    "world/quake/tlight02": "0x78EE08E0A33EBC61",
+    "world/quake/tlight02_colpass": "0xBB3D3C93DF90C461",
+    "world/quake/tlight07": "0x9D43889E9F80D539",
+    "world/quake/tlight07_colpass": "0x83A36AA5CE063495",
+    "world/quake/tlight08": "0x707580BA1739F4FA",
+    "world/quake/tlight08_colpass": "0x1D37077A8A700623",
+    "world/quake/tlight10": "0x586D0FA194092AA8",
+    "world/quake/tlight10_colpass": "0x6DA99D435442AAB4",
+    "world/quake/tlight11": "0x2B0525A3E6DFE75D",
+    "world/quake/tlight11_colpass": "0x5960C536D7E78A6",
+    "world/quake/twall1_1": "0x4EB4615991404105",
+    "world/quake/twall1_1_colpass": "0x384FABCA69A5771A",
+    "world/quake/twall1_2": "0x23B3FFBFB125CBCA",
+    "world/quake/twall1_2_colpass": "0x975A49FF60EC9C39",
+    "world/quake/twall2_1": "0x147F2A5FE51B851F",
+    "world/quake/twall2_1_colpass": "0x32B919D4C76BAA65",
+    "world/quake/twall2_2": "0xE9CBB9D265D391E2",
+    "world/quake/twall2_2_colpass": "0x99DF499AAC7EEAC6",
+    "world/quake/twall2_3": "0xBC8A485B4C50EEA6",
+    "world/quake/twall2_3_colpass": "0x90D99DE1D8E2CB7B",
+    "world/quake/twall2_5": "0x6421FCC4224A9530",
+    "world/quake/twall2_5_colpass": "0x6425BF6CD3A85D9B",
+    "world/quake/twall2_6": "0x38D4AA1DE15D9DF7",
+    "world/quake/twall2_6_colpass": "0xFB45C06CC11357F2",
+    "world/quake/twall3_1": "0xDA49F365D5B96A29",
+    "world/quake/twall3_1_colpass": "0xFC8ED48BC6591126",
+    "world/quake/twall5_1": "0x65DF85727D6FF25D",
+    "world/quake/twall5_1_colpass": "0xD51E0F489D276228",
+    "world/quake/twall5_3": "0xD9DB26183D2D9E6",
+    "world/quake/twall5_3_colpass": "0x90F300AC4D2877A8",
+    "world/quake/uwall1_2": "0x34803852E9A9AA",
+    "world/quake/uwall1_2_colpass": "0xA1DA218C8E8E3F13",
+    "world/quake/z_exit": "0x8C473B5B3C313512",
+    "world/quake/z_exit_colpass": "0x9C12A639E1E292BC"
+  },
+  "textures": {
+    "*SLIME0": {
+      "shader": null,
+      "method": "liquid, not compiled"
+    },
+    "*TELEPORT": {
+      "shader": null,
+      "method": "liquid, not compiled"
+    },
+    "*WATER0": {
+      "shader": null,
+      "method": "liquid, not compiled"
+    },
+    "+0BASEBTN": {
+      "shader": "world/quake/plus0basebtn",
+      "method": "renamed",
+      "source": "lq_tech/plus_0basebtn_fbr.png",
+      "width": 32,
+      "height": 32
+    },
+    "+0PLANET": {
+      "shader": "world/quake/plus0planet",
+      "method": "substitute",
+      "source": "lq_tech/plus_0planet_a_fbr.png",
+      "width": 32,
+      "height": 32
+    },
+    "+0SLIP": {
+      "shader": "world/quake/plus0slip",
+      "method": "substitute",
+      "source": "lq_tech/plus_0slipbot.png",
+      "width": 64,
+      "height": 64
+    },
+    "+0SLIPBOT": {
+      "shader": "world/quake/plus0slipbot",
+      "method": "renamed",
+      "source": "lq_tech/plus_0slipbot.png",
+      "width": 64,
+      "height": 64
+    },
+    "+0SLIPTOP": {
+      "shader": "world/quake/plus0sliptop",
+      "method": "renamed",
+      "source": "lq_tech/plus_0sliptop.png",
+      "width": 64,
+      "height": 64
+    },
+    "BASEBUTN3": {
+      "shader": "world/quake/basebutn3",
+      "method": "substitute",
+      "source": "lq_tech/plus_abasebtn.png",
+      "width": 32,
+      "height": 32
+    },
+    "CLIP": {
+      "shader": "tools/toolsplayerclip",
+      "method": "tool"
+    },
+    "COMP1_1": {
+      "shader": "world/quake/comp1_1",
+      "method": "exact",
+      "source": "lq_tech/comp1_1.png",
+      "width": 64,
+      "height": 64
+    },
+    "COMP1_2": {
+      "shader": "world/quake/comp1_2",
+      "method": "exact",
+      "source": "lq_tech/comp1_2.png",
+      "width": 64,
+      "height": 64
+    },
+    "COMP1_3": {
+      "shader": "world/quake/comp1_3",
+      "method": "exact",
+      "source": "lq_tech/comp1_3.png",
+      "width": 64,
+      "height": 64
+    },
+    "COMP1_4": {
+      "shader": "world/quake/comp1_4",
+      "method": "exact",
+      "source": "lq_tech/comp1_4.png",
+      "width": 64,
+      "height": 64
+    },
+    "COMP1_5": {
+      "shader": "world/quake/comp1_5",
+      "method": "exact",
+      "source": "lq_tech/comp1_5.png",
+      "width": 64,
+      "height": 64
+    },
+    "COMP1_6": {
+      "shader": "world/quake/comp1_6",
+      "method": "exact",
+      "source": "lq_tech/comp1_6.png",
+      "width": 64,
+      "height": 64
+    },
+    "CRATE0_SIDE": {
+      "shader": "world/quake/crate0_side",
+      "method": "exact",
+      "source": "lq_tech/crate0_side.png",
+      "width": 64,
+      "height": 64
+    },
+    "CRATE0_TOP": {
+      "shader": "world/quake/crate0_top",
+      "method": "exact",
+      "source": "lq_tech/crate0_top.png",
+      "width": 64,
+      "height": 64
+    },
+    "DOOR02_1": {
+      "shader": "world/quake/door02_1",
+      "method": "exact",
+      "source": "lq_tech/door02_1.png",
+      "width": 48,
+      "height": 128
+    },
+    "ECOP1_1": {
+      "shader": "world/quake/ecop1_1",
+      "method": "exact",
+      "source": "lq_tech/ecop1_1.png",
+      "width": 64,
+      "height": 64
+    },
+    "ECOP1_4": {
+      "shader": "world/quake/ecop1_4",
+      "method": "exact",
+      "source": "lq_tech/ecop1_4.png",
+      "width": 64,
+      "height": 64
+    },
+    "ECOP1_6": {
+      "shader": "world/quake/ecop1_6",
+      "method": "substitute",
+      "source": "lq_tech/ecop1_4.png",
+      "width": 64,
+      "height": 64
+    },
+    "EDOOR01_1": {
+      "shader": "world/quake/edoor01_1",
+      "method": "exact",
+      "source": "lq_tech/edoor01_1.png",
+      "width": 128,
+      "height": 128
+    },
+    "GROUND1_2": {
+      "shader": "world/quake/ground1_2",
+      "method": "substitute",
+      "source": "lq_legacy/ground_1.png",
+      "width": 64,
+      "height": 64
+    },
+    "GROUND1_6": {
+      "shader": "world/quake/ground1_6",
+      "method": "substitute",
+      "source": "lq_legacy/ground_1.png",
+      "width": 64,
+      "height": 64
+    },
+    "KEY01_3": {
+      "shader": "world/quake/key01_3",
+      "method": "substitute",
+      "source": "lq_tech/plus_0_gkey.png",
+      "width": 32,
+      "height": 32
+    },
+    "PLAT_SIDE1": {
+      "shader": "world/quake/plat_side1",
+      "method": "exact",
+      "source": "lq_tech/plat_side1.png",
+      "width": 64,
+      "height": 16
+    },
+    "PLAT_STEM": {
+      "shader": "world/quake/plat_stem",
+      "method": "exact",
+      "source": "lq_tech/plat_stem.png",
+      "width": 16,
+      "height": 64
+    },
+    "PLAT_TOP1": {
+      "shader": "world/quake/plat_top1",
+      "method": "exact",
+      "source": "lq_tech/plat_top1.png",
+      "width": 64,
+      "height": 64
+    },
+    "SFLOOR4_2": {
+      "shader": "world/quake/sfloor4_2",
+      "method": "substitute",
+      "source": "lq_tech/t_flor1a.png",
+      "width": 64,
+      "height": 64
+    },
+    "SFLOOR4_5": {
+      "shader": "world/quake/sfloor4_5",
+      "method": "substitute",
+      "source": "lq_tech/t_flor1a.png",
+      "width": 64,
+      "height": 64
+    },
+    "SKY4": {
+      "shader": "tools/toolsskybox",
+      "method": "tool"
+    },
+    "SLIP1": {
+      "shader": "world/quake/slip1",
+      "method": "substitute",
+      "source": "lq_tech/plus_0slipbot.png",
+      "width": 64,
+      "height": 64
+    },
+    "SLIPBOTSD": {
+      "shader": "world/quake/slipbotsd",
+      "method": "substitute",
+      "source": "lq_tech/plus_0slipbot.png",
+      "width": 64,
+      "height": 64
+    },
+    "SLIPLITE": {
+      "shader": "world/quake/sliplite",
+      "method": "substitute",
+      "source": "lq_tech/t_lit01_fbr.png",
+      "width": 16,
+      "height": 16
+    },
+    "SLIPSIDE": {
+      "shader": "world/quake/slipside",
+      "method": "substitute",
+      "source": "lq_tech/t_trim1a.png",
+      "width": 64,
+      "height": 64
+    },
+    "SLIPTOPSD": {
+      "shader": "world/quake/sliptopsd",
+      "method": "substitute",
+      "source": "lq_tech/plus_0sliptop.png",
+      "width": 64,
+      "height": 64
+    },
+    "SWITCH_1": {
+      "shader": "world/quake/switch_1",
+      "method": "substitute",
+      "source": "lq_tech/butmet.png",
+      "width": 32,
+      "height": 64
+    },
+    "TECH01_1": {
+      "shader": "world/quake/tech01_1",
+      "method": "substitute",
+      "source": "lq_tech/t_tech01.png",
+      "width": 64,
+      "height": 64
+    },
+    "TECH01_6": {
+      "shader": "world/quake/tech01_6",
+      "method": "substitute",
+      "source": "lq_tech/t_tech01.png",
+      "width": 64,
+      "height": 64
+    },
+    "TECH01_7": {
+      "shader": "world/quake/tech01_7",
+      "method": "substitute",
+      "source": "lq_tech/t_tech01.png",
+      "width": 64,
+      "height": 64
+    },
+    "TECH01_9": {
+      "shader": "world/quake/tech01_9",
+      "method": "substitute",
+      "source": "lq_tech/t_tech01.png",
+      "width": 64,
+      "height": 64
+    },
+    "TECH04_1": {
+      "shader": "world/quake/tech04_1",
+      "method": "exact",
+      "source": "lq_tech/tech04_1.png",
+      "width": 128,
+      "height": 16
+    },
+    "TECH04_2": {
+      "shader": "world/quake/tech04_2",
+      "method": "substitute",
+      "source": "lq_tech/tech04_1.png",
+      "width": 128,
+      "height": 16
+    },
+    "TECH04_3": {
+      "shader": "world/quake/tech04_3",
+      "method": "exact",
+      "source": "lq_tech/tech04_3.png",
+      "width": 16,
+      "height": 128
+    },
+    "TECH07_2": {
+      "shader": "world/quake/tech07_2",
+      "method": "substitute",
+      "source": "lq_tech/t_tech02.png",
+      "width": 64,
+      "height": 64
+    },
+    "TECH08_1": {
+      "shader": "world/quake/tech08_1",
+      "method": "exact",
+      "source": "lq_tech/tech08_1.png",
+      "width": 128,
+      "height": 128
+    },
+    "TECH09_3": {
+      "shader": "world/quake/tech09_3",
+      "method": "substitute",
+      "source": "lq_tech/t_tech03.png",
+      "width": 128,
+      "height": 128
+    },
+    "TECH10_1": {
+      "shader": "world/quake/tech10_1",
+      "method": "substitute",
+      "source": "lq_tech/tech10_3.png",
+      "width": 32,
+      "height": 128
+    },
+    "TECH10_3": {
+      "shader": "world/quake/tech10_3",
+      "method": "exact",
+      "source": "lq_tech/tech10_3.png",
+      "width": 32,
+      "height": 128
+    },
+    "TECH11_2": {
+      "shader": "world/quake/tech11_2",
+      "method": "substitute",
+      "source": "lq_tech/t_tech04.png",
+      "width": 64,
+      "height": 64
+    },
+    "TLIGHT01": {
+      "shader": "world/quake/tlight01",
+      "method": "substitute",
+      "source": "lq_tech/t_lit01_fbr.png",
+      "width": 16,
+      "height": 16
+    },
+    "TLIGHT02": {
+      "shader": "world/quake/tlight02",
+      "method": "substitute",
+      "source": "lq_tech/t_lit01_fbr.png",
+      "width": 16,
+      "height": 16
+    },
+    "TLIGHT07": {
+      "shader": "world/quake/tlight07",
+      "method": "substitute",
+      "source": "lq_tech/t_lit01_fbr.png",
+      "width": 16,
+      "height": 16
+    },
+    "TLIGHT08": {
+      "shader": "world/quake/tlight08",
+      "method": "substitute",
+      "source": "lq_tech/t_lit01_fbr.png",
+      "width": 16,
+      "height": 16
+    },
+    "TLIGHT10": {
+      "shader": "world/quake/tlight10",
+      "method": "substitute",
+      "source": "lq_tech/t_lit01_fbr.png",
+      "width": 16,
+      "height": 16
+    },
+    "TLIGHT11": {
+      "shader": "world/quake/tlight11",
+      "method": "renamed",
+      "source": "lq_tech/tlight11_fbr.png",
+      "width": 64,
+      "height": 64
+    },
+    "TRIGGER": {
+      "shader": "tools/toolstrigger",
+      "method": "tool"
+    },
+    "TWALL1_1": {
+      "shader": "world/quake/twall1_1",
+      "method": "substitute",
+      "source": "lq_tech/t_wall1a.png",
+      "width": 128,
+      "height": 128
+    },
+    "TWALL1_2": {
+      "shader": "world/quake/twall1_2",
+      "method": "substitute",
+      "source": "lq_tech/t_wall1a.png",
+      "width": 128,
+      "height": 128
+    },
+    "TWALL2_1": {
+      "shader": "world/quake/twall2_1",
+      "method": "substitute",
+      "source": "lq_tech/twall2_3.png",
+      "width": 64,
+      "height": 64
+    },
+    "TWALL2_2": {
+      "shader": "world/quake/twall2_2",
+      "method": "substitute",
+      "source": "lq_tech/twall2_3.png",
+      "width": 64,
+      "height": 64
+    },
+    "TWALL2_3": {
+      "shader": "world/quake/twall2_3",
+      "method": "exact",
+      "source": "lq_tech/twall2_3.png",
+      "width": 64,
+      "height": 64
+    },
+    "TWALL2_5": {
+      "shader": "world/quake/twall2_5",
+      "method": "substitute",
+      "source": "lq_tech/twall2_3.png",
+      "width": 64,
+      "height": 64
+    },
+    "TWALL2_6": {
+      "shader": "world/quake/twall2_6",
+      "method": "substitute",
+      "source": "lq_tech/twall2_3.png",
+      "width": 64,
+      "height": 64
+    },
+    "TWALL3_1": {
+      "shader": "world/quake/twall3_1",
+      "method": "substitute",
+      "source": "lq_tech/t_wall3a.png",
+      "width": 128,
+      "height": 128
+    },
+    "TWALL5_1": {
+      "shader": "world/quake/twall5_1",
+      "method": "substitute",
+      "source": "lq_tech/t_wall2a.png",
+      "width": 128,
+      "height": 128
+    },
+    "TWALL5_3": {
+      "shader": "world/quake/twall5_3",
+      "method": "substitute",
+      "source": "lq_tech/t_wall2a.png",
+      "width": 128,
+      "height": 128
+    },
+    "UWALL1_2": {
+      "shader": "world/quake/uwall1_2",
+      "method": "exact",
+      "source": "lq_terra/uwall1_2.png",
+      "width": 128,
+      "height": 128
+    },
+    "Z_EXIT": {
+      "shader": "world/quake/z_exit",
+      "method": "renamed",
+      "source": "lq_tech/z_exit_fbr.png",
+      "width": 32,
+      "height": 32
+    }
+  },
+  "unresolved_references": [],
+  "counts": {
+    "exact": 21,
+    "liquid, not compiled": 3,
+    "renamed": 5,
+    "substitute": 38,
+    "tool": 3
+  }
+}

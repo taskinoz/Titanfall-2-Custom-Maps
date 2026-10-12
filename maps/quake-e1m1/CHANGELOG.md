@@ -1,5 +1,9 @@
 # Quake E1M1 changelog
 
+## 0.3.0 (2026-10-12)
+
+LibreQuake textures, Quake light entities and a static sun, baked lightmaps.
+
 ## 0.2.1 (2026-10-07)
 
 Fixes the surface vertex ranges (`first_vertex` relative to the material sort, inclusive `num_vertices`) that crashed grapples and impact queries.

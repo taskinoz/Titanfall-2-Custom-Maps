@@ -1,27 +1,27 @@
 {
-  "path": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\northstar-e1m1-0.2.1-final\\compile\\mp_quake_e1m1.bsp",
+  "path": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\northstar-e1m1-0.3.0\\compile\\mp_quake_e1m1.bsp",
   "version": 37,
   "counts": {
     "1": 511,
-    "2": 2,
-    "3": 6253,
+    "2": 59,
+    "3": 6143,
     "14": 1,
-    "30": 107,
+    "30": 137,
     "71": 0,
     "72": 0,
-    "73": 27520,
+    "73": 26930,
     "74": 0,
-    "79": 41214,
-    "80": 43,
-    "81": 43,
-    "82": 2,
+    "79": 40368,
+    "80": 298,
+    "81": 298,
+    "82": 57,
     "85": 1,
     "86": 177,
-    "87": 2436,
-    "88": 2436,
+    "87": 2392,
+    "88": 2392,
     "89": 0,
     "90": 0,
-    "91": 1,
+    "91": 2,
     "92": 1152,
     "93": 510,
     "94": 7422,
@@ -44,20 +44,29 @@
       "trigger_secret": 6,
       "trigger_changelevel": 1
     },
-    "removed_placeholder_lighting_bytes": {
-      "54": 1008,
-      "99": 32,
-      "100": 0
-    }
+    "light_entities": 199,
+    "removed_placeholder_lighting_bytes": {},
+    "textures": {
+      "exact": 21,
+      "liquid, not compiled": 3,
+      "renamed": 5,
+      "substitute": 38,
+      "tool": 3
+    },
+    "stbsp_materials": 57
   },
-  "baked_lighting": false,
+  "baked_lighting": true,
   "level": "mp_quake_e1m1",
   "ingame_tested": false,
   "vpk_round_trip": "all members byte-identical via pg9182/tf2vpk",
   "files": {
     "maps/mp_quake_e1m1.bsp": {
-      "bytes": 2262036,
-      "sha256": "59d0753f1b4045811ac34ff599c326a64c91ef3f28484ee0272c0d894ca0e40a"
+      "bytes": 19672496,
+      "sha256": "85b038c3a5870ce5dafd548e24d01c49d36ed2eb1e318511252aee0dffa85a99"
+    },
+    "maps/mp_quake_e1m1.stbsp": {
+      "bytes": 4927,
+      "sha256": "87477ff1d3928df8490a05bce450e62458776da6d8dc268598eb811b2fc8651c"
     },
     "maps/mp_quake_e1m1_env.ent": {
       "bytes": 12,

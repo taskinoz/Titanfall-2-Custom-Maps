@@ -140,6 +140,13 @@ research checkout stays ignored. Local TF1 Angel City and TF2 Coliseum/Glitch
 provide byte-size/layout evidence. See [RESPAWN_LIGHTING.md](RESPAWN_LIGHTING.md)
 for attribution, results, encoding uncertainties and engine-validation limits.
 
+Gravemind's `games/respawn/maps` conversion research was read on 11 October 2026.
+Document IDs, revisions, recorded authors, source workspace references and local
+engine cross-checks are retained in [RESPAWN_GRAVEMIND.md](RESPAWN_GRAVEMIND.md).
+Technical findings inform an original read-only TF2 budget auditor and future
+lighting/material/collision work. No conversion source, game assets, or access
+credentials were copied into the project.
+
 For each incorporation, add the exact upstream commit/release, original authors,
 license and preserved notice locations, affected local files, modifications,
 target build and validation evidence here. Keep each tool's identity in release

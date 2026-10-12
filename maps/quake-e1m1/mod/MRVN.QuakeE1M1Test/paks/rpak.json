@@ -2,5 +2,8 @@
   "Aliases": {
     "mp_quake_e1m1.rpak": "mp_coliseum.rpak",
     "mp_quake_e1m1_loadscreen.rpak": "mp_coliseum_loadscreen.rpak"
+  },
+  "Postload": {
+    "quake_textures.rpak": "mp_coliseum.rpak"
   }
 }
