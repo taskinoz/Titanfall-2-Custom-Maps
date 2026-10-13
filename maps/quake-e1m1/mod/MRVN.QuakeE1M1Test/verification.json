@@ -1,34 +1,34 @@
 {
-  "path": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\northstar-e1m1-0.3.0\\compile\\mp_quake_e1m1.bsp",
+  "path": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\iter\\t13\\mod\\compile\\mp_quake_e1m1.bsp",
   "version": 37,
   "counts": {
     "1": 511,
     "2": 59,
-    "3": 6143,
+    "3": 6949,
     "14": 1,
-    "30": 137,
+    "30": 135,
     "71": 0,
     "72": 0,
-    "73": 26930,
+    "73": 19836,
     "74": 0,
-    "79": 40368,
-    "80": 298,
-    "81": 298,
-    "82": 57,
+    "79": 29526,
+    "80": 309,
+    "81": 309,
+    "82": 58,
     "85": 1,
     "86": 177,
-    "87": 2392,
-    "88": 2392,
+    "87": 2398,
+    "88": 2398,
     "89": 0,
     "90": 0,
     "91": 2,
-    "92": 1152,
+    "92": 1158,
     "93": 510,
-    "94": 7422,
-    "95": 7422
+    "94": 7458,
+    "95": 7458
   },
   "issues": [],
-  "brushes_adapted": 1152,
+  "brushes_adapted": 1158,
   "pilot_spawn_entities": 24,
   "conversion": {
     "discarded_brushes": {
@@ -45,15 +45,18 @@
       "trigger_changelevel": 1
     },
     "light_entities": 199,
+    "menu_rig_entities": 9,
+    "enclosure": "world/quake/sky4",
+    "menu_rig": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\samples\\tf2-coliseum\\maps\\mp_coliseum_env.ent",
     "removed_placeholder_lighting_bytes": {},
     "textures": {
-      "exact": 21,
+      "exact": 22,
       "liquid, not compiled": 3,
       "renamed": 5,
       "substitute": 38,
-      "tool": 3
+      "tool": 2
     },
-    "stbsp_materials": 57
+    "stbsp_materials": 58
   },
   "baked_lighting": true,
   "level": "mp_quake_e1m1",
@@ -61,24 +64,24 @@
   "vpk_round_trip": "all members byte-identical via pg9182/tf2vpk",
   "files": {
     "maps/mp_quake_e1m1.bsp": {
-      "bytes": 19672496,
-      "sha256": "85b038c3a5870ce5dafd548e24d01c49d36ed2eb1e318511252aee0dffa85a99"
+      "bytes": 19490236,
+      "sha256": "c5961c6b4ebcedd55ecd89267c3b436ad536fdd3f4190322ba97919987ef6188"
     },
     "maps/mp_quake_e1m1.stbsp": {
-      "bytes": 4927,
-      "sha256": "87477ff1d3928df8490a05bce450e62458776da6d8dc268598eb811b2fc8651c"
+      "bytes": 7488,
+      "sha256": "793cf72f68b3de2a0af3bd437a6291f0db2f5087853d3be365252a03a13cf829"
     },
     "maps/mp_quake_e1m1_env.ent": {
-      "bytes": 12,
-      "sha256": "08eb502c40c2e9470124fa40ee44317a47f3661da4dd97ea9639a112b59b0711"
+      "bytes": 16403,
+      "sha256": "1b2cc885fc4ce0a5aed4366a20a42f2c94b86a267210df9a99929acf4b4c6c58"
     },
     "maps/mp_quake_e1m1_fx.ent": {
       "bytes": 12,
       "sha256": "08eb502c40c2e9470124fa40ee44317a47f3661da4dd97ea9639a112b59b0711"
     },
     "maps/mp_quake_e1m1_script.ent": {
-      "bytes": 268,
-      "sha256": "1c04ec3985af97cc74991ecc2568892c7c6d700db156e46f2d985d3e3dd06cb3"
+      "bytes": 281,
+      "sha256": "73cc1e5fdf0169b42e64313a98dd87c4bfb5100411a1e3eedcfc504e6d0f28e6"
     },
     "maps/mp_quake_e1m1_snd.ent": {
       "bytes": 12,

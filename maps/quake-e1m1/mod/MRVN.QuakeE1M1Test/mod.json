@@ -1,7 +1,7 @@
 {
   "Name": "MRVN.QuakeE1M1Test",
   "Description": "Experimental E1M1 compiler test with baked lighting and LibreQuake textures; load mp_quake_e1m1 locally.",
-  "Version": "0.3.0",
+  "Version": "0.4.0",
   "LoadPriority": 100,
   "RequiredOnClient": true,
   "Scripts": [

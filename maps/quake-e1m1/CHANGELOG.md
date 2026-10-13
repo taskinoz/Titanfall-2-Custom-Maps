@@ -1,5 +1,9 @@
 # Quake E1M1 changelog
 
+## 0.4.0 (2026-10-13)
+
+One-bounce baked lighting, the map enclosed in a sky shell like retail maps, Titans disabled (no navmesh), fixed CSG occluders reading unset bevel planes.
+
 ## 0.3.0 (2026-10-12)
 
 LibreQuake textures, Quake light entities and a static sun, baked lightmaps.

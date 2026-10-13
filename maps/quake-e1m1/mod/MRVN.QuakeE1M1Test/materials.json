@@ -1,6 +1,6 @@
 {
-  "pak": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\quake-materials\\project\\build\\quake_textures.rpak",
-  "template": "world/concrete/concrete_plates_plain_wet_bm",
+  "pak": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\iter\\t11\\materials\\project\\build\\quake_textures.rpak",
+  "template": "world/dev/dev_gray_512",
   "template_pak": "C:\\Users\\Tristan\\AppData\\Local\\Temp\\claude\\C--Users-Tristan-GitHub-MRVN-Radiant\\0d83475a-6bb1-4d69-be24-6b4b3cf1d104\\scratchpad\\rpak-work\\mp_coliseum.rpak.raw",
   "materials": {
     "world/quake/basebutn3": "0x4D42EFCCE3020F46",
@@ -57,6 +57,8 @@
     "world/quake/sfloor4_2_colpass": "0x2276A43B0B12E916",
     "world/quake/sfloor4_5": "0xC8708E820BE65AB7",
     "world/quake/sfloor4_5_colpass": "0x4723002C1E7A25E3",
+    "world/quake/sky4": "0xA0246F6C0F585A73",
+    "world/quake/sky4_colpass": "0xDA7396B041BBB66D",
     "world/quake/slip1": "0x54B991361C5248E1",
     "world/quake/slip1_colpass": "0xD27F5589F8064B34",
     "world/quake/slipbotsd": "0x105B05515EA1930D",
@@ -339,8 +341,11 @@
       "height": 64
     },
     "SKY4": {
-      "shader": "tools/toolsskybox",
-      "method": "tool"
+      "shader": "world/quake/sky4",
+      "method": "exact",
+      "source": "lq_legacy/sky4.png",
+      "width": 128,
+      "height": 128
     },
     "SLIP1": {
       "shader": "world/quake/slip1",
@@ -608,10 +613,10 @@
   },
   "unresolved_references": [],
   "counts": {
-    "exact": 21,
+    "exact": 22,
     "liquid, not compiled": 3,
     "renamed": 5,
     "substitute": 38,
-    "tool": 3
+    "tool": 2
   }
 }

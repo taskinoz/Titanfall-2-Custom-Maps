@@ -149,11 +149,10 @@ textures/world/quake/sfloor4_5
  $shadertype LitBumpGeneric
 }
 
-textures/tools/toolsskybox
+textures/world/quake/sky4
 {
+ $shadertype LitBumpGeneric
  $compileflag sky
- $compileflag nodraw
- $surfaceflag sky
 }
 
 textures/world/quake/slip1
