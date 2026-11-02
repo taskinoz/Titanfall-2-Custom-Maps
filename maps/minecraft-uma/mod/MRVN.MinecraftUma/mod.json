@@ -1,0 +1,13 @@
+{
+  "Name": "MRVN.MinecraftUma",
+  "Version": "0.1.0",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Uma Minecraft port. Original Minecraft build by BirthdayTrain",
+  "Scripts": [
+    {
+      "Path": "mp/levels/mp_minecraft_uma.nut",
+      "RunOn": "SERVER && MP && MAP_mp_minecraft_uma"
+    }
+  ]
+}
