@@ -4,7 +4,8 @@
 "_lightmapscale" "16"
 "_bouncescale" "0"
 "_skyocclusion" "1"
-"_skysamples" "64"
+"_skysamples" "128"
+"_skyfixedpattern" "1"
 "_meshcluster" "768"
 {
 ( -1584 1056 0 ) ( -3936 1056 0 ) ( -3936 1008 0 ) world/minecraft_ports/uma/coarse_dirt 0 0 0 0.1875 0.1875 0 0 0
@@ -147721,101 +147722,101 @@ world/minecraft_ports/uma/_sky
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "-2424 24 50"
-"angles" "0 0 0"
+"origin" "-2328 -24 50"
+"angles" "0 1 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "-2424 24 50"
-"angles" "0 0 0"
-"teamnum" "2"
-}
-{
-"classname" "info_spawnpoint_human"
-"origin" "-2472 -120 50"
-"angles" "0 0 0"
-"teamnum" "2"
-}
-{
-"classname" "info_spawnpoint_human_start"
-"origin" "-2472 -120 50"
-"angles" "0 0 0"
+"origin" "-2328 -24 50"
+"angles" "0 1 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "-2568 72 50"
-"angles" "0 0 0"
+"origin" "-2952 72 50"
+"angles" "0 -1 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "-2568 72 50"
-"angles" "0 0 0"
+"origin" "-2952 72 50"
+"angles" "0 -1 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "-2328 -120 50"
-"angles" "0 0 0"
+"origin" "-2040 216 50"
+"angles" "0 -6 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "-2328 -120 50"
-"angles" "0 0 0"
+"origin" "-2040 216 50"
+"angles" "0 -6 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "2520 24 50"
-"angles" "0 180 0"
+"origin" "-1800 -168 50"
+"angles" "0 5 0"
+"teamnum" "2"
+}
+{
+"classname" "info_spawnpoint_human_start"
+"origin" "-1800 -168 50"
+"angles" "0 5 0"
+"teamnum" "2"
+}
+{
+"classname" "info_spawnpoint_human"
+"origin" "2136 -648 50"
+"angles" "0 163 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "2520 24 50"
-"angles" "0 180 0"
+"origin" "2136 -648 50"
+"angles" "0 163 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "2472 -120 50"
-"angles" "0 180 0"
+"origin" "1416 264 50"
+"angles" "0 -170 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "2472 -120 50"
-"angles" "0 180 0"
+"origin" "1416 264 50"
+"angles" "0 -170 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "2232 -24 50"
-"angles" "0 180 0"
+"origin" "1368 72 50"
+"angles" "0 -177 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "2232 -24 50"
-"angles" "0 180 0"
+"origin" "1368 72 50"
+"angles" "0 -177 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "2568 168 50"
-"angles" "0 180 0"
+"origin" "1272 216 50"
+"angles" "0 -171 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "2568 168 50"
-"angles" "0 180 0"
+"origin" "1272 216 50"
+"angles" "0 -171 0"
 "teamnum" "3"
 }
 {
 "classname" "info_player_start"
-"origin" "-2424.0 24.0 50"
+"origin" "-2328.0 -24.0 50"
 }

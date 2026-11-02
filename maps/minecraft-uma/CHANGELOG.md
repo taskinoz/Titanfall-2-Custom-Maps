@@ -1,5 +1,9 @@
 # UMA (Minecraft) changelog
 
+## 0.4.3 (2026-11-02)
+
+Fixed-pattern sky occlusion removes spotty shadows, in-game loading screens, Glitch's pit kills at Z -192, Glitch's iron-bar lines become native ziplines, spawns need a clear area and face the middle.
+
 ## 0.3.1 (2026-11-02)
 
 The menu Titan stands on open grass; the brick backdrop moved behind it.
