@@ -1,7 +1,6 @@
 {
   "Aliases": {
-    "mp_minecraft_glitch.rpak": "mp_coliseum.rpak",
-    "mp_minecraft_glitch_loadscreen.rpak": "mp_coliseum_loadscreen.rpak"
+    "mp_minecraft_glitch.rpak": "mp_coliseum.rpak"
   },
   "Postload": {
     "minecraft_glitch.rpak": "mp_coliseum.rpak"

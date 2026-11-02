@@ -4,7 +4,8 @@
 "_lightmapscale" "16"
 "_bouncescale" "0"
 "_skyocclusion" "1"
-"_skysamples" "64"
+"_skysamples" "128"
+"_skyfixedpattern" "1"
 "_meshcluster" "768"
 {
 ( 2160 2688 0 ) ( -1728 2688 0 ) ( -1728 2448 0 ) world/minecraft_ports/glitch/dirt 0 0 0 0.1875 0.1875 0 0 0
@@ -42823,22 +42824,6 @@
 ( -1008 -672 312 ) ( -1008 -720 312 ) ( -1008 -720 288 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 }
 {
-( -912 -693 288 ) ( -933 -693 288 ) ( -933 -699 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -933 -699 336 ) ( -933 -693 336 ) ( -912 -693 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -933 -699 336 ) ( -912 -699 336 ) ( -912 -699 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -912 -699 336 ) ( -912 -693 336 ) ( -912 -693 288 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -912 -693 336 ) ( -933 -693 336 ) ( -933 -693 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -933 -693 336 ) ( -933 -699 336 ) ( -933 -699 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -891 -693 288 ) ( -912 -693 288 ) ( -912 -699 288 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -912 -699 336 ) ( -912 -693 336 ) ( -891 -693 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -912 -699 336 ) ( -891 -699 336 ) ( -891 -699 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -891 -699 336 ) ( -891 -693 336 ) ( -891 -693 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -891 -693 336 ) ( -912 -693 336 ) ( -912 -693 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -912 -693 336 ) ( -912 -699 336 ) ( -912 -699 288 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
 ( -960 -720 288 ) ( -1008 -720 288 ) ( -1008 -768 288 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 ( -1008 -768 312 ) ( -1008 -720 312 ) ( -960 -720 312 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 ( -1008 -768 312 ) ( -960 -768 312 ) ( -960 -768 288 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -42973,62 +42958,6 @@
 ( -768 -1152 312 ) ( -768 -1104 312 ) ( -768 -1104 288 ) world/minecraft_ports/glitch/quartz_block_bottom 0 0 0 0.1875 0.1875 0 0 0
 ( -768 -1104 312 ) ( -816 -1104 312 ) ( -816 -1104 288 ) world/minecraft_ports/glitch/quartz_block_bottom 0 0 0 0.1875 0.1875 0 0 0
 ( -816 -1104 312 ) ( -816 -1152 312 ) ( -816 -1152 288 ) world/minecraft_ports/glitch/quartz_block_bottom 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -816 -645 336 ) ( -837 -645 336 ) ( -837 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -837 -651 384 ) ( -837 -645 384 ) ( -816 -645 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -837 -651 384 ) ( -816 -651 384 ) ( -816 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -816 -651 384 ) ( -816 -645 384 ) ( -816 -645 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -816 -645 384 ) ( -837 -645 384 ) ( -837 -645 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -837 -645 384 ) ( -837 -651 384 ) ( -837 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -837 -651 336 ) ( -843 -651 336 ) ( -843 -672 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -843 -672 384 ) ( -843 -651 384 ) ( -837 -651 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -843 -672 384 ) ( -837 -672 384 ) ( -837 -672 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -837 -672 384 ) ( -837 -651 384 ) ( -837 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -837 -651 384 ) ( -843 -651 384 ) ( -843 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -843 -651 384 ) ( -843 -672 384 ) ( -843 -672 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -768 -645 336 ) ( -789 -645 336 ) ( -789 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -789 -651 384 ) ( -789 -645 384 ) ( -768 -645 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -789 -651 384 ) ( -768 -651 384 ) ( -768 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -768 -651 384 ) ( -768 -645 384 ) ( -768 -645 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -768 -645 384 ) ( -789 -645 384 ) ( -789 -645 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -789 -645 384 ) ( -789 -651 384 ) ( -789 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -795 -645 336 ) ( -816 -645 336 ) ( -816 -651 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -816 -651 384 ) ( -816 -645 384 ) ( -795 -645 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -816 -651 384 ) ( -795 -651 384 ) ( -795 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -795 -651 384 ) ( -795 -645 384 ) ( -795 -645 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -795 -645 384 ) ( -816 -645 384 ) ( -816 -645 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -816 -645 384 ) ( -816 -651 384 ) ( -816 -651 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -864 -693 336 ) ( -885 -693 336 ) ( -885 -699 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -885 -699 384 ) ( -885 -693 384 ) ( -864 -693 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -885 -699 384 ) ( -864 -699 384 ) ( -864 -699 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -864 -699 384 ) ( -864 -693 384 ) ( -864 -693 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -864 -693 384 ) ( -885 -693 384 ) ( -885 -693 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -885 -693 384 ) ( -885 -699 384 ) ( -885 -699 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -837 -672 336 ) ( -843 -672 336 ) ( -843 -693 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -843 -693 384 ) ( -843 -672 384 ) ( -837 -672 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -843 -693 384 ) ( -837 -693 384 ) ( -837 -693 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -837 -693 384 ) ( -837 -672 384 ) ( -837 -672 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -837 -672 384 ) ( -843 -672 384 ) ( -843 -672 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -843 -672 384 ) ( -843 -693 384 ) ( -843 -693 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -843 -693 336 ) ( -864 -693 336 ) ( -864 -699 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -864 -699 384 ) ( -864 -693 384 ) ( -843 -693 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -864 -699 384 ) ( -843 -699 384 ) ( -843 -699 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -843 -699 384 ) ( -843 -693 384 ) ( -843 -693 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -843 -693 384 ) ( -864 -693 384 ) ( -864 -693 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -864 -693 384 ) ( -864 -699 384 ) ( -864 -699 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
 }
 {
 ( -1026 -450 384 ) ( -1038 -450 384 ) ( -1038 -462 384 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -43415,262 +43344,6 @@
 ( -288 -384 264 ) ( -288 -432 264 ) ( -288 -432 240 ) world/minecraft_ports/glitch/quartz_block_side 0 0 0 0.1875 0.1875 0 0 0
 }
 {
-( -720 -645 336 ) ( -741 -645 336 ) ( -741 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -741 -651 384 ) ( -741 -645 384 ) ( -720 -645 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -741 -651 384 ) ( -720 -651 384 ) ( -720 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -720 -651 384 ) ( -720 -645 384 ) ( -720 -645 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -720 -645 384 ) ( -741 -645 384 ) ( -741 -645 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -741 -645 384 ) ( -741 -651 384 ) ( -741 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -747 -645 336 ) ( -768 -645 336 ) ( -768 -651 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -768 -651 384 ) ( -768 -645 384 ) ( -747 -645 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -768 -651 384 ) ( -747 -651 384 ) ( -747 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -747 -651 384 ) ( -747 -645 384 ) ( -747 -645 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -747 -645 384 ) ( -768 -645 384 ) ( -768 -645 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -768 -645 384 ) ( -768 -651 384 ) ( -768 -651 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -699 -645 336 ) ( -720 -645 336 ) ( -720 -651 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -720 -651 384 ) ( -720 -645 384 ) ( -699 -645 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -720 -651 384 ) ( -699 -651 384 ) ( -699 -651 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -699 -651 384 ) ( -699 -645 384 ) ( -699 -645 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -699 -645 384 ) ( -720 -645 384 ) ( -720 -645 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -720 -645 384 ) ( -720 -651 384 ) ( -720 -651 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -672 -645 384 ) ( -693 -645 384 ) ( -693 -651 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -693 -651 432 ) ( -693 -645 432 ) ( -672 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -693 -651 432 ) ( -672 -651 432 ) ( -672 -651 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -672 -651 432 ) ( -672 -645 432 ) ( -672 -645 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -672 -645 432 ) ( -693 -645 432 ) ( -693 -645 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -693 -645 432 ) ( -693 -651 432 ) ( -693 -651 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -624 -645 384 ) ( -645 -645 384 ) ( -645 -651 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -645 -651 432 ) ( -645 -645 432 ) ( -624 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -645 -651 432 ) ( -624 -651 432 ) ( -624 -651 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -624 -651 432 ) ( -624 -645 432 ) ( -624 -645 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -624 -645 432 ) ( -645 -645 432 ) ( -645 -645 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -645 -645 432 ) ( -645 -651 432 ) ( -645 -651 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -651 -645 384 ) ( -672 -645 384 ) ( -672 -651 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -672 -651 432 ) ( -672 -645 432 ) ( -651 -645 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -672 -651 432 ) ( -651 -651 432 ) ( -651 -651 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -651 -651 432 ) ( -651 -645 432 ) ( -651 -645 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -651 -645 432 ) ( -672 -645 432 ) ( -672 -645 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -672 -645 432 ) ( -672 -651 432 ) ( -672 -651 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -576 -645 384 ) ( -597 -645 384 ) ( -597 -651 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -597 -651 432 ) ( -597 -645 432 ) ( -576 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -597 -651 432 ) ( -576 -651 432 ) ( -576 -651 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -576 -651 432 ) ( -576 -645 432 ) ( -576 -645 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -576 -645 432 ) ( -597 -645 432 ) ( -597 -645 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -597 -645 432 ) ( -597 -651 432 ) ( -597 -651 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -603 -645 384 ) ( -624 -645 384 ) ( -624 -651 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -624 -651 432 ) ( -624 -645 432 ) ( -603 -645 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -624 -651 432 ) ( -603 -651 432 ) ( -603 -651 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -603 -651 432 ) ( -603 -645 432 ) ( -603 -645 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -603 -645 432 ) ( -624 -645 432 ) ( -624 -645 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -624 -645 432 ) ( -624 -651 432 ) ( -624 -651 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -555 -645 384 ) ( -576 -645 384 ) ( -576 -651 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -576 -651 432 ) ( -576 -645 432 ) ( -555 -645 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -576 -651 432 ) ( -555 -651 432 ) ( -555 -651 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -555 -651 432 ) ( -555 -645 432 ) ( -555 -645 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -555 -645 432 ) ( -576 -645 432 ) ( -576 -645 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -576 -645 432 ) ( -576 -651 432 ) ( -576 -651 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -528 -645 432 ) ( -549 -645 432 ) ( -549 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -549 -651 480 ) ( -549 -645 480 ) ( -528 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -549 -651 480 ) ( -528 -651 480 ) ( -528 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -528 -651 480 ) ( -528 -645 480 ) ( -528 -645 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -528 -645 480 ) ( -549 -645 480 ) ( -549 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -549 -645 480 ) ( -549 -651 480 ) ( -549 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -480 -645 432 ) ( -501 -645 432 ) ( -501 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -501 -651 480 ) ( -501 -645 480 ) ( -480 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -501 -651 480 ) ( -480 -651 480 ) ( -480 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -480 -651 480 ) ( -480 -645 480 ) ( -480 -645 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -480 -645 480 ) ( -501 -645 480 ) ( -501 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -501 -645 480 ) ( -501 -651 480 ) ( -501 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -507 -645 432 ) ( -528 -645 432 ) ( -528 -651 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -528 -651 480 ) ( -528 -645 480 ) ( -507 -645 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -528 -651 480 ) ( -507 -651 480 ) ( -507 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -507 -651 480 ) ( -507 -645 480 ) ( -507 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -507 -645 480 ) ( -528 -645 480 ) ( -528 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -528 -645 480 ) ( -528 -651 480 ) ( -528 -651 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -432 -645 432 ) ( -453 -645 432 ) ( -453 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -453 -651 480 ) ( -453 -645 480 ) ( -432 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -453 -651 480 ) ( -432 -651 480 ) ( -432 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -432 -651 480 ) ( -432 -645 480 ) ( -432 -645 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -432 -645 480 ) ( -453 -645 480 ) ( -453 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -453 -645 480 ) ( -453 -651 480 ) ( -453 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -459 -645 432 ) ( -480 -645 432 ) ( -480 -651 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -480 -651 480 ) ( -480 -645 480 ) ( -459 -645 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -480 -651 480 ) ( -459 -651 480 ) ( -459 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -459 -651 480 ) ( -459 -645 480 ) ( -459 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -459 -645 480 ) ( -480 -645 480 ) ( -480 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -480 -645 480 ) ( -480 -651 480 ) ( -480 -651 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -384 -645 432 ) ( -405 -645 432 ) ( -405 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -405 -651 480 ) ( -405 -645 480 ) ( -384 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -405 -651 480 ) ( -384 -651 480 ) ( -384 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -384 -651 480 ) ( -384 -645 480 ) ( -384 -645 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -384 -645 480 ) ( -405 -645 480 ) ( -405 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -405 -645 480 ) ( -405 -651 480 ) ( -405 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -411 -645 432 ) ( -432 -645 432 ) ( -432 -651 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -432 -651 480 ) ( -432 -645 480 ) ( -411 -645 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -432 -651 480 ) ( -411 -651 480 ) ( -411 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -411 -651 480 ) ( -411 -645 480 ) ( -411 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -411 -645 480 ) ( -432 -645 480 ) ( -432 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -432 -645 480 ) ( -432 -651 480 ) ( -432 -651 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -363 -645 432 ) ( -384 -645 432 ) ( -384 -651 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -384 -651 480 ) ( -384 -645 480 ) ( -363 -645 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -384 -651 480 ) ( -363 -651 480 ) ( -363 -651 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -363 -651 480 ) ( -363 -645 480 ) ( -363 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -363 -645 480 ) ( -384 -645 480 ) ( -384 -645 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -384 -645 480 ) ( -384 -651 480 ) ( -384 -651 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -336 -645 480 ) ( -357 -645 480 ) ( -357 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -357 -651 528 ) ( -357 -645 528 ) ( -336 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -357 -651 528 ) ( -336 -651 528 ) ( -336 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -336 -651 528 ) ( -336 -645 528 ) ( -336 -645 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -336 -645 528 ) ( -357 -645 528 ) ( -357 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -357 -645 528 ) ( -357 -651 528 ) ( -357 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -288 -645 480 ) ( -309 -645 480 ) ( -309 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -309 -651 528 ) ( -309 -645 528 ) ( -288 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -309 -651 528 ) ( -288 -651 528 ) ( -288 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -288 -651 528 ) ( -288 -645 528 ) ( -288 -645 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -288 -645 528 ) ( -309 -645 528 ) ( -309 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -309 -645 528 ) ( -309 -651 528 ) ( -309 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -315 -645 480 ) ( -336 -645 480 ) ( -336 -651 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -336 -651 528 ) ( -336 -645 528 ) ( -315 -645 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -336 -651 528 ) ( -315 -651 528 ) ( -315 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -315 -651 528 ) ( -315 -645 528 ) ( -315 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -315 -645 528 ) ( -336 -645 528 ) ( -336 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -336 -645 528 ) ( -336 -651 528 ) ( -336 -651 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -240 -645 480 ) ( -261 -645 480 ) ( -261 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -261 -651 528 ) ( -261 -645 528 ) ( -240 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -261 -651 528 ) ( -240 -651 528 ) ( -240 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -240 -651 528 ) ( -240 -645 528 ) ( -240 -645 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -240 -645 528 ) ( -261 -645 528 ) ( -261 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -261 -645 528 ) ( -261 -651 528 ) ( -261 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -267 -645 480 ) ( -288 -645 480 ) ( -288 -651 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -288 -651 528 ) ( -288 -645 528 ) ( -267 -645 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -288 -651 528 ) ( -267 -651 528 ) ( -267 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -267 -651 528 ) ( -267 -645 528 ) ( -267 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -267 -645 528 ) ( -288 -645 528 ) ( -288 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -288 -645 528 ) ( -288 -651 528 ) ( -288 -651 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -192 -645 480 ) ( -213 -645 480 ) ( -213 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -213 -651 528 ) ( -213 -645 528 ) ( -192 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -213 -651 528 ) ( -192 -651 528 ) ( -192 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -192 -651 528 ) ( -192 -645 528 ) ( -192 -645 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -192 -645 528 ) ( -213 -645 528 ) ( -213 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -213 -645 528 ) ( -213 -651 528 ) ( -213 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -219 -645 480 ) ( -240 -645 480 ) ( -240 -651 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -240 -651 528 ) ( -240 -645 528 ) ( -219 -645 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -240 -651 528 ) ( -219 -651 528 ) ( -219 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -219 -651 528 ) ( -219 -645 528 ) ( -219 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -219 -645 528 ) ( -240 -645 528 ) ( -240 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -240 -645 528 ) ( -240 -651 528 ) ( -240 -651 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -171 -645 480 ) ( -192 -645 480 ) ( -192 -651 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -192 -651 528 ) ( -192 -645 528 ) ( -171 -645 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -192 -651 528 ) ( -171 -651 528 ) ( -171 -651 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -171 -651 528 ) ( -171 -645 528 ) ( -171 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -171 -645 528 ) ( -192 -645 528 ) ( -192 -645 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -192 -645 528 ) ( -192 -651 528 ) ( -192 -651 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -144 -645 528 ) ( -165 -645 528 ) ( -165 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -165 -651 576 ) ( -165 -645 576 ) ( -144 -645 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -165 -651 576 ) ( -144 -651 576 ) ( -144 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -144 -651 576 ) ( -144 -645 576 ) ( -144 -645 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -144 -645 576 ) ( -165 -645 576 ) ( -165 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -165 -645 576 ) ( -165 -651 576 ) ( -165 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -96 -645 528 ) ( -117 -645 528 ) ( -117 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -117 -651 576 ) ( -117 -645 576 ) ( -96 -645 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -117 -651 576 ) ( -96 -651 576 ) ( -96 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -96 -651 576 ) ( -96 -645 576 ) ( -96 -645 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -96 -645 576 ) ( -117 -645 576 ) ( -117 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -117 -645 576 ) ( -117 -651 576 ) ( -117 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -123 -645 528 ) ( -144 -645 528 ) ( -144 -651 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -144 -651 576 ) ( -144 -645 576 ) ( -123 -645 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -144 -651 576 ) ( -123 -651 576 ) ( -123 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -123 -651 576 ) ( -123 -645 576 ) ( -123 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -123 -645 576 ) ( -144 -645 576 ) ( -144 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -144 -645 576 ) ( -144 -651 576 ) ( -144 -651 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -48 -645 528 ) ( -69 -645 528 ) ( -69 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -69 -651 576 ) ( -69 -645 576 ) ( -48 -645 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -69 -651 576 ) ( -48 -651 576 ) ( -48 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -48 -651 576 ) ( -48 -645 576 ) ( -48 -645 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -48 -645 576 ) ( -69 -645 576 ) ( -69 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -69 -645 576 ) ( -69 -651 576 ) ( -69 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -75 -645 528 ) ( -96 -645 528 ) ( -96 -651 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -96 -651 576 ) ( -96 -645 576 ) ( -75 -645 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -96 -651 576 ) ( -75 -651 576 ) ( -75 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -75 -651 576 ) ( -75 -645 576 ) ( -75 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -75 -645 576 ) ( -96 -645 576 ) ( -96 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -96 -645 576 ) ( -96 -651 576 ) ( -96 -651 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 0 -645 528 ) ( -21 -645 528 ) ( -21 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -21 -651 576 ) ( -21 -645 576 ) ( 0 -645 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -21 -651 576 ) ( 0 -651 576 ) ( 0 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 0 -651 576 ) ( 0 -645 576 ) ( 0 -645 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 0 -645 576 ) ( -21 -645 576 ) ( -21 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -21 -645 576 ) ( -21 -651 576 ) ( -21 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -27 -645 528 ) ( -48 -645 528 ) ( -48 -651 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -48 -651 576 ) ( -48 -645 576 ) ( -27 -645 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -48 -651 576 ) ( -27 -651 576 ) ( -27 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -27 -651 576 ) ( -27 -645 576 ) ( -27 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -27 -645 576 ) ( -48 -645 576 ) ( -48 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -48 -645 576 ) ( -48 -651 576 ) ( -48 -651 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
 ( -66 -546 672 ) ( -78 -546 672 ) ( -78 -558 672 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( -78 -558 720 ) ( -78 -546 720 ) ( -66 -546 720 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( -78 -558 720 ) ( -66 -558 720 ) ( -66 -558 672 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -43949,14 +43622,6 @@
 ( 96 -624 576 ) ( 96 -576 576 ) ( 96 -576 552 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 96 -576 576 ) ( 48 -576 576 ) ( 48 -576 552 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 48 -576 576 ) ( 48 -624 576 ) ( 48 -624 552 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 21 -645 528 ) ( 0 -645 528 ) ( 0 -651 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 0 -651 576 ) ( 0 -645 576 ) ( 21 -645 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 0 -651 576 ) ( 21 -651 576 ) ( 21 -651 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 21 -651 576 ) ( 21 -645 576 ) ( 21 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 21 -645 576 ) ( 0 -645 576 ) ( 0 -645 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 0 -645 576 ) ( 0 -651 576 ) ( 0 -651 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
 }
 {
 ( 96 -624 552 ) ( 48 -624 552 ) ( 48 -672 552 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -54431,46 +54096,6 @@
 ( 3648 1392 576 ) ( 3648 1344 576 ) ( 3648 1344 552 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 }
 {
-( 3744 1371 528 ) ( 3723 1371 528 ) ( 3723 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3723 1365 576 ) ( 3723 1371 576 ) ( 3744 1371 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3723 1365 576 ) ( 3744 1365 576 ) ( 3744 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3744 1365 576 ) ( 3744 1371 576 ) ( 3744 1371 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3744 1371 576 ) ( 3723 1371 576 ) ( 3723 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3723 1371 576 ) ( 3723 1365 576 ) ( 3723 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3792 1371 528 ) ( 3771 1371 528 ) ( 3771 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3771 1365 576 ) ( 3771 1371 576 ) ( 3792 1371 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3771 1365 576 ) ( 3792 1365 576 ) ( 3792 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3792 1365 576 ) ( 3792 1371 576 ) ( 3792 1371 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3792 1371 576 ) ( 3771 1371 576 ) ( 3771 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3771 1371 576 ) ( 3771 1365 576 ) ( 3771 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3765 1371 528 ) ( 3744 1371 528 ) ( 3744 1365 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3744 1365 576 ) ( 3744 1371 576 ) ( 3765 1371 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3744 1365 576 ) ( 3765 1365 576 ) ( 3765 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3765 1365 576 ) ( 3765 1371 576 ) ( 3765 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3765 1371 576 ) ( 3744 1371 576 ) ( 3744 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3744 1371 576 ) ( 3744 1365 576 ) ( 3744 1365 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3840 1371 528 ) ( 3819 1371 528 ) ( 3819 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3819 1365 576 ) ( 3819 1371 576 ) ( 3840 1371 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3819 1365 576 ) ( 3840 1365 576 ) ( 3840 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3840 1365 576 ) ( 3840 1371 576 ) ( 3840 1371 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3840 1371 576 ) ( 3819 1371 576 ) ( 3819 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3819 1371 576 ) ( 3819 1365 576 ) ( 3819 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3813 1371 528 ) ( 3792 1371 528 ) ( 3792 1365 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3792 1365 576 ) ( 3792 1371 576 ) ( 3813 1371 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3792 1365 576 ) ( 3813 1365 576 ) ( 3813 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3813 1365 576 ) ( 3813 1371 576 ) ( 3813 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3813 1371 576 ) ( 3792 1371 576 ) ( 3792 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3792 1371 576 ) ( 3792 1365 576 ) ( 3792 1365 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
 ( 3696 1344 552 ) ( 3648 1344 552 ) ( 3648 1296 552 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 3648 1296 576 ) ( 3648 1344 576 ) ( 3696 1344 576 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 3648 1296 576 ) ( 3696 1296 576 ) ( 3696 1296 552 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -54621,278 +54246,6 @@
 ( 4608 1776 312 ) ( 4608 1824 312 ) ( 4608 1824 288 ) world/minecraft_ports/glitch/quartz_block_bottom 0 0 0 0.1875 0.1875 0 0 0
 ( 4608 1824 312 ) ( 4560 1824 312 ) ( 4560 1824 288 ) world/minecraft_ports/glitch/quartz_block_bottom 0 0 0 0.1875 0.1875 0 0 0
 ( 4560 1824 312 ) ( 4560 1776 312 ) ( 4560 1776 288 ) world/minecraft_ports/glitch/quartz_block_bottom 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4608 1419 336 ) ( 4587 1419 336 ) ( 4587 1413 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4587 1413 384 ) ( 4587 1419 384 ) ( 4608 1419 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4587 1413 384 ) ( 4608 1413 384 ) ( 4608 1413 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4608 1413 384 ) ( 4608 1419 384 ) ( 4608 1419 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4608 1419 384 ) ( 4587 1419 384 ) ( 4587 1419 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4587 1419 384 ) ( 4587 1413 384 ) ( 4587 1413 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4587 1413 336 ) ( 4581 1413 336 ) ( 4581 1392 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4581 1392 384 ) ( 4581 1413 384 ) ( 4587 1413 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4581 1392 384 ) ( 4587 1392 384 ) ( 4587 1392 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4587 1392 384 ) ( 4587 1413 384 ) ( 4587 1413 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4587 1413 384 ) ( 4581 1413 384 ) ( 4581 1413 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4581 1413 384 ) ( 4581 1392 384 ) ( 4581 1392 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4464 1371 336 ) ( 4443 1371 336 ) ( 4443 1365 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4443 1365 384 ) ( 4443 1371 384 ) ( 4464 1371 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4443 1365 384 ) ( 4464 1365 384 ) ( 4464 1365 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4464 1365 384 ) ( 4464 1371 384 ) ( 4464 1371 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4464 1371 384 ) ( 4443 1371 384 ) ( 4443 1371 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4443 1371 384 ) ( 4443 1365 384 ) ( 4443 1365 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4512 1371 336 ) ( 4491 1371 336 ) ( 4491 1365 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4491 1365 384 ) ( 4491 1371 384 ) ( 4512 1371 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4491 1365 384 ) ( 4512 1365 384 ) ( 4512 1365 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4512 1365 384 ) ( 4512 1371 384 ) ( 4512 1371 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4512 1371 384 ) ( 4491 1371 384 ) ( 4491 1371 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4491 1371 384 ) ( 4491 1365 384 ) ( 4491 1365 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4485 1371 336 ) ( 4464 1371 336 ) ( 4464 1365 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4464 1365 384 ) ( 4464 1371 384 ) ( 4485 1371 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4464 1365 384 ) ( 4485 1365 384 ) ( 4485 1365 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4485 1365 384 ) ( 4485 1371 384 ) ( 4485 1371 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4485 1371 384 ) ( 4464 1371 384 ) ( 4464 1371 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4464 1371 384 ) ( 4464 1365 384 ) ( 4464 1365 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4560 1371 336 ) ( 4539 1371 336 ) ( 4539 1365 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4539 1365 384 ) ( 4539 1371 384 ) ( 4560 1371 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4539 1365 384 ) ( 4560 1365 384 ) ( 4560 1365 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4560 1365 384 ) ( 4560 1371 384 ) ( 4560 1371 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4560 1371 384 ) ( 4539 1371 384 ) ( 4539 1371 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4539 1371 384 ) ( 4539 1365 384 ) ( 4539 1365 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4533 1371 336 ) ( 4512 1371 336 ) ( 4512 1365 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4512 1365 384 ) ( 4512 1371 384 ) ( 4533 1371 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4512 1365 384 ) ( 4533 1365 384 ) ( 4533 1365 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4533 1365 384 ) ( 4533 1371 384 ) ( 4533 1371 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4533 1371 384 ) ( 4512 1371 384 ) ( 4512 1371 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4512 1371 384 ) ( 4512 1365 384 ) ( 4512 1365 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4587 1392 336 ) ( 4581 1392 336 ) ( 4581 1371 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4581 1371 384 ) ( 4581 1392 384 ) ( 4587 1392 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4581 1371 384 ) ( 4587 1371 384 ) ( 4587 1371 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4587 1371 384 ) ( 4587 1392 384 ) ( 4587 1392 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4587 1392 384 ) ( 4581 1392 384 ) ( 4581 1392 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4581 1392 384 ) ( 4581 1371 384 ) ( 4581 1371 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4581 1371 336 ) ( 4560 1371 336 ) ( 4560 1365 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4560 1365 384 ) ( 4560 1371 384 ) ( 4581 1371 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4560 1365 384 ) ( 4581 1365 384 ) ( 4581 1365 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4581 1365 384 ) ( 4581 1371 384 ) ( 4581 1371 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4581 1371 384 ) ( 4560 1371 384 ) ( 4560 1371 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4560 1371 384 ) ( 4560 1365 384 ) ( 4560 1365 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4320 1371 384 ) ( 4299 1371 384 ) ( 4299 1365 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4299 1365 432 ) ( 4299 1371 432 ) ( 4320 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4299 1365 432 ) ( 4320 1365 432 ) ( 4320 1365 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4320 1365 432 ) ( 4320 1371 432 ) ( 4320 1371 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4320 1371 432 ) ( 4299 1371 432 ) ( 4299 1371 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4299 1371 432 ) ( 4299 1365 432 ) ( 4299 1365 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4368 1371 384 ) ( 4347 1371 384 ) ( 4347 1365 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4347 1365 432 ) ( 4347 1371 432 ) ( 4368 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4347 1365 432 ) ( 4368 1365 432 ) ( 4368 1365 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4368 1365 432 ) ( 4368 1371 432 ) ( 4368 1371 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4368 1371 432 ) ( 4347 1371 432 ) ( 4347 1371 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4347 1371 432 ) ( 4347 1365 432 ) ( 4347 1365 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4341 1371 384 ) ( 4320 1371 384 ) ( 4320 1365 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4320 1365 432 ) ( 4320 1371 432 ) ( 4341 1371 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4320 1365 432 ) ( 4341 1365 432 ) ( 4341 1365 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4341 1365 432 ) ( 4341 1371 432 ) ( 4341 1371 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4341 1371 432 ) ( 4320 1371 432 ) ( 4320 1371 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4320 1371 432 ) ( 4320 1365 432 ) ( 4320 1365 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4416 1371 384 ) ( 4395 1371 384 ) ( 4395 1365 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4395 1365 432 ) ( 4395 1371 432 ) ( 4416 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4395 1365 432 ) ( 4416 1365 432 ) ( 4416 1365 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4416 1365 432 ) ( 4416 1371 432 ) ( 4416 1371 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4416 1371 432 ) ( 4395 1371 432 ) ( 4395 1371 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4395 1371 432 ) ( 4395 1365 432 ) ( 4395 1365 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4389 1371 384 ) ( 4368 1371 384 ) ( 4368 1365 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4368 1365 432 ) ( 4368 1371 432 ) ( 4389 1371 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4368 1365 432 ) ( 4389 1365 432 ) ( 4389 1365 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4389 1365 432 ) ( 4389 1371 432 ) ( 4389 1371 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4389 1371 432 ) ( 4368 1371 432 ) ( 4368 1371 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4368 1371 432 ) ( 4368 1365 432 ) ( 4368 1365 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4437 1371 384 ) ( 4416 1371 384 ) ( 4416 1365 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4416 1365 432 ) ( 4416 1371 432 ) ( 4437 1371 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4416 1365 432 ) ( 4437 1365 432 ) ( 4437 1365 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4437 1365 432 ) ( 4437 1371 432 ) ( 4437 1371 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4437 1371 432 ) ( 4416 1371 432 ) ( 4416 1371 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4416 1371 432 ) ( 4416 1365 432 ) ( 4416 1365 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4128 1371 432 ) ( 4107 1371 432 ) ( 4107 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4107 1365 480 ) ( 4107 1371 480 ) ( 4128 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4107 1365 480 ) ( 4128 1365 480 ) ( 4128 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4128 1365 480 ) ( 4128 1371 480 ) ( 4128 1371 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4128 1371 480 ) ( 4107 1371 480 ) ( 4107 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4107 1371 480 ) ( 4107 1365 480 ) ( 4107 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4176 1371 432 ) ( 4155 1371 432 ) ( 4155 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4155 1365 480 ) ( 4155 1371 480 ) ( 4176 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4155 1365 480 ) ( 4176 1365 480 ) ( 4176 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4176 1365 480 ) ( 4176 1371 480 ) ( 4176 1371 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4176 1371 480 ) ( 4155 1371 480 ) ( 4155 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4155 1371 480 ) ( 4155 1365 480 ) ( 4155 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4149 1371 432 ) ( 4128 1371 432 ) ( 4128 1365 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4128 1365 480 ) ( 4128 1371 480 ) ( 4149 1371 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4128 1365 480 ) ( 4149 1365 480 ) ( 4149 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4149 1365 480 ) ( 4149 1371 480 ) ( 4149 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4149 1371 480 ) ( 4128 1371 480 ) ( 4128 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4128 1371 480 ) ( 4128 1365 480 ) ( 4128 1365 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4224 1371 432 ) ( 4203 1371 432 ) ( 4203 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4203 1365 480 ) ( 4203 1371 480 ) ( 4224 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4203 1365 480 ) ( 4224 1365 480 ) ( 4224 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4224 1365 480 ) ( 4224 1371 480 ) ( 4224 1371 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4224 1371 480 ) ( 4203 1371 480 ) ( 4203 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4203 1371 480 ) ( 4203 1365 480 ) ( 4203 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4197 1371 432 ) ( 4176 1371 432 ) ( 4176 1365 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4176 1365 480 ) ( 4176 1371 480 ) ( 4197 1371 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4176 1365 480 ) ( 4197 1365 480 ) ( 4197 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4197 1365 480 ) ( 4197 1371 480 ) ( 4197 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4197 1371 480 ) ( 4176 1371 480 ) ( 4176 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4176 1371 480 ) ( 4176 1365 480 ) ( 4176 1365 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4272 1371 432 ) ( 4251 1371 432 ) ( 4251 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4251 1365 480 ) ( 4251 1371 480 ) ( 4272 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4251 1365 480 ) ( 4272 1365 480 ) ( 4272 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4272 1365 480 ) ( 4272 1371 480 ) ( 4272 1371 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4272 1371 480 ) ( 4251 1371 480 ) ( 4251 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4251 1371 480 ) ( 4251 1365 480 ) ( 4251 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4245 1371 432 ) ( 4224 1371 432 ) ( 4224 1365 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4224 1365 480 ) ( 4224 1371 480 ) ( 4245 1371 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4224 1365 480 ) ( 4245 1365 480 ) ( 4245 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4245 1365 480 ) ( 4245 1371 480 ) ( 4245 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4245 1371 480 ) ( 4224 1371 480 ) ( 4224 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4224 1371 480 ) ( 4224 1365 480 ) ( 4224 1365 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4293 1371 432 ) ( 4272 1371 432 ) ( 4272 1365 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4272 1365 480 ) ( 4272 1371 480 ) ( 4293 1371 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4272 1365 480 ) ( 4293 1365 480 ) ( 4293 1365 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4293 1365 480 ) ( 4293 1371 480 ) ( 4293 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4293 1371 480 ) ( 4272 1371 480 ) ( 4272 1371 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4272 1371 480 ) ( 4272 1365 480 ) ( 4272 1365 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3936 1371 480 ) ( 3915 1371 480 ) ( 3915 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3915 1365 528 ) ( 3915 1371 528 ) ( 3936 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3915 1365 528 ) ( 3936 1365 528 ) ( 3936 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3936 1365 528 ) ( 3936 1371 528 ) ( 3936 1371 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3936 1371 528 ) ( 3915 1371 528 ) ( 3915 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3915 1371 528 ) ( 3915 1365 528 ) ( 3915 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3984 1371 480 ) ( 3963 1371 480 ) ( 3963 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3963 1365 528 ) ( 3963 1371 528 ) ( 3984 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3963 1365 528 ) ( 3984 1365 528 ) ( 3984 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3984 1365 528 ) ( 3984 1371 528 ) ( 3984 1371 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3984 1371 528 ) ( 3963 1371 528 ) ( 3963 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3963 1371 528 ) ( 3963 1365 528 ) ( 3963 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3957 1371 480 ) ( 3936 1371 480 ) ( 3936 1365 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3936 1365 528 ) ( 3936 1371 528 ) ( 3957 1371 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3936 1365 528 ) ( 3957 1365 528 ) ( 3957 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3957 1365 528 ) ( 3957 1371 528 ) ( 3957 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3957 1371 528 ) ( 3936 1371 528 ) ( 3936 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3936 1371 528 ) ( 3936 1365 528 ) ( 3936 1365 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4032 1371 480 ) ( 4011 1371 480 ) ( 4011 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4011 1365 528 ) ( 4011 1371 528 ) ( 4032 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4011 1365 528 ) ( 4032 1365 528 ) ( 4032 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4032 1365 528 ) ( 4032 1371 528 ) ( 4032 1371 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4032 1371 528 ) ( 4011 1371 528 ) ( 4011 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4011 1371 528 ) ( 4011 1365 528 ) ( 4011 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4005 1371 480 ) ( 3984 1371 480 ) ( 3984 1365 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3984 1365 528 ) ( 3984 1371 528 ) ( 4005 1371 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3984 1365 528 ) ( 4005 1365 528 ) ( 4005 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4005 1365 528 ) ( 4005 1371 528 ) ( 4005 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4005 1371 528 ) ( 3984 1371 528 ) ( 3984 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3984 1371 528 ) ( 3984 1365 528 ) ( 3984 1365 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4080 1371 480 ) ( 4059 1371 480 ) ( 4059 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4059 1365 528 ) ( 4059 1371 528 ) ( 4080 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4059 1365 528 ) ( 4080 1365 528 ) ( 4080 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4080 1365 528 ) ( 4080 1371 528 ) ( 4080 1371 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4080 1371 528 ) ( 4059 1371 528 ) ( 4059 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4059 1371 528 ) ( 4059 1365 528 ) ( 4059 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4053 1371 480 ) ( 4032 1371 480 ) ( 4032 1365 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4032 1365 528 ) ( 4032 1371 528 ) ( 4053 1371 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4032 1365 528 ) ( 4053 1365 528 ) ( 4053 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4053 1365 528 ) ( 4053 1371 528 ) ( 4053 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4053 1371 528 ) ( 4032 1371 528 ) ( 4032 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4032 1371 528 ) ( 4032 1365 528 ) ( 4032 1365 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4101 1371 480 ) ( 4080 1371 480 ) ( 4080 1365 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4080 1365 528 ) ( 4080 1371 528 ) ( 4101 1371 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4080 1365 528 ) ( 4101 1365 528 ) ( 4101 1365 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4101 1365 528 ) ( 4101 1371 528 ) ( 4101 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4101 1371 528 ) ( 4080 1371 528 ) ( 4080 1371 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4080 1371 528 ) ( 4080 1365 528 ) ( 4080 1365 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3888 1371 528 ) ( 3867 1371 528 ) ( 3867 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3867 1365 576 ) ( 3867 1371 576 ) ( 3888 1371 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3867 1365 576 ) ( 3888 1365 576 ) ( 3888 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3888 1365 576 ) ( 3888 1371 576 ) ( 3888 1371 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3888 1371 576 ) ( 3867 1371 576 ) ( 3867 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3867 1371 576 ) ( 3867 1365 576 ) ( 3867 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3861 1371 528 ) ( 3840 1371 528 ) ( 3840 1365 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3840 1365 576 ) ( 3840 1371 576 ) ( 3861 1371 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3840 1365 576 ) ( 3861 1365 576 ) ( 3861 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3861 1365 576 ) ( 3861 1371 576 ) ( 3861 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3861 1371 576 ) ( 3840 1371 576 ) ( 3840 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3840 1371 576 ) ( 3840 1365 576 ) ( 3840 1365 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3909 1371 528 ) ( 3888 1371 528 ) ( 3888 1365 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3888 1365 576 ) ( 3888 1371 576 ) ( 3909 1371 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3888 1365 576 ) ( 3909 1365 576 ) ( 3909 1365 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3909 1365 576 ) ( 3909 1371 576 ) ( 3909 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3909 1371 576 ) ( 3888 1371 576 ) ( 3888 1371 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3888 1371 576 ) ( 3888 1365 576 ) ( 3888 1365 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
 }
 {
 ( 4512 1920 576 ) ( 4464 1920 576 ) ( 4464 1872 576 ) world/minecraft_ports/glitch/quartz_block_top 0 0 0 0.1875 0.1875 0 0 0
@@ -55183,36 +54536,12 @@
 ( 4704 1488 312 ) ( 4704 1440 312 ) ( 4704 1440 288 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 }
 {
-( 4656 1419 288 ) ( 4635 1419 288 ) ( 4635 1413 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4635 1413 336 ) ( 4635 1419 336 ) ( 4656 1419 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4635 1413 336 ) ( 4656 1413 336 ) ( 4656 1413 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4656 1413 336 ) ( 4656 1419 336 ) ( 4656 1419 288 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4656 1419 336 ) ( 4635 1419 336 ) ( 4635 1419 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4635 1419 336 ) ( 4635 1413 336 ) ( 4635 1413 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4677 1419 288 ) ( 4656 1419 288 ) ( 4656 1413 288 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4656 1413 336 ) ( 4656 1419 336 ) ( 4677 1419 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4656 1413 336 ) ( 4677 1413 336 ) ( 4677 1413 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4677 1413 336 ) ( 4677 1419 336 ) ( 4677 1419 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4677 1419 336 ) ( 4656 1419 336 ) ( 4656 1419 288 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4656 1419 336 ) ( 4656 1413 336 ) ( 4656 1413 288 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
 ( 4752 1440 288 ) ( 4704 1440 288 ) ( 4704 1392 288 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 4704 1392 312 ) ( 4704 1440 312 ) ( 4752 1440 312 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 4704 1392 312 ) ( 4752 1392 312 ) ( 4752 1392 288 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 4752 1392 312 ) ( 4752 1440 312 ) ( 4752 1440 288 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 4752 1440 312 ) ( 4704 1440 312 ) ( 4704 1440 288 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 4704 1440 312 ) ( 4704 1392 312 ) ( 4704 1392 288 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4629 1419 336 ) ( 4608 1419 336 ) ( 4608 1413 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4608 1413 384 ) ( 4608 1419 384 ) ( 4629 1419 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4608 1413 384 ) ( 4629 1413 384 ) ( 4629 1413 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4629 1413 384 ) ( 4629 1419 384 ) ( 4629 1419 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4629 1419 384 ) ( 4608 1419 384 ) ( 4608 1419 336 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4608 1419 384 ) ( 4608 1413 384 ) ( 4608 1413 336 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
 }
 {
 ( 4782 1182 384 ) ( 4770 1182 384 ) ( 4770 1170 384 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -59535,62 +58864,6 @@
 ( 3600 864 624 ) ( 3600 816 624 ) ( 3600 816 600 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 }
 {
-( 3696 843 576 ) ( 3675 843 576 ) ( 3675 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3675 837 624 ) ( 3675 843 624 ) ( 3696 843 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3675 837 624 ) ( 3696 837 624 ) ( 3696 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3696 837 624 ) ( 3696 843 624 ) ( 3696 843 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3696 843 624 ) ( 3675 843 624 ) ( 3675 843 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3675 843 624 ) ( 3675 837 624 ) ( 3675 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3744 843 576 ) ( 3723 843 576 ) ( 3723 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3723 837 624 ) ( 3723 843 624 ) ( 3744 843 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3723 837 624 ) ( 3744 837 624 ) ( 3744 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3744 837 624 ) ( 3744 843 624 ) ( 3744 843 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3744 843 624 ) ( 3723 843 624 ) ( 3723 843 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3723 843 624 ) ( 3723 837 624 ) ( 3723 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3717 843 576 ) ( 3696 843 576 ) ( 3696 837 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3696 837 624 ) ( 3696 843 624 ) ( 3717 843 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3696 837 624 ) ( 3717 837 624 ) ( 3717 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3717 837 624 ) ( 3717 843 624 ) ( 3717 843 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3717 843 624 ) ( 3696 843 624 ) ( 3696 843 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3696 843 624 ) ( 3696 837 624 ) ( 3696 837 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3792 843 576 ) ( 3771 843 576 ) ( 3771 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3771 837 624 ) ( 3771 843 624 ) ( 3792 843 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3771 837 624 ) ( 3792 837 624 ) ( 3792 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3792 837 624 ) ( 3792 843 624 ) ( 3792 843 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3792 843 624 ) ( 3771 843 624 ) ( 3771 843 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3771 843 624 ) ( 3771 837 624 ) ( 3771 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3765 843 576 ) ( 3744 843 576 ) ( 3744 837 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3744 837 624 ) ( 3744 843 624 ) ( 3765 843 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3744 837 624 ) ( 3765 837 624 ) ( 3765 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3765 837 624 ) ( 3765 843 624 ) ( 3765 843 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3765 843 624 ) ( 3744 843 624 ) ( 3744 843 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3744 843 624 ) ( 3744 837 624 ) ( 3744 837 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3840 843 576 ) ( 3819 843 576 ) ( 3819 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3819 837 624 ) ( 3819 843 624 ) ( 3840 843 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3819 837 624 ) ( 3840 837 624 ) ( 3840 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3840 837 624 ) ( 3840 843 624 ) ( 3840 843 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3840 843 624 ) ( 3819 843 624 ) ( 3819 843 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3819 843 624 ) ( 3819 837 624 ) ( 3819 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3813 843 576 ) ( 3792 843 576 ) ( 3792 837 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3792 837 624 ) ( 3792 843 624 ) ( 3813 843 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3792 837 624 ) ( 3813 837 624 ) ( 3813 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3813 837 624 ) ( 3813 843 624 ) ( 3813 843 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3813 843 624 ) ( 3792 843 624 ) ( 3792 843 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3792 843 624 ) ( 3792 837 624 ) ( 3792 837 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
 ( 3168 1056 648 ) ( 3120 1056 648 ) ( 3120 1008 648 ) world/minecraft_ports/glitch/quartz_block_top 0 0 0 0.1875 0.1875 0 0 0
 ( 3120 1008 672 ) ( 3120 1056 672 ) ( 3168 1056 672 ) world/minecraft_ports/glitch/quartz_block_top 0 0 0 0.1875 0.1875 0 0 0
 ( 3120 1008 672 ) ( 3168 1008 672 ) ( 3168 1008 648 ) world/minecraft_ports/glitch/quartz_block_side 0 0 0 0.1875 0.1875 0 0 0
@@ -59791,150 +59064,6 @@
 ( 4560 816 312 ) ( 4560 768 312 ) ( 4560 768 288 ) world/minecraft_ports/glitch/quartz_block_side 0 0 0 0.1875 0.1875 0 0 0
 }
 {
-( 4560 699 384 ) ( 4539 699 384 ) ( 4539 693 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4539 693 432 ) ( 4539 699 432 ) ( 4560 699 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4539 693 432 ) ( 4560 693 432 ) ( 4560 693 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4560 693 432 ) ( 4560 699 432 ) ( 4560 699 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4560 699 432 ) ( 4539 699 432 ) ( 4539 699 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4539 699 432 ) ( 4539 693 432 ) ( 4539 693 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4581 699 384 ) ( 4560 699 384 ) ( 4560 693 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4560 693 432 ) ( 4560 699 432 ) ( 4581 699 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4560 693 432 ) ( 4581 693 432 ) ( 4581 693 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4581 693 432 ) ( 4581 699 432 ) ( 4581 699 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4581 699 432 ) ( 4560 699 432 ) ( 4560 699 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4560 699 432 ) ( 4560 693 432 ) ( 4560 693 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4368 747 432 ) ( 4347 747 432 ) ( 4347 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4347 741 480 ) ( 4347 747 480 ) ( 4368 747 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4347 741 480 ) ( 4368 741 480 ) ( 4368 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4368 741 480 ) ( 4368 747 480 ) ( 4368 747 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4368 747 480 ) ( 4347 747 480 ) ( 4347 747 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4347 747 480 ) ( 4347 741 480 ) ( 4347 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4416 747 432 ) ( 4395 747 432 ) ( 4395 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4395 741 480 ) ( 4395 747 480 ) ( 4416 747 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4395 741 480 ) ( 4416 741 480 ) ( 4416 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4416 741 480 ) ( 4416 747 480 ) ( 4416 747 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4416 747 480 ) ( 4395 747 480 ) ( 4395 747 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4395 747 480 ) ( 4395 741 480 ) ( 4395 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4389 747 432 ) ( 4368 747 432 ) ( 4368 741 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4368 741 480 ) ( 4368 747 480 ) ( 4389 747 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4368 741 480 ) ( 4389 741 480 ) ( 4389 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4389 741 480 ) ( 4389 747 480 ) ( 4389 747 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4389 747 480 ) ( 4368 747 480 ) ( 4368 747 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4368 747 480 ) ( 4368 741 480 ) ( 4368 741 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4464 747 432 ) ( 4443 747 432 ) ( 4443 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4443 741 480 ) ( 4443 747 480 ) ( 4464 747 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4443 741 480 ) ( 4464 741 480 ) ( 4464 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4464 741 480 ) ( 4464 747 480 ) ( 4464 747 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4464 747 480 ) ( 4443 747 480 ) ( 4443 747 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4443 747 480 ) ( 4443 741 480 ) ( 4443 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4437 747 432 ) ( 4416 747 432 ) ( 4416 741 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4416 741 480 ) ( 4416 747 480 ) ( 4437 747 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4416 741 480 ) ( 4437 741 480 ) ( 4437 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4437 741 480 ) ( 4437 747 480 ) ( 4437 747 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4437 747 480 ) ( 4416 747 480 ) ( 4416 747 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4416 747 480 ) ( 4416 741 480 ) ( 4416 741 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4491 741 432 ) ( 4485 741 432 ) ( 4485 720 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4485 720 480 ) ( 4485 741 480 ) ( 4491 741 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4485 720 480 ) ( 4491 720 480 ) ( 4491 720 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4491 720 480 ) ( 4491 741 480 ) ( 4491 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4491 741 480 ) ( 4485 741 480 ) ( 4485 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4485 741 480 ) ( 4485 720 480 ) ( 4485 720 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4485 747 432 ) ( 4464 747 432 ) ( 4464 741 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4464 741 480 ) ( 4464 747 480 ) ( 4485 747 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4464 741 480 ) ( 4485 741 480 ) ( 4485 741 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4485 741 480 ) ( 4485 747 480 ) ( 4485 747 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4485 747 480 ) ( 4464 747 480 ) ( 4464 747 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4464 747 480 ) ( 4464 741 480 ) ( 4464 741 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4491 720 432 ) ( 4485 720 432 ) ( 4485 699 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4485 699 480 ) ( 4485 720 480 ) ( 4491 720 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4485 699 480 ) ( 4491 699 480 ) ( 4491 699 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4491 699 480 ) ( 4491 720 480 ) ( 4491 720 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4491 720 480 ) ( 4485 720 480 ) ( 4485 720 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4485 720 480 ) ( 4485 699 480 ) ( 4485 699 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4512 699 432 ) ( 4491 699 432 ) ( 4491 693 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4491 693 480 ) ( 4491 699 480 ) ( 4512 699 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4491 693 480 ) ( 4512 693 480 ) ( 4512 693 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4512 693 480 ) ( 4512 699 480 ) ( 4512 699 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4512 699 480 ) ( 4491 699 480 ) ( 4491 699 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4491 699 480 ) ( 4491 693 480 ) ( 4491 693 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4533 699 432 ) ( 4512 699 432 ) ( 4512 693 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4512 693 480 ) ( 4512 699 480 ) ( 4533 699 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4512 693 480 ) ( 4533 693 480 ) ( 4533 693 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4533 693 480 ) ( 4533 699 480 ) ( 4533 699 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4533 699 480 ) ( 4512 699 480 ) ( 4512 699 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4512 699 480 ) ( 4512 693 480 ) ( 4512 693 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4224 747 480 ) ( 4203 747 480 ) ( 4203 741 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4203 741 528 ) ( 4203 747 528 ) ( 4224 747 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4203 741 528 ) ( 4224 741 528 ) ( 4224 741 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4224 741 528 ) ( 4224 747 528 ) ( 4224 747 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4224 747 528 ) ( 4203 747 528 ) ( 4203 747 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4203 747 528 ) ( 4203 741 528 ) ( 4203 741 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4272 747 480 ) ( 4251 747 480 ) ( 4251 741 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4251 741 528 ) ( 4251 747 528 ) ( 4272 747 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4251 741 528 ) ( 4272 741 528 ) ( 4272 741 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4272 741 528 ) ( 4272 747 528 ) ( 4272 747 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4272 747 528 ) ( 4251 747 528 ) ( 4251 747 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4251 747 528 ) ( 4251 741 528 ) ( 4251 741 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4245 747 480 ) ( 4224 747 480 ) ( 4224 741 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4224 741 528 ) ( 4224 747 528 ) ( 4245 747 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4224 741 528 ) ( 4245 741 528 ) ( 4245 741 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4245 741 528 ) ( 4245 747 528 ) ( 4245 747 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4245 747 528 ) ( 4224 747 528 ) ( 4224 747 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4224 747 528 ) ( 4224 741 528 ) ( 4224 741 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4320 747 480 ) ( 4299 747 480 ) ( 4299 741 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4299 741 528 ) ( 4299 747 528 ) ( 4320 747 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4299 741 528 ) ( 4320 741 528 ) ( 4320 741 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4320 741 528 ) ( 4320 747 528 ) ( 4320 747 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4320 747 528 ) ( 4299 747 528 ) ( 4299 747 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4299 747 528 ) ( 4299 741 528 ) ( 4299 741 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4293 747 480 ) ( 4272 747 480 ) ( 4272 741 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4272 741 528 ) ( 4272 747 528 ) ( 4293 747 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4272 741 528 ) ( 4293 741 528 ) ( 4293 741 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4293 741 528 ) ( 4293 747 528 ) ( 4293 747 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4293 747 528 ) ( 4272 747 528 ) ( 4272 747 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4272 747 528 ) ( 4272 741 528 ) ( 4272 741 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4341 747 480 ) ( 4320 747 480 ) ( 4320 741 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4320 741 528 ) ( 4320 747 528 ) ( 4341 747 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4320 741 528 ) ( 4341 741 528 ) ( 4341 741 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4341 741 528 ) ( 4341 747 528 ) ( 4341 747 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4341 747 528 ) ( 4320 747 528 ) ( 4320 747 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4320 747 528 ) ( 4320 741 528 ) ( 4320 741 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
 ( 3936 1056 552 ) ( 3888 1056 552 ) ( 3888 1008 552 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 3888 1008 576 ) ( 3888 1056 576 ) ( 3936 1056 576 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 3888 1008 576 ) ( 3936 1008 576 ) ( 3936 1008 552 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -59943,164 +59072,12 @@
 ( 3888 1056 576 ) ( 3888 1008 576 ) ( 3888 1008 552 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 }
 {
-( 3984 795 528 ) ( 3963 795 528 ) ( 3963 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3963 789 576 ) ( 3963 795 576 ) ( 3984 795 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3963 789 576 ) ( 3984 789 576 ) ( 3984 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3984 789 576 ) ( 3984 795 576 ) ( 3984 795 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3984 795 576 ) ( 3963 795 576 ) ( 3963 795 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3963 795 576 ) ( 3963 789 576 ) ( 3963 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4032 795 528 ) ( 4011 795 528 ) ( 4011 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4011 789 576 ) ( 4011 795 576 ) ( 4032 795 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4011 789 576 ) ( 4032 789 576 ) ( 4032 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4032 789 576 ) ( 4032 795 576 ) ( 4032 795 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4032 795 576 ) ( 4011 795 576 ) ( 4011 795 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4011 795 576 ) ( 4011 789 576 ) ( 4011 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4005 795 528 ) ( 3984 795 528 ) ( 3984 789 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3984 789 576 ) ( 3984 795 576 ) ( 4005 795 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3984 789 576 ) ( 4005 789 576 ) ( 4005 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4005 789 576 ) ( 4005 795 576 ) ( 4005 795 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4005 795 576 ) ( 3984 795 576 ) ( 3984 795 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3984 795 576 ) ( 3984 789 576 ) ( 3984 789 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4080 795 528 ) ( 4059 795 528 ) ( 4059 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4059 789 576 ) ( 4059 795 576 ) ( 4080 795 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4059 789 576 ) ( 4080 789 576 ) ( 4080 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4080 789 576 ) ( 4080 795 576 ) ( 4080 795 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4080 795 576 ) ( 4059 795 576 ) ( 4059 795 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4059 795 576 ) ( 4059 789 576 ) ( 4059 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4053 795 528 ) ( 4032 795 528 ) ( 4032 789 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4032 789 576 ) ( 4032 795 576 ) ( 4053 795 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4032 789 576 ) ( 4053 789 576 ) ( 4053 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4053 789 576 ) ( 4053 795 576 ) ( 4053 795 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4053 795 576 ) ( 4032 795 576 ) ( 4032 795 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4032 795 576 ) ( 4032 789 576 ) ( 4032 789 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4107 789 528 ) ( 4101 789 528 ) ( 4101 768 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4101 768 576 ) ( 4101 789 576 ) ( 4107 789 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4101 768 576 ) ( 4107 768 576 ) ( 4107 768 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4107 768 576 ) ( 4107 789 576 ) ( 4107 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4107 789 576 ) ( 4101 789 576 ) ( 4101 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4101 789 576 ) ( 4101 768 576 ) ( 4101 768 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4101 795 528 ) ( 4080 795 528 ) ( 4080 789 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4080 789 576 ) ( 4080 795 576 ) ( 4101 795 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4080 789 576 ) ( 4101 789 576 ) ( 4101 789 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4101 789 576 ) ( 4101 795 576 ) ( 4101 795 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4101 795 576 ) ( 4080 795 576 ) ( 4080 795 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4080 795 576 ) ( 4080 789 576 ) ( 4080 789 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4107 768 528 ) ( 4101 768 528 ) ( 4101 747 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4101 747 576 ) ( 4101 768 576 ) ( 4107 768 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4101 747 576 ) ( 4107 747 576 ) ( 4107 747 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4107 747 576 ) ( 4107 768 576 ) ( 4107 768 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4107 768 576 ) ( 4101 768 576 ) ( 4101 768 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4101 768 576 ) ( 4101 747 576 ) ( 4101 747 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4128 747 528 ) ( 4107 747 528 ) ( 4107 741 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4107 741 576 ) ( 4107 747 576 ) ( 4128 747 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4107 741 576 ) ( 4128 741 576 ) ( 4128 741 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4128 741 576 ) ( 4128 747 576 ) ( 4128 747 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4128 747 576 ) ( 4107 747 576 ) ( 4107 747 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4107 747 576 ) ( 4107 741 576 ) ( 4107 741 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4176 747 528 ) ( 4155 747 528 ) ( 4155 741 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4155 741 576 ) ( 4155 747 576 ) ( 4176 747 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4155 741 576 ) ( 4176 741 576 ) ( 4176 741 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4176 741 576 ) ( 4176 747 576 ) ( 4176 747 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4176 747 576 ) ( 4155 747 576 ) ( 4155 747 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4155 747 576 ) ( 4155 741 576 ) ( 4155 741 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4149 747 528 ) ( 4128 747 528 ) ( 4128 741 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4128 741 576 ) ( 4128 747 576 ) ( 4149 747 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4128 741 576 ) ( 4149 741 576 ) ( 4149 741 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4149 741 576 ) ( 4149 747 576 ) ( 4149 747 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4149 747 576 ) ( 4128 747 576 ) ( 4128 747 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4128 747 576 ) ( 4128 741 576 ) ( 4128 741 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 4197 747 528 ) ( 4176 747 528 ) ( 4176 741 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4176 741 576 ) ( 4176 747 576 ) ( 4197 747 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 4176 741 576 ) ( 4197 741 576 ) ( 4197 741 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4197 741 576 ) ( 4197 747 576 ) ( 4197 747 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4197 747 576 ) ( 4176 747 576 ) ( 4176 747 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 4176 747 576 ) ( 4176 741 576 ) ( 4176 741 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
 ( 3888 1008 600 ) ( 3840 1008 600 ) ( 3840 960 600 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 3840 960 624 ) ( 3840 1008 624 ) ( 3888 1008 624 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 3840 960 624 ) ( 3888 960 624 ) ( 3888 960 600 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 3888 960 624 ) ( 3888 1008 624 ) ( 3888 1008 600 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 3888 1008 624 ) ( 3840 1008 624 ) ( 3840 1008 600 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 3840 1008 624 ) ( 3840 960 624 ) ( 3840 960 600 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3867 837 576 ) ( 3861 837 576 ) ( 3861 816 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3861 816 624 ) ( 3861 837 624 ) ( 3867 837 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3861 816 624 ) ( 3867 816 624 ) ( 3867 816 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3867 816 624 ) ( 3867 837 624 ) ( 3867 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3867 837 624 ) ( 3861 837 624 ) ( 3861 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3861 837 624 ) ( 3861 816 624 ) ( 3861 816 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3861 843 576 ) ( 3840 843 576 ) ( 3840 837 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3840 837 624 ) ( 3840 843 624 ) ( 3861 843 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3840 837 624 ) ( 3861 837 624 ) ( 3861 837 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3861 837 624 ) ( 3861 843 624 ) ( 3861 843 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3861 843 624 ) ( 3840 843 624 ) ( 3840 843 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3840 843 624 ) ( 3840 837 624 ) ( 3840 837 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3867 816 576 ) ( 3861 816 576 ) ( 3861 795 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3861 795 624 ) ( 3861 816 624 ) ( 3867 816 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3861 795 624 ) ( 3867 795 624 ) ( 3867 795 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3867 795 624 ) ( 3867 816 624 ) ( 3867 816 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3867 816 624 ) ( 3861 816 624 ) ( 3861 816 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3861 816 624 ) ( 3861 795 624 ) ( 3861 795 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3888 795 576 ) ( 3867 795 576 ) ( 3867 789 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3867 789 624 ) ( 3867 795 624 ) ( 3888 795 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3867 789 624 ) ( 3888 789 624 ) ( 3888 789 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3888 789 624 ) ( 3888 795 624 ) ( 3888 795 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3888 795 624 ) ( 3867 795 624 ) ( 3867 795 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3867 795 624 ) ( 3867 789 624 ) ( 3867 789 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3936 795 576 ) ( 3915 795 576 ) ( 3915 789 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3915 789 624 ) ( 3915 795 624 ) ( 3936 795 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3915 789 624 ) ( 3936 789 624 ) ( 3936 789 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3936 789 624 ) ( 3936 795 624 ) ( 3936 795 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3936 795 624 ) ( 3915 795 624 ) ( 3915 795 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3915 795 624 ) ( 3915 789 624 ) ( 3915 789 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3909 795 576 ) ( 3888 795 576 ) ( 3888 789 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3888 789 624 ) ( 3888 795 624 ) ( 3909 795 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3888 789 624 ) ( 3909 789 624 ) ( 3909 789 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3909 789 624 ) ( 3909 795 624 ) ( 3909 795 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3909 795 624 ) ( 3888 795 624 ) ( 3888 795 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3888 795 624 ) ( 3888 789 624 ) ( 3888 789 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 3957 795 576 ) ( 3936 795 576 ) ( 3936 789 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3936 789 624 ) ( 3936 795 624 ) ( 3957 795 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 3936 789 624 ) ( 3957 789 624 ) ( 3957 789 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3957 789 624 ) ( 3957 795 624 ) ( 3957 795 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3957 795 624 ) ( 3936 795 624 ) ( 3936 795 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 3936 795 624 ) ( 3936 789 624 ) ( 3936 789 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
 }
 {
 ( 4686 1134 192 ) ( 4674 1134 192 ) ( 4674 1122 192 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -60855,22 +59832,6 @@
 ( -912 48 408 ) ( -912 -0 408 ) ( -912 -0 384 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
 }
 {
-( -816 27 384 ) ( -837 27 384 ) ( -837 21 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -837 21 432 ) ( -837 27 432 ) ( -816 27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -837 21 432 ) ( -816 21 432 ) ( -816 21 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -816 21 432 ) ( -816 27 432 ) ( -816 27 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -816 27 432 ) ( -837 27 432 ) ( -837 27 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -837 27 432 ) ( -837 21 432 ) ( -837 21 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -795 27 384 ) ( -816 27 384 ) ( -816 21 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -816 21 432 ) ( -816 27 432 ) ( -795 27 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -816 21 432 ) ( -795 21 432 ) ( -795 21 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -795 21 432 ) ( -795 27 432 ) ( -795 27 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -795 27 432 ) ( -816 27 432 ) ( -816 27 384 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -816 27 432 ) ( -816 21 432 ) ( -816 21 384 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
 ( -1218 -306 384 ) ( -1230 -306 384 ) ( -1230 -318 384 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( -1230 -318 432 ) ( -1230 -306 432 ) ( -1218 -306 432 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( -1230 -318 432 ) ( -1218 -318 432 ) ( -1218 -318 384 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -60941,14 +59902,6 @@
 ( -1029 192 459 ) ( -1029 219 459 ) ( -1029 219 450 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( -1029 219 459 ) ( -1035 219 459 ) ( -1035 219 450 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
 ( -1035 219 459 ) ( -1035 192 459 ) ( -1035 192 450 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -768 27 432 ) ( -789 27 432 ) ( -789 21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -789 21 480 ) ( -789 27 480 ) ( -768 27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -789 21 480 ) ( -768 21 480 ) ( -768 21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -768 21 480 ) ( -768 27 480 ) ( -768 27 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -768 27 480 ) ( -789 27 480 ) ( -789 27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -789 27 480 ) ( -789 21 480 ) ( -789 21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
 }
 {
 ( -1266 -18 432 ) ( -1278 -18 432 ) ( -1278 -30 432 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -61263,222 +60216,6 @@
 ( -96 -144 360 ) ( -96 -192 360 ) ( -96 -192 336 ) world/minecraft_ports/glitch/quartz_block_bottom 0 0 0 0.1875 0.1875 0 0 0
 }
 {
-( -741 21 432 ) ( -747 21 432 ) ( -747 -0 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -747 -0 480 ) ( -747 21 480 ) ( -741 21 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -747 -0 480 ) ( -741 -0 480 ) ( -741 -0 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -741 -0 480 ) ( -741 21 480 ) ( -741 21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -741 21 480 ) ( -747 21 480 ) ( -747 21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -747 21 480 ) ( -747 -0 480 ) ( -747 -0 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -747 27 432 ) ( -768 27 432 ) ( -768 21 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -768 21 480 ) ( -768 27 480 ) ( -747 27 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -768 21 480 ) ( -747 21 480 ) ( -747 21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -747 21 480 ) ( -747 27 480 ) ( -747 27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -747 27 480 ) ( -768 27 480 ) ( -768 27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -768 27 480 ) ( -768 21 480 ) ( -768 21 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -741 -0 432 ) ( -747 -0 432 ) ( -747 -21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -747 -21 480 ) ( -747 -0 480 ) ( -741 -0 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -747 -21 480 ) ( -741 -21 480 ) ( -741 -21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -741 -21 480 ) ( -741 -0 480 ) ( -741 -0 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -741 -0 480 ) ( -747 -0 480 ) ( -747 -0 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -747 -0 480 ) ( -747 -21 480 ) ( -747 -21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -720 -21 432 ) ( -741 -21 432 ) ( -741 -27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -741 -27 480 ) ( -741 -21 480 ) ( -720 -21 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -741 -27 480 ) ( -720 -27 480 ) ( -720 -27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -720 -27 480 ) ( -720 -21 480 ) ( -720 -21 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -720 -21 480 ) ( -741 -21 480 ) ( -741 -21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -741 -21 480 ) ( -741 -27 480 ) ( -741 -27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -672 -21 432 ) ( -693 -21 432 ) ( -693 -27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -693 -27 480 ) ( -693 -21 480 ) ( -672 -21 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -693 -27 480 ) ( -672 -27 480 ) ( -672 -27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -672 -27 480 ) ( -672 -21 480 ) ( -672 -21 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -672 -21 480 ) ( -693 -21 480 ) ( -693 -21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -693 -21 480 ) ( -693 -27 480 ) ( -693 -27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -699 -21 432 ) ( -720 -21 432 ) ( -720 -27 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -720 -27 480 ) ( -720 -21 480 ) ( -699 -21 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -720 -27 480 ) ( -699 -27 480 ) ( -699 -27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -699 -27 480 ) ( -699 -21 480 ) ( -699 -21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -699 -21 480 ) ( -720 -21 480 ) ( -720 -21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -720 -21 480 ) ( -720 -27 480 ) ( -720 -27 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -624 -21 432 ) ( -645 -21 432 ) ( -645 -27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -645 -27 480 ) ( -645 -21 480 ) ( -624 -21 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -645 -27 480 ) ( -624 -27 480 ) ( -624 -27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -624 -27 480 ) ( -624 -21 480 ) ( -624 -21 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -624 -21 480 ) ( -645 -21 480 ) ( -645 -21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -645 -21 480 ) ( -645 -27 480 ) ( -645 -27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -651 -21 432 ) ( -672 -21 432 ) ( -672 -27 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -672 -27 480 ) ( -672 -21 480 ) ( -651 -21 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -672 -27 480 ) ( -651 -27 480 ) ( -651 -27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -651 -27 480 ) ( -651 -21 480 ) ( -651 -21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -651 -21 480 ) ( -672 -21 480 ) ( -672 -21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -672 -21 480 ) ( -672 -27 480 ) ( -672 -27 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -603 -21 432 ) ( -624 -21 432 ) ( -624 -27 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -624 -27 480 ) ( -624 -21 480 ) ( -603 -21 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -624 -27 480 ) ( -603 -27 480 ) ( -603 -27 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -603 -27 480 ) ( -603 -21 480 ) ( -603 -21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -603 -21 480 ) ( -624 -21 480 ) ( -624 -21 432 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -624 -21 480 ) ( -624 -27 480 ) ( -624 -27 432 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -576 -21 480 ) ( -597 -21 480 ) ( -597 -27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -597 -27 528 ) ( -597 -21 528 ) ( -576 -21 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -597 -27 528 ) ( -576 -27 528 ) ( -576 -27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -576 -27 528 ) ( -576 -21 528 ) ( -576 -21 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -576 -21 528 ) ( -597 -21 528 ) ( -597 -21 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -597 -21 528 ) ( -597 -27 528 ) ( -597 -27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -528 -21 480 ) ( -549 -21 480 ) ( -549 -27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -549 -27 528 ) ( -549 -21 528 ) ( -528 -21 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -549 -27 528 ) ( -528 -27 528 ) ( -528 -27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -528 -27 528 ) ( -528 -21 528 ) ( -528 -21 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -528 -21 528 ) ( -549 -21 528 ) ( -549 -21 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -549 -21 528 ) ( -549 -27 528 ) ( -549 -27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -555 -21 480 ) ( -576 -21 480 ) ( -576 -27 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -576 -27 528 ) ( -576 -21 528 ) ( -555 -21 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -576 -27 528 ) ( -555 -27 528 ) ( -555 -27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -555 -27 528 ) ( -555 -21 528 ) ( -555 -21 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -555 -21 528 ) ( -576 -21 528 ) ( -576 -21 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -576 -21 528 ) ( -576 -27 528 ) ( -576 -27 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -480 -21 480 ) ( -501 -21 480 ) ( -501 -27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -501 -27 528 ) ( -501 -21 528 ) ( -480 -21 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -501 -27 528 ) ( -480 -27 528 ) ( -480 -27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -480 -27 528 ) ( -480 -21 528 ) ( -480 -21 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -480 -21 528 ) ( -501 -21 528 ) ( -501 -21 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -501 -21 528 ) ( -501 -27 528 ) ( -501 -27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -507 -21 480 ) ( -528 -21 480 ) ( -528 -27 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -528 -27 528 ) ( -528 -21 528 ) ( -507 -21 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -528 -27 528 ) ( -507 -27 528 ) ( -507 -27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -507 -27 528 ) ( -507 -21 528 ) ( -507 -21 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -507 -21 528 ) ( -528 -21 528 ) ( -528 -21 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -528 -21 528 ) ( -528 -27 528 ) ( -528 -27 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -459 -21 480 ) ( -480 -21 480 ) ( -480 -27 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -480 -27 528 ) ( -480 -21 528 ) ( -459 -21 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -480 -27 528 ) ( -459 -27 528 ) ( -459 -27 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -459 -27 528 ) ( -459 -21 528 ) ( -459 -21 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -459 -21 528 ) ( -480 -21 528 ) ( -480 -21 480 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -480 -21 528 ) ( -480 -27 528 ) ( -480 -27 480 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -432 -21 528 ) ( -453 -21 528 ) ( -453 -27 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -453 -27 576 ) ( -453 -21 576 ) ( -432 -21 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -453 -27 576 ) ( -432 -27 576 ) ( -432 -27 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -432 -27 576 ) ( -432 -21 576 ) ( -432 -21 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -432 -21 576 ) ( -453 -21 576 ) ( -453 -21 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -453 -21 576 ) ( -453 -27 576 ) ( -453 -27 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -384 -21 528 ) ( -405 -21 528 ) ( -405 -27 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -405 -27 576 ) ( -405 -21 576 ) ( -384 -21 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -405 -27 576 ) ( -384 -27 576 ) ( -384 -27 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -384 -27 576 ) ( -384 -21 576 ) ( -384 -21 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -384 -21 576 ) ( -405 -21 576 ) ( -405 -21 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -405 -21 576 ) ( -405 -27 576 ) ( -405 -27 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -411 -21 528 ) ( -432 -21 528 ) ( -432 -27 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -432 -27 576 ) ( -432 -21 576 ) ( -411 -21 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -432 -27 576 ) ( -411 -27 576 ) ( -411 -27 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -411 -27 576 ) ( -411 -21 576 ) ( -411 -21 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -411 -21 576 ) ( -432 -21 576 ) ( -432 -21 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -432 -21 576 ) ( -432 -27 576 ) ( -432 -27 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -357 -27 528 ) ( -363 -27 528 ) ( -363 -48 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -363 -48 576 ) ( -363 -27 576 ) ( -357 -27 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -363 -48 576 ) ( -357 -48 576 ) ( -357 -48 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -357 -48 576 ) ( -357 -27 576 ) ( -357 -27 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -357 -27 576 ) ( -363 -27 576 ) ( -363 -27 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -363 -27 576 ) ( -363 -48 576 ) ( -363 -48 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -363 -21 528 ) ( -384 -21 528 ) ( -384 -27 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -384 -27 576 ) ( -384 -21 576 ) ( -363 -21 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -384 -27 576 ) ( -363 -27 576 ) ( -363 -27 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -363 -27 576 ) ( -363 -21 576 ) ( -363 -21 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -363 -21 576 ) ( -384 -21 576 ) ( -384 -21 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -384 -21 576 ) ( -384 -27 576 ) ( -384 -27 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -357 -48 528 ) ( -363 -48 528 ) ( -363 -69 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -363 -69 576 ) ( -363 -48 576 ) ( -357 -48 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -363 -69 576 ) ( -357 -69 576 ) ( -357 -69 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -357 -69 576 ) ( -357 -48 576 ) ( -357 -48 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -357 -48 576 ) ( -363 -48 576 ) ( -363 -48 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -363 -48 576 ) ( -363 -69 576 ) ( -363 -69 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -336 -69 528 ) ( -357 -69 528 ) ( -357 -75 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -357 -75 576 ) ( -357 -69 576 ) ( -336 -69 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -357 -75 576 ) ( -336 -75 576 ) ( -336 -75 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -336 -75 576 ) ( -336 -69 576 ) ( -336 -69 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -336 -69 576 ) ( -357 -69 576 ) ( -357 -69 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -357 -69 576 ) ( -357 -75 576 ) ( -357 -75 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -288 -69 528 ) ( -309 -69 528 ) ( -309 -75 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -309 -75 576 ) ( -309 -69 576 ) ( -288 -69 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -309 -75 576 ) ( -288 -75 576 ) ( -288 -75 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -288 -75 576 ) ( -288 -69 576 ) ( -288 -69 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -288 -69 576 ) ( -309 -69 576 ) ( -309 -69 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -309 -69 576 ) ( -309 -75 576 ) ( -309 -75 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -315 -69 528 ) ( -336 -69 528 ) ( -336 -75 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -336 -75 576 ) ( -336 -69 576 ) ( -315 -69 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -336 -75 576 ) ( -315 -75 576 ) ( -315 -75 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -315 -75 576 ) ( -315 -69 576 ) ( -315 -69 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -315 -69 576 ) ( -336 -69 576 ) ( -336 -69 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -336 -69 576 ) ( -336 -75 576 ) ( -336 -75 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -240 -69 528 ) ( -261 -69 528 ) ( -261 -75 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -261 -75 576 ) ( -261 -69 576 ) ( -240 -69 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -261 -75 576 ) ( -240 -75 576 ) ( -240 -75 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -240 -75 576 ) ( -240 -69 576 ) ( -240 -69 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -240 -69 576 ) ( -261 -69 576 ) ( -261 -69 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -261 -69 576 ) ( -261 -75 576 ) ( -261 -75 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -267 -69 528 ) ( -288 -69 528 ) ( -288 -75 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -288 -75 576 ) ( -288 -69 576 ) ( -267 -69 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -288 -75 576 ) ( -267 -75 576 ) ( -267 -75 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -267 -75 576 ) ( -267 -69 576 ) ( -267 -69 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -267 -69 576 ) ( -288 -69 576 ) ( -288 -69 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -288 -69 576 ) ( -288 -75 576 ) ( -288 -75 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -219 -69 528 ) ( -240 -69 528 ) ( -240 -75 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -240 -75 576 ) ( -240 -69 576 ) ( -219 -69 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -240 -75 576 ) ( -219 -75 576 ) ( -219 -75 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -219 -75 576 ) ( -219 -69 576 ) ( -219 -69 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -219 -69 576 ) ( -240 -69 576 ) ( -240 -69 528 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -240 -69 576 ) ( -240 -75 576 ) ( -240 -75 528 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
 ( -144 -288 552 ) ( -192 -288 552 ) ( -192 -336 552 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( -192 -336 576 ) ( -192 -288 576 ) ( -144 -288 576 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( -192 -336 576 ) ( -144 -336 576 ) ( -144 -336 552 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -61493,94 +60230,6 @@
 ( -48 -384 552 ) ( -48 -336 552 ) ( -48 -336 528 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( -48 -336 552 ) ( -96 -336 552 ) ( -96 -336 528 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( -96 -336 552 ) ( -96 -384 552 ) ( -96 -384 528 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -192 -69 576 ) ( -213 -69 576 ) ( -213 -75 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -213 -75 624 ) ( -213 -69 624 ) ( -192 -69 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -213 -75 624 ) ( -192 -75 624 ) ( -192 -75 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -192 -75 624 ) ( -192 -69 624 ) ( -192 -69 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -192 -69 624 ) ( -213 -69 624 ) ( -213 -69 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -213 -69 624 ) ( -213 -75 624 ) ( -213 -75 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -144 -69 576 ) ( -165 -69 576 ) ( -165 -75 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -165 -75 624 ) ( -165 -69 624 ) ( -144 -69 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -165 -75 624 ) ( -144 -75 624 ) ( -144 -75 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -144 -75 624 ) ( -144 -69 624 ) ( -144 -69 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -144 -69 624 ) ( -165 -69 624 ) ( -165 -69 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -165 -69 624 ) ( -165 -75 624 ) ( -165 -75 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -171 -69 576 ) ( -192 -69 576 ) ( -192 -75 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -192 -75 624 ) ( -192 -69 624 ) ( -171 -69 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -192 -75 624 ) ( -171 -75 624 ) ( -171 -75 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -171 -75 624 ) ( -171 -69 624 ) ( -171 -69 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -171 -69 624 ) ( -192 -69 624 ) ( -192 -69 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -192 -69 624 ) ( -192 -75 624 ) ( -192 -75 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -117 -75 576 ) ( -123 -75 576 ) ( -123 -96 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -123 -96 624 ) ( -123 -75 624 ) ( -117 -75 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -123 -96 624 ) ( -117 -96 624 ) ( -117 -96 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -117 -96 624 ) ( -117 -75 624 ) ( -117 -75 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -117 -75 624 ) ( -123 -75 624 ) ( -123 -75 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -123 -75 624 ) ( -123 -96 624 ) ( -123 -96 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -123 -69 576 ) ( -144 -69 576 ) ( -144 -75 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -144 -75 624 ) ( -144 -69 624 ) ( -123 -69 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -144 -75 624 ) ( -123 -75 624 ) ( -123 -75 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -123 -75 624 ) ( -123 -69 624 ) ( -123 -69 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -123 -69 624 ) ( -144 -69 624 ) ( -144 -69 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -144 -69 624 ) ( -144 -75 624 ) ( -144 -75 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -117 -96 576 ) ( -123 -96 576 ) ( -123 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -123 -117 624 ) ( -123 -96 624 ) ( -117 -96 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -123 -117 624 ) ( -117 -117 624 ) ( -117 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -117 -117 624 ) ( -117 -96 624 ) ( -117 -96 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -117 -96 624 ) ( -123 -96 624 ) ( -123 -96 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -123 -96 624 ) ( -123 -117 624 ) ( -123 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -96 -117 576 ) ( -117 -117 576 ) ( -117 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -117 -123 624 ) ( -117 -117 624 ) ( -96 -117 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -117 -123 624 ) ( -96 -123 624 ) ( -96 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -96 -123 624 ) ( -96 -117 624 ) ( -96 -117 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -96 -117 624 ) ( -117 -117 624 ) ( -117 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -117 -117 624 ) ( -117 -123 624 ) ( -117 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -48 -117 576 ) ( -69 -117 576 ) ( -69 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -69 -123 624 ) ( -69 -117 624 ) ( -48 -117 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -69 -123 624 ) ( -48 -123 624 ) ( -48 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -48 -123 624 ) ( -48 -117 624 ) ( -48 -117 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -48 -117 624 ) ( -69 -117 624 ) ( -69 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -69 -117 624 ) ( -69 -123 624 ) ( -69 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -75 -117 576 ) ( -96 -117 576 ) ( -96 -123 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -96 -123 624 ) ( -96 -117 624 ) ( -75 -117 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -96 -123 624 ) ( -75 -123 624 ) ( -75 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -75 -123 624 ) ( -75 -117 624 ) ( -75 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -75 -117 624 ) ( -96 -117 624 ) ( -96 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -96 -117 624 ) ( -96 -123 624 ) ( -96 -123 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 0 -117 576 ) ( -21 -117 576 ) ( -21 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -21 -123 624 ) ( -21 -117 624 ) ( 0 -117 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -21 -123 624 ) ( 0 -123 624 ) ( 0 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 0 -123 624 ) ( 0 -117 624 ) ( 0 -117 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 0 -117 624 ) ( -21 -117 624 ) ( -21 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -21 -117 624 ) ( -21 -123 624 ) ( -21 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( -27 -117 576 ) ( -48 -117 576 ) ( -48 -123 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -48 -123 624 ) ( -48 -117 624 ) ( -27 -117 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( -48 -123 624 ) ( -27 -123 624 ) ( -27 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -27 -123 624 ) ( -27 -117 624 ) ( -27 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -27 -117 624 ) ( -48 -117 624 ) ( -48 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( -48 -117 624 ) ( -48 -123 624 ) ( -48 -123 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
 }
 {
 ( -96 -240 600 ) ( -144 -240 600 ) ( -144 -288 600 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -61901,30 +60550,6 @@
 ( 336 192 576 ) ( 336 240 576 ) ( 336 240 552 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 336 240 576 ) ( 288 240 576 ) ( 288 240 552 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
 ( 288 240 576 ) ( 288 192 576 ) ( 288 192 552 ) world/minecraft_ports/glitch/crimson_planks 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 48 -117 576 ) ( 27 -117 576 ) ( 27 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 27 -123 624 ) ( 27 -117 624 ) ( 48 -117 624 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 27 -123 624 ) ( 48 -123 624 ) ( 48 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 48 -123 624 ) ( 48 -117 624 ) ( 48 -117 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 48 -117 624 ) ( 27 -117 624 ) ( 27 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 27 -117 624 ) ( 27 -123 624 ) ( 27 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 21 -117 576 ) ( 0 -117 576 ) ( 0 -123 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 0 -123 624 ) ( 0 -117 624 ) ( 21 -117 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 0 -123 624 ) ( 21 -123 624 ) ( 21 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 21 -123 624 ) ( 21 -117 624 ) ( 21 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 21 -117 624 ) ( 0 -117 624 ) ( 0 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 0 -117 624 ) ( 0 -123 624 ) ( 0 -123 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-}
-{
-( 69 -117 576 ) ( 48 -117 576 ) ( 48 -123 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 48 -123 624 ) ( 48 -117 624 ) ( 69 -117 624 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
-( 48 -123 624 ) ( 69 -123 624 ) ( 69 -123 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 69 -123 624 ) ( 69 -117 624 ) ( 69 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 69 -117 624 ) ( 48 -117 624 ) ( 48 -117 576 ) world/minecraft_ports/glitch/_nodraw 0 0 0 0.1875 0.1875 0 0 0
-( 48 -117 624 ) ( 48 -123 624 ) ( 48 -123 576 ) world/minecraft_ports/glitch/iron_bars 0 0 0 0.1875 0.1875 0 0 0
 }
 {
 ( 144 -96 600 ) ( 96 -96 600 ) ( 96 -144 600 ) world/minecraft_ports/glitch/acacia_planks 0 0 0 0.1875 0.1875 0 0 0
@@ -69000,102 +67625,334 @@ world/minecraft_ports/glitch/_sky
 "lightEnvironmentIndex" "1"
 }
 {
+"Zipline" "1"
+"RopeMaterial" "cable/zipline.vmt"
+"ZiplineSagEnable" "0"
+"ZiplineSagHeight" "50"
+"ZiplineMoveSpeedScale" "1"
+"ZiplineAutoDetachDistance" "200"
+"Width" "2"
+"Slack" "25"
+"Subdiv" "2"
+"MoveSpeed" "64"
+"TextureScale" "1"
+"PositionInterpolator" "2"
+"spawnflags" "1"
+"Type" "0"
+"UseWind" "0"
+"Dangling" "0"
+"Collide" "0"
+"Breakable" "0"
+"Barbed" "0"
+"disableX360" "0"
+"mingpulevel" "0"
+"mincpulevel" "0"
+"maxgpulevel" "0"
+"maxcpulevel" "0"
+"classname" "move_rope"
+"origin" "24 -648 552"
+"targetname" "zipline_0"
+}
+{
+"Zipline" "1"
+"RopeMaterial" "cable/zipline.vmt"
+"ZiplineSagEnable" "0"
+"ZiplineSagHeight" "50"
+"ZiplineMoveSpeedScale" "1"
+"ZiplineAutoDetachDistance" "200"
+"Width" "2"
+"Slack" "25"
+"Subdiv" "2"
+"MoveSpeed" "64"
+"TextureScale" "1"
+"PositionInterpolator" "2"
+"spawnflags" "1"
+"Type" "0"
+"UseWind" "0"
+"Dangling" "0"
+"Collide" "0"
+"Breakable" "0"
+"Barbed" "0"
+"disableX360" "0"
+"mingpulevel" "0"
+"mincpulevel" "0"
+"maxgpulevel" "0"
+"maxcpulevel" "0"
+"classname" "move_rope"
+"origin" "-936 -696 312"
+"NextKey" "zipline_0"
+}
+{
+"Zipline" "1"
+"RopeMaterial" "cable/zipline.vmt"
+"ZiplineSagEnable" "0"
+"ZiplineSagHeight" "50"
+"ZiplineMoveSpeedScale" "1"
+"ZiplineAutoDetachDistance" "200"
+"Width" "2"
+"Slack" "25"
+"Subdiv" "2"
+"MoveSpeed" "64"
+"TextureScale" "1"
+"PositionInterpolator" "2"
+"spawnflags" "1"
+"Type" "0"
+"UseWind" "0"
+"Dangling" "0"
+"Collide" "0"
+"Breakable" "0"
+"Barbed" "0"
+"disableX360" "0"
+"mingpulevel" "0"
+"mincpulevel" "0"
+"maxgpulevel" "0"
+"maxcpulevel" "0"
+"classname" "move_rope"
+"origin" "72 -120 600"
+"targetname" "zipline_1"
+}
+{
+"Zipline" "1"
+"RopeMaterial" "cable/zipline.vmt"
+"ZiplineSagEnable" "0"
+"ZiplineSagHeight" "50"
+"ZiplineMoveSpeedScale" "1"
+"ZiplineAutoDetachDistance" "200"
+"Width" "2"
+"Slack" "25"
+"Subdiv" "2"
+"MoveSpeed" "64"
+"TextureScale" "1"
+"PositionInterpolator" "2"
+"spawnflags" "1"
+"Type" "0"
+"UseWind" "0"
+"Dangling" "0"
+"Collide" "0"
+"Breakable" "0"
+"Barbed" "0"
+"disableX360" "0"
+"mingpulevel" "0"
+"mincpulevel" "0"
+"maxgpulevel" "0"
+"maxcpulevel" "0"
+"classname" "move_rope"
+"origin" "-840 24 408"
+"NextKey" "zipline_1"
+}
+{
+"Zipline" "1"
+"RopeMaterial" "cable/zipline.vmt"
+"ZiplineSagEnable" "0"
+"ZiplineSagHeight" "50"
+"ZiplineMoveSpeedScale" "1"
+"ZiplineAutoDetachDistance" "200"
+"Width" "2"
+"Slack" "25"
+"Subdiv" "2"
+"MoveSpeed" "64"
+"TextureScale" "1"
+"PositionInterpolator" "2"
+"spawnflags" "1"
+"Type" "0"
+"UseWind" "0"
+"Dangling" "0"
+"Collide" "0"
+"Breakable" "0"
+"Barbed" "0"
+"disableX360" "0"
+"mingpulevel" "0"
+"mincpulevel" "0"
+"maxgpulevel" "0"
+"maxcpulevel" "0"
+"classname" "move_rope"
+"origin" "4584 696 408"
+"targetname" "zipline_2"
+}
+{
+"Zipline" "1"
+"RopeMaterial" "cable/zipline.vmt"
+"ZiplineSagEnable" "0"
+"ZiplineSagHeight" "50"
+"ZiplineMoveSpeedScale" "1"
+"ZiplineAutoDetachDistance" "200"
+"Width" "2"
+"Slack" "25"
+"Subdiv" "2"
+"MoveSpeed" "64"
+"TextureScale" "1"
+"PositionInterpolator" "2"
+"spawnflags" "1"
+"Type" "0"
+"UseWind" "0"
+"Dangling" "0"
+"Collide" "0"
+"Breakable" "0"
+"Barbed" "0"
+"disableX360" "0"
+"mingpulevel" "0"
+"mincpulevel" "0"
+"maxgpulevel" "0"
+"maxcpulevel" "0"
+"classname" "move_rope"
+"origin" "3672 840 600"
+"NextKey" "zipline_2"
+}
+{
+"Zipline" "1"
+"RopeMaterial" "cable/zipline.vmt"
+"ZiplineSagEnable" "0"
+"ZiplineSagHeight" "50"
+"ZiplineMoveSpeedScale" "1"
+"ZiplineAutoDetachDistance" "200"
+"Width" "2"
+"Slack" "25"
+"Subdiv" "2"
+"MoveSpeed" "64"
+"TextureScale" "1"
+"PositionInterpolator" "2"
+"spawnflags" "1"
+"Type" "0"
+"UseWind" "0"
+"Dangling" "0"
+"Collide" "0"
+"Breakable" "0"
+"Barbed" "0"
+"disableX360" "0"
+"mingpulevel" "0"
+"mincpulevel" "0"
+"maxgpulevel" "0"
+"maxcpulevel" "0"
+"classname" "move_rope"
+"origin" "4680 1416 312"
+"targetname" "zipline_3"
+}
+{
+"Zipline" "1"
+"RopeMaterial" "cable/zipline.vmt"
+"ZiplineSagEnable" "0"
+"ZiplineSagHeight" "50"
+"ZiplineMoveSpeedScale" "1"
+"ZiplineAutoDetachDistance" "200"
+"Width" "2"
+"Slack" "25"
+"Subdiv" "2"
+"MoveSpeed" "64"
+"TextureScale" "1"
+"PositionInterpolator" "2"
+"spawnflags" "1"
+"Type" "0"
+"UseWind" "0"
+"Dangling" "0"
+"Collide" "0"
+"Breakable" "0"
+"Barbed" "0"
+"disableX360" "0"
+"mingpulevel" "0"
+"mincpulevel" "0"
+"maxgpulevel" "0"
+"maxcpulevel" "0"
+"classname" "move_rope"
+"origin" "3720 1368 552"
+"NextKey" "zipline_3"
+}
+{
 "classname" "info_spawnpoint_human"
-"origin" "-1032 -984 50"
-"angles" "0 0 0"
+"origin" "-792 -840 50"
+"angles" "0 16 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "-1032 -984 50"
-"angles" "0 0 0"
+"origin" "-792 -840 50"
+"angles" "0 16 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "-840 -840 50"
-"angles" "0 0 0"
+"origin" "-792 -696 50"
+"angles" "0 13 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "-840 -840 50"
-"angles" "0 0 0"
+"origin" "-792 -696 50"
+"angles" "0 13 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "-1176 -984 50"
-"angles" "0 0 0"
+"origin" "-696 -984 50"
+"angles" "0 20 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "-1176 -984 50"
-"angles" "0 0 0"
+"origin" "-696 -984 50"
+"angles" "0 20 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "-840 -696 50"
-"angles" "0 0 0"
+"origin" "-648 -840 50"
+"angles" "0 17 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "-840 -696 50"
-"angles" "0 0 0"
+"origin" "-648 -840 50"
+"angles" "0 17 0"
 "teamnum" "2"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "3816 360 50"
-"angles" "0 180 0"
+"origin" "3864 312 50"
+"angles" "0 -168 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "3816 360 50"
-"angles" "0 180 0"
+"origin" "3864 312 50"
+"angles" "0 -168 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "3816 216 50"
-"angles" "0 180 0"
+"origin" "3960 456 50"
+"angles" "0 -165 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "3816 216 50"
-"angles" "0 180 0"
+"origin" "3960 456 50"
+"angles" "0 -165 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "3960 360 50"
-"angles" "0 180 0"
+"origin" "3864 168 50"
+"angles" "0 -171 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "3960 360 50"
-"angles" "0 180 0"
+"origin" "3864 168 50"
+"angles" "0 -171 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human"
-"origin" "3864 504 50"
-"angles" "0 180 0"
+"origin" "4008 120 50"
+"angles" "0 -173 0"
 "teamnum" "3"
 }
 {
 "classname" "info_spawnpoint_human_start"
-"origin" "3864 504 50"
-"angles" "0 180 0"
+"origin" "4008 120 50"
+"angles" "0 -173 0"
 "teamnum" "3"
 }
 {
 "classname" "info_player_start"
-"origin" "-1032.0 -984.0 50"
+"origin" "-792.0 -840.0 50"
 }

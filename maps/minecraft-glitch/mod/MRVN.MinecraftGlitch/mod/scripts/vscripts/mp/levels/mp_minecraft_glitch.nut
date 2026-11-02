@@ -12,7 +12,7 @@ void function KillFallenPilots()
  {
   foreach ( entity player in GetPlayerArray() )
   {
-   if ( IsAlive( player ) && player.GetOrigin().z < -1248.0 )
+   if ( IsAlive( player ) && player.GetOrigin().z < -192.0 )
     player.TakeDamage( 10000, null, null, { damageSourceId = eDamageSourceId.fall } )
   }
   wait 0.1

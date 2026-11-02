@@ -105,11 +105,6 @@ textures/world/minecraft_ports/glitch/gray_stained_glass
  $shadertype LitBumpGeneric
 }
 
-textures/world/minecraft_ports/glitch/iron_bars
-{
- $shadertype LitBumpGeneric
-}
-
 textures/world/minecraft_ports/glitch/moss_block
 {
  $shadertype LitBumpGeneric

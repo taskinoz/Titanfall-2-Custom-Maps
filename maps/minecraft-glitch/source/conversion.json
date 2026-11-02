@@ -10,11 +10,9 @@
   ],
   "selected_blocks": 44811,
   "merged_full_cubes": 38964,
-  "brushes": 8169,
-  "textures": 36,
-  "omitted_model_types": {
-    "iron_bars": 54
-  },
+  "brushes": 7997,
+  "textures": 35,
+  "omitted_model_types": {},
   "approximated_rotated_types": {},
   "engine_verified": false,
   "input_sha256": "55655ecbdc1cb60dacd966556ca08795215040b7cc27c3073a13cc70a315aa14",
