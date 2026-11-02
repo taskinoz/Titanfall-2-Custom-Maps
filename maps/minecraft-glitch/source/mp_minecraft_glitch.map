@@ -67111,20 +67111,20 @@ world/minecraft_ports/glitch/_sky
 ( -2064 2064 18000 ) ( -2064 -2064 18000 ) ( -2064 -2064 17998 ) world/minecraft_ports/glitch/grass_block_top 0 0 0 0.1875 0.1875 0 0 0
 }
 {
-( 360 480 18000 ) ( -360 480 18000 ) ( -360 96 18000 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
-( -360 96 18048 ) ( -360 480 18048 ) ( 360 480 18048 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
-( -360 96 18048 ) ( 360 96 18048 ) ( 360 96 18000 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
-( 360 96 18048 ) ( 360 480 18048 ) ( 360 480 18000 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
-( 360 480 18048 ) ( -360 480 18048 ) ( -360 480 18000 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
-( -360 480 18048 ) ( -360 96 18048 ) ( -360 96 18000 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
+( 480 960 18000 ) ( -480 960 18000 ) ( -480 576 18000 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
+( -480 576 18096 ) ( -480 960 18096 ) ( 480 960 18096 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
+( -480 576 18096 ) ( 480 576 18096 ) ( 480 576 18000 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
+( 480 576 18096 ) ( 480 960 18096 ) ( 480 960 18000 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
+( 480 960 18096 ) ( -480 960 18096 ) ( -480 960 18000 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
+( -480 960 18096 ) ( -480 576 18096 ) ( -480 576 18000 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
 }
 {
-( 240 432 18048 ) ( -240 432 18048 ) ( -240 144 18048 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
-( -240 144 18096 ) ( -240 432 18096 ) ( 240 432 18096 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
-( -240 144 18096 ) ( 240 144 18096 ) ( 240 144 18048 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
-( 240 144 18096 ) ( 240 432 18096 ) ( 240 432 18048 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
-( 240 432 18096 ) ( -240 432 18096 ) ( -240 432 18048 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
-( -240 432 18096 ) ( -240 144 18096 ) ( -240 144 18048 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
+( 360 912 18096 ) ( -360 912 18096 ) ( -360 624 18096 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
+( -360 624 18192 ) ( -360 912 18192 ) ( 360 912 18192 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
+( -360 624 18192 ) ( 360 624 18192 ) ( 360 624 18096 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
+( 360 624 18192 ) ( 360 912 18192 ) ( 360 912 18096 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
+( 360 912 18192 ) ( -360 912 18192 ) ( -360 912 18096 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
+( -360 912 18192 ) ( -360 624 18192 ) ( -360 624 18096 ) world/minecraft_ports/glitch/stone_bricks 0 0 0 0.1875 0.1875 0 0 0
 }
 {
 ( -626 374 18000 ) ( -674 374 18000 ) ( -674 326 18000 ) world/minecraft_ports/glitch/oak_log 0 0 0 0.1875 0.1875 0 0 0
