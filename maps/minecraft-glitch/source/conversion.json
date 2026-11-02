@@ -1,0 +1,23 @@
+{
+  "level": "mp_minecraft_glitch",
+  "author": "Oblivering",
+  "source": "https://www.planetminecraft.com/project/glitch-titanfall-2/",
+  "scale": 48,
+  "anchor_minecraft": [
+    64,
+    199,
+    -8
+  ],
+  "selected_blocks": 44811,
+  "merged_full_cubes": 38964,
+  "brushes": 8169,
+  "textures": 31,
+  "omitted_model_types": {
+    "iron_bars": 54
+  },
+  "approximated_rotated_types": {},
+  "engine_verified": true,
+  "input_sha256": "55655ecbdc1cb60dacd966556ca08795215040b7cc27c3073a13cc70a315aa14",
+  "verification_scope": "Local load, render inspection, eight pilot spawn hulls, both team start-spawn selection; not full gameplay validation",
+  "bsp_sha256": "9adc8c0c2cf185ccf612b24849269d2573ca5a59e5f5381878b3573ee6e48970"
+}

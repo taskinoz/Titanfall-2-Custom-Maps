@@ -1,0 +1,13 @@
+{
+  "Name": "MRVN.MinecraftGlitch",
+  "Version": "0.1.0",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Glitch Minecraft port. Original Minecraft build by Oblivering",
+  "Scripts": [
+    {
+      "Path": "mp/levels/mp_minecraft_glitch.nut",
+      "RunOn": "SERVER && MP && MAP_mp_minecraft_glitch"
+    }
+  ]
+}
