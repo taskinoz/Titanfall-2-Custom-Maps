@@ -1,5 +1,9 @@
 # Glitch (Minecraft) changelog
 
+## 0.5.0 (2026-11-02)
+
+Fewer, larger world meshes fix sections vanishing at wide fields of view, 96 placed torches with baked lights, map names on the loading screen and menus, an invisible roof and walls around the build, UMA's barrier blocks and glass roof become clip.
+
 ## 0.4.3 (2026-11-02)
 
 Fixed-pattern sky occlusion removes spotty shadows, in-game loading screens, Glitch's pit kills at Z -192, Glitch's iron-bar lines become native ziplines, spawns need a clear area and face the middle.

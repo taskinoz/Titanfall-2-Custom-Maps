@@ -1,4 +1,4 @@
-# Glitch Minecraft to Titanfall 2 test port
+# Glitch (Minecraft): Minecraft to Titanfall 2 test port
 
 Original Minecraft map: Oblivering, https://www.planetminecraft.com/project/glitch-titanfall-2/
 Original game: Respawn Entertainment. Minecraft assets: Mojang/Microsoft.
@@ -9,13 +9,11 @@ Extract MRVN.MinecraftGlitch into R2Northstar/mods. In a local Northstar session
 
 This is an experimental pilot-only geometry port. No navmesh, Titans, AI,
 objective placements, Minecraft commands/redstone, or moving mechanisms.
-Glitch's author lists the Minecraft source as 55% complete.
 48 Source units per block. Shape boxes follow Java blockstate/model variants;
 rotated subelements use unrotated bounds. Plants, signs and zero-thickness
 elements are omitted. Glass/leaf alpha is composited onto opaque backing.
 Animated textures use their first frame. Per-face model UV rotations and
 subrectangle UVs are approximated by world-aligned 48-unit tiling.
-UMA's upper white-glass containment shell becomes sky.
 Safe spawn sites are selected on the primary floor. Runtime behavior still
 requires in-game verification; a successful compile is not proof of playability.
 

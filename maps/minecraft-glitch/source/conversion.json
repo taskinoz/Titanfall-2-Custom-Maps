@@ -10,8 +10,8 @@
   ],
   "selected_blocks": 44811,
   "merged_full_cubes": 38964,
-  "brushes": 7997,
-  "textures": 35,
+  "brushes": 8189,
+  "textures": 38,
   "omitted_model_types": {},
   "approximated_rotated_types": {},
   "engine_verified": false,
@@ -23,5 +23,19 @@
     180,
     225,
     48
-  ]
+  ],
+  "spawn_areas_minecraft": [
+    [
+      42,
+      9
+    ],
+    [
+      143,
+      -16
+    ]
+  ],
+  "world_meshes": 376,
+  "mesh_cluster": 3072,
+  "torches": 96,
+  "kill_z": -192
 }

@@ -1,3 +1,9 @@
+textures/world/minecraft_ports/glitch/_clip
+{
+ $compileflag nodraw
+ $contentflag playerclip
+}
+
 textures/world/minecraft_ports/glitch/_nodraw
 {
  $compileflag nodraw
@@ -13,6 +19,18 @@ textures/world/minecraft_ports/glitch/_sky_void
 {
  $shadertype LitBumpGeneric
  $compileflag sky
+}
+
+textures/world/minecraft_ports/glitch/_torch_flame
+{
+ $shadertype LitBumpGeneric
+ $contentflag nonsolid
+}
+
+textures/world/minecraft_ports/glitch/_torch_stick
+{
+ $shadertype LitBumpGeneric
+ $contentflag nonsolid
 }
 
 textures/world/minecraft_ports/glitch/acacia_planks
