@@ -9,9 +9,9 @@
     0
   ],
   "selected_blocks": 47400,
-  "merged_full_cubes": 39270,
-  "brushes": 18110,
-  "textures": 125,
+  "merged_full_cubes": 29767,
+  "brushes": 18009,
+  "textures": 128,
   "omitted_model_types": {
     "white_wall_banner": 4,
     "iron_bars": 113,
@@ -32,8 +32,14 @@
   "approximated_rotated_types": {
     "lever": 6
   },
-  "engine_verified": true,
+  "engine_verified": false,
   "input_sha256": "98638425baf8236df0f63a7a83e7f010c95ddbb6c4df52c91db7219281e3b49f",
-  "verification_scope": "Local load, render inspection, eight pilot spawn hulls, both team start-spawn selection; not full gameplay validation",
-  "bsp_sha256": "4faf8329046e0d314840c0b2bc3c3bb0bd38a36046d0e64a840295bf6f09b941"
+  "selection_bounds_minecraft": [
+    -144,
+    16,
+    -64,
+    32,
+    75,
+    56
+  ]
 }

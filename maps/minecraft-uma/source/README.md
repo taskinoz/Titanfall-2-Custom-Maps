@@ -16,12 +16,9 @@ elements are omitted. Glass/leaf alpha is composited onto opaque backing.
 Animated textures use their first frame. Per-face model UV rotations and
 subrectangle UVs are approximated by world-aligned 48-unit tiling.
 UMA's upper white-glass containment shell becomes sky.
-Safe spawn sites are selected on the primary floor. Both maps loaded and rendered in Northstar. All eight pilot spawn hulls and
-both team spawn selections passed. Full traversal and multiplayer testing remain.
+Safe spawn sites are selected on the primary floor. Runtime behavior still
+requires in-game verification; a successful compile is not proof of playability.
 
 Editable source: mp_minecraft_uma.map and assets/ in the adjacent source ZIP.
 Use this output directory as the editor/compiler basepath.
 Third-party game assets are for local use; no redistribution license is granted.
-
-Compiler visibility count overflow was corrected before packaging. See
-RESPAWN_MINECRAFT_PORTS.md for build and verification details.
