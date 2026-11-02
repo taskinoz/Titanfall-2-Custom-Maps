@@ -1,6 +1,6 @@
 {
   "Name": "MRVN.MinecraftUma",
-  "Version": "0.5.0",
+  "Version": "0.5.1",
   "LoadPriority": 200,
   "RequiredOnClient": true,
   "Description": "UMA (Minecraft). Original Minecraft build by BirthdayTrain",
