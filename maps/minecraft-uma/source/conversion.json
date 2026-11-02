@@ -10,8 +10,8 @@
   ],
   "selected_blocks": 47400,
   "merged_full_cubes": 29767,
-  "brushes": 18009,
-  "textures": 128,
+  "brushes": 18201,
+  "textures": 131,
   "omitted_model_types": {
     "white_wall_banner": 4,
     "iron_bars": 113,
@@ -41,5 +41,19 @@
     32,
     75,
     56
-  ]
+  ],
+  "spawn_areas_minecraft": [
+    [
+      -100,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "world_meshes": 960,
+  "mesh_cluster": 3072,
+  "torches": 96,
+  "kill_z": -960
 }

@@ -1,9 +1,12 @@
 {
   "Name": "MRVN.MinecraftUma",
-  "Version": "0.4.3",
+  "Version": "0.5.0",
   "LoadPriority": 200,
   "RequiredOnClient": true,
-  "Description": "Uma Minecraft port. Original Minecraft build by BirthdayTrain",
+  "Description": "UMA (Minecraft). Original Minecraft build by BirthdayTrain",
+  "Localisation": [
+    "resource/mp_minecraft_uma_%language%.txt"
+  ],
   "Scripts": [
     {
       "Path": "mp/levels/mp_minecraft_uma.nut",
