@@ -1,5 +1,9 @@
 # Glitch (Minecraft) changelog
 
+## 0.5.1 (2026-11-02)
+
+Glitch: fills the hole in the world's terrain at the south-west corner and restores the cut-off northern edge. UMA: version bump only.
+
 ## 0.5.0 (2026-11-02)
 
 Fewer, larger world meshes fix sections vanishing at wide fields of view, 96 placed torches with baked lights, map names on the loading screen and menus, an invisible roof and walls around the build, UMA's barrier blocks and glass roof become clip.

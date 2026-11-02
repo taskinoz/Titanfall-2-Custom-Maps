@@ -8,18 +8,18 @@
     199,
     -8
   ],
-  "selected_blocks": 44811,
-  "merged_full_cubes": 38964,
-  "brushes": 8189,
+  "selected_blocks": 46148,
+  "merged_full_cubes": 40287,
+  "brushes": 8190,
   "textures": 38,
   "omitted_model_types": {},
   "approximated_rotated_types": {},
   "engine_verified": false,
-  "input_sha256": "55655ecbdc1cb60dacd966556ca08795215040b7cc27c3073a13cc70a315aa14",
+  "input_sha256": "eb878738863352dfb911944347de9c12ac208a9f6fa587a4a261088b63a5e246",
   "selection_bounds_minecraft": [
     -64,
     188,
-    -64,
+    -68,
     180,
     225,
     48
@@ -34,8 +34,8 @@
       -16
     ]
   ],
-  "world_meshes": 376,
+  "world_meshes": 343,
   "mesh_cluster": 3072,
-  "torches": 96,
+  "torches": 63,
   "kill_z": -192
 }
