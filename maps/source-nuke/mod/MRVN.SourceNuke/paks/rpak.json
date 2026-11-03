@@ -1,0 +1,9 @@
+{
+  "Aliases": {
+    "mp_source_nuke.rpak": "mp_coliseum.rpak",
+    "mp_source_nuke_loadscreen.rpak": "mp_coliseum_loadscreen.rpak"
+  },
+  "Postload": {
+    "source_nuke.rpak": "mp_coliseum.rpak"
+  }
+}

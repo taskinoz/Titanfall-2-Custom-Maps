@@ -1,0 +1,16 @@
+{
+  "Name": "MRVN.SourceNuke",
+  "Version": "0.1.0",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Nuke (CS2). Local test port of a Source engine map",
+  "Localisation": [
+    "resource/mp_source_nuke_%language%.txt"
+  ],
+  "Scripts": [
+    {
+      "Path": "mp/levels/mp_source_nuke.nut",
+      "RunOn": "SERVER && MP && MAP_mp_source_nuke"
+    }
+  ]
+}

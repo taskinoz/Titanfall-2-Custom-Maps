@@ -1,0 +1,42 @@
+{
+  "level": "mp_source_trainstation02",
+  "source": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Half-Life 2\\hl2\\maps\\d1_trainstation_02.bsp",
+  "input_sha256": "b22b26d506407363d92d04bc791b746272d2fe03ace0a331379dc0f285617307",
+  "brushes": 3205,
+  "displacements": 3,
+  "textures": 185,
+  "skipped": {
+    "3D skybox": 27,
+    "contents 0x8020000": 24,
+    "contents 0x8000080": 4,
+    "contents 0x0": 10,
+    "trigger_teleport": 4,
+    "trigger_multiple": 30,
+    "trigger_once": 19,
+    "func_breakable": 1,
+    "func_illusionary": 2,
+    "func_monitor": 12,
+    "func_button": 2,
+    "func_smokevolume": 1,
+    "trigger_transition": 1,
+    "trigger_changelevel": 3,
+    "func_clip_vphysics": 7,
+    "func_door": 10,
+    "cutout or translucent mesh": 66,
+    "3D skybox prop": 9
+  },
+  "invisible_glass": [
+    "maps/d1_trainstation_02/glass/glasswindow017a_-5519_-3453_316"
+  ],
+  "missing_materials": {},
+  "static_props": 299,
+  "prop_charts": 32187,
+  "prop_collision_brushes": 1312,
+  "world_meshes": 419,
+  "mesh_cluster": 3072,
+  "luxel_size": 16,
+  "lightmap_pages": 2,
+  "teleports": 4,
+  "kill_z": -542.0,
+  "engine_verified": false
+}

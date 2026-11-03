@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "minecraft-uma",
+    "mod": "MRVN.MinecraftUma",
+    "name": "Minecraft_UMA",
+    "title": "UMA (Minecraft)",
+    "version": "0.5.1",
+    "tag": "minecraft-uma-v0.5.1",
+    "asset": "MRVN.MinecraftUma-0.5.1.zip",
+    "bytes": 21498958,
+    "sha256": "e830b74a4ab0cb538715e76e20183ace3d23a58e4c86ecc806f11cdc2085a6f2",
+    "command": "map mp_minecraft_uma tdm",
+    "original_title": "UMA by BirthdayTrain on Planet Minecraft",
+    "original_url": "https://www.planetminecraft.com/project/ru-titanfall-2-uma/",
+    "description": "BirthdayTrain's Minecraft UMA converted back into a Titanfall 2 map. Pilot-only preview with baked lighting, torches, spawns and a loading screen."
+  },
+  {
+    "slug": "minecraft-glitch",
+    "mod": "MRVN.MinecraftGlitch",
+    "name": "Minecraft_Glitch",
+    "title": "Glitch (Minecraft)",
+    "version": "0.5.1",
+    "tag": "minecraft-glitch-v0.5.1",
+    "asset": "MRVN.MinecraftGlitch-0.5.1.zip",
+    "bytes": 16306948,
+    "sha256": "64a949ea7670e636657e5435adec0289199498e5b82918dae6232692d1de529a",
+    "command": "map mp_minecraft_glitch tdm",
+    "original_title": "Glitch by Oblivering on Planet Minecraft",
+    "original_url": "https://www.planetminecraft.com/project/glitch-titanfall-2/",
+    "description": "Oblivering's Minecraft Glitch converted back into a Titanfall 2 map. Pilot-only preview with ziplines, a death pit, baked lighting and a loading screen."
+  },
+  {
+    "slug": "quake-e1m1",
+    "mod": "MRVN.QuakeE1M1Test",
+    "name": "Quake_E1M1",
+    "title": "Quake E1M1",
+    "version": "0.4.0",
+    "tag": "quake-e1m1-v0.4.0",
+    "asset": "MRVN.QuakeE1M1Test-0.4.0.zip",
+    "bytes": 5952711,
+    "sha256": "589f9989500884a3bbfe18ddb505eb2ecd652f7f15bd0b2f80d7a82543f3c2e4",
+    "command": "map mp_quake_e1m1",
+    "original_title": "E1M1 by John Romero / id Software (GPL map source)",
+    "original_url": "https://github.com/fzwoch/quake_map_source",
+    "description": "Quake's E1M1, The Slipgate Complex, compiled for Titanfall 2 with LibreQuake textures and baked lighting. Geometry test: no doors, lifts or Quake gameplay."
+  }
+]

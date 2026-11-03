@@ -1,0 +1,28 @@
+{
+  "level": "mp_source_nuke",
+  "source": "F:\\Games\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\game\\csgo\\maps\\de_nuke.vpk",
+  "input_sha256": "ab56860b13c86ead3f0f17f1488e4cec44ac0208dbfdda9f1fecb5d5e769d4a7",
+  "render_triangles": 817733,
+  "render_charts": 293792,
+  "snap_grid": 4,
+  "textures": 225,
+  "collision_hulls": 5987,
+  "collision_patches": 29304,
+  "skipped": {
+    "cutout, translucent or tool triangles": 391610,
+    "simplified away": 2388512,
+    "non-player hulls": 1,
+    "non-player mesh triangles": 2782
+  },
+  "missing_materials": {
+    "nuke_water": 1,
+    "black_simple": 2
+  },
+  "world_meshes": 626,
+  "mesh_cluster": 8192,
+  "luxel_size": 16.0,
+  "lightmap_pages": 6,
+  "teleports": 0,
+  "kill_z": -1471.9998607183356,
+  "engine_verified": false
+}

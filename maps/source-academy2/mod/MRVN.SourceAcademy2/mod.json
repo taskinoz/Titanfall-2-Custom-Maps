@@ -1,0 +1,16 @@
+{
+  "Name": "MRVN.SourceAcademy2",
+  "Version": "0.1.0",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Jump Academy 2 (TF2). Local test port of a Source engine map",
+  "Localisation": [
+    "resource/mp_source_academy2_%language%.txt"
+  ],
+  "Scripts": [
+    {
+      "Path": "mp/levels/mp_source_academy2.nut",
+      "RunOn": "SERVER && MP && MAP_mp_source_academy2"
+    }
+  ]
+}

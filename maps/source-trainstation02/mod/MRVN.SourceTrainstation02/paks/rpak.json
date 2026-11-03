@@ -1,0 +1,9 @@
+{
+  "Aliases": {
+    "mp_source_trainstation02.rpak": "mp_coliseum.rpak",
+    "mp_source_trainstation02_loadscreen.rpak": "mp_coliseum_loadscreen.rpak"
+  },
+  "Postload": {
+    "source_trainstation02.rpak": "mp_coliseum.rpak"
+  }
+}
