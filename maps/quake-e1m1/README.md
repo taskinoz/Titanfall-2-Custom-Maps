@@ -49,7 +49,7 @@ small for a Titanfall pilot.
 | --- | --- |
 | `mod/MRVN.QuakeE1M1Test/` | Text files of the shipped mod, licences, `materials.json` and build verification |
 | `source/e1m1-original.map` | John Romero's original map source (GPL-2.0) |
-| `source/mp_quake_e1m1.map` | The adapted map the compiler reads |
+| `source/mp_quake_e1m1.map` | The adapted map the builder writes and remap compiles |
 | `source/test.shader` | Editor shader declarations |
 | `screenshot.png` | In-game view, also used for the Thunderstore icon |
 | `build.ps1` | The builder commands for this map |
