@@ -45,6 +45,11 @@ in Thunderstore's layout (`manifest.json`, `README.md`, `icon.png`,
 A release whose tag isn't in the catalog, such as an older version, publishes
 nothing.
 
+When the first releases were created with `gh release create` on 2026-11-03, no
+workflow run started, and the cause wasn't found. If no run appears under Actions
+within a minute, run the workflow by hand (below) with the release tag and
+**publish** on.
+
 ## Running the workflow by hand
 
 In GitHub, open **Actions → Publish maps to Thunderstore → Run workflow** on

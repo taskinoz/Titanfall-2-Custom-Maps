@@ -25,7 +25,7 @@ multiplayer.
 
 ## Install
 
-**With a mod manager:** install the maps from
+**With a mod manager:** install [UMA](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_UMA/), [Glitch](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_Glitch/) or [Quake E1M1](https://thunderstore.io/c/northstar/p/taskinoz/Quake_E1M1/) from
 [Thunderstore](https://thunderstore.io/c/northstar/p/taskinoz/).
 
 **By hand:** download a map's ZIP from
