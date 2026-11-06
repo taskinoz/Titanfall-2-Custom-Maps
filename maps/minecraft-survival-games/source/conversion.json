@@ -1,0 +1,54 @@
+{
+  "level": "mp_minecraft_survival_games",
+  "author": "Vareide",
+  "source": "https://www.planetminecraft.com/project/the-original-survival-games-map/",
+  "scale": 48,
+  "anchor_minecraft": [
+    -1577,
+    64,
+    -620
+  ],
+  "selected_blocks": 2804979,
+  "merged_full_cubes": 2657585,
+  "brushes": 116076,
+  "textures": 79,
+  "omitted_model_types": {
+    "vine": 28,
+    "oak_wall_sign": 4,
+    "spruce_sapling": 4,
+    "red_mushroom": 2,
+    "brown_mushroom": 2,
+    "cobweb": 2,
+    "ladder": 2,
+    "repeater": 18
+  },
+  "approximated_rotated_types": {
+    "wall_torch": 12,
+    "lever": 6,
+    "redstone_wall_torch": 18
+  },
+  "engine_verified": false,
+  "input_sha256": "8cc1697f8140bdbdd89cf98d4ddd3e85294b6556add220f881f4102e80e05370",
+  "selection_bounds_minecraft": [
+    -1737,
+    36,
+    -780,
+    -1417,
+    110,
+    -460
+  ],
+  "spawn_areas_minecraft": [
+    [
+      -1577,
+      -740
+    ],
+    [
+      -1577,
+      -500
+    ]
+  ],
+  "world_meshes": 899,
+  "mesh_cluster": 12288,
+  "torches": 96,
+  "kill_z": -2112
+}

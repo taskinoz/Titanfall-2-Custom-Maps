@@ -1,0 +1,9 @@
+{
+  "Aliases": {
+    "mp_minecraft_survival_games.rpak": "mp_coliseum.rpak",
+    "mp_minecraft_survival_games_loadscreen.rpak": "mp_coliseum_loadscreen.rpak"
+  },
+  "Postload": {
+    "minecraft_survival_games.rpak": "mp_coliseum.rpak"
+  }
+}

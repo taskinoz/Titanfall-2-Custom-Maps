@@ -1,0 +1,16 @@
+{
+  "Name": "MRVN.MinecraftSurvivalGames",
+  "Version": "0.5.2",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Survival Games (Minecraft). Original Minecraft build by Vareide",
+  "Localisation": [
+    "resource/mp_minecraft_survival_games_%language%.txt"
+  ],
+  "Scripts": [
+    {
+      "Path": "mp/levels/mp_minecraft_survival_games.nut",
+      "RunOn": "SERVER && MP && MAP_mp_minecraft_survival_games"
+    }
+  ]
+}
