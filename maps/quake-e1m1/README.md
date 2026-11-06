@@ -12,7 +12,7 @@ produced with AI (see [AI.md](../../AI.md)).
 | --- | --- |
 | Mod | `MRVN.QuakeE1M1Test` |
 | Level | `mp_quake_e1m1` |
-| Current version | 0.4.0 |
+| Current version | 0.4.1 |
 | Status | Compiler test: geometry, textures and lighting, no Quake gameplay |
 
 ## Play

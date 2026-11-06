@@ -1,12 +1,15 @@
 {
-  "path": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\iter\\t13\\mod\\compile\\mp_quake_e1m1.bsp",
+  "path": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\custom-maps-rebuild\\quake-e1m1\\compile\\mp_quake_e1m1.bsp",
   "version": 37,
   "counts": {
-    "1": 511,
+    "1": 3846,
     "2": 59,
     "3": 6949,
     "14": 1,
     "30": 135,
+    "66": 0,
+    "68": 0,
+    "69": 0,
     "71": 0,
     "72": 0,
     "73": 19836,
@@ -17,17 +20,65 @@
     "82": 58,
     "85": 1,
     "86": 177,
-    "87": 2398,
-    "88": 2398,
-    "89": 0,
-    "90": 0,
+    "87": 842,
+    "88": 842,
+    "89": 1108,
+    "90": 1108,
     "91": 2,
-    "92": 1158,
-    "93": 510,
-    "94": 7458,
-    "95": 7458
+    "92": 1125,
+    "93": 3789,
+    "94": 10539,
+    "95": 10539,
+    "96": 0,
+    "97": 0,
+    "106": 1,
+    "107": 1,
+    "108": 113,
+    "109": 115,
+    "110": 135,
+    "111": 115,
+    "112": 452,
+    "113": 452,
+    "114": 137,
+    "115": 137,
+    "116": 135,
+    "119": 15,
+    "120": 309,
+    "121": 309,
+    "123": 1
   },
   "issues": [],
+  "game_lump": {
+    "path": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\custom-maps-rebuild\\quake-e1m1\\compile\\mp_quake_e1m1.bsp",
+    "storage": "internal",
+    "base": 206488,
+    "bytes": 40,
+    "sha256": "a7e172891879de6cd68d23c192a6f39e1edfac988491cc029ccd5b7fef30aeac",
+    "entries": [
+      {
+        "id_hex": "70727073",
+        "name": "sprp",
+        "flags": 0,
+        "version": 13,
+        "offset": 206508,
+        "length": 20,
+        "relative_offset": 20,
+        "sha256": "de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90",
+        "decoded": true,
+        "model_names": [],
+        "model_count": 0,
+        "placement_count": 0,
+        "referenced_model_count": 0,
+        "unknown_header_counts": [
+          0,
+          0
+        ],
+        "unknown_record_count": 0,
+        "inactive_nonfinite_lighting_origins": 0,
+        "unknown_records_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
   "brushes_adapted": 1158,
   "pilot_spawn_entities": 24,
   "conversion": {
@@ -47,7 +98,7 @@
     "light_entities": 199,
     "menu_rig_entities": 9,
     "enclosure": "world/quake/sky4",
-    "menu_rig": "C:\\Users\\Tristan\\GitHub\\MRVN-Radiant\\.local\\respawn\\samples\\tf2-coliseum\\maps\\mp_coliseum_env.ent",
+    "menu_rig": ".local\\respawn\\apex-port\\coliseum-source\\preserved\\mp_coliseum_env.ent",
     "removed_placeholder_lighting_bytes": {},
     "textures": {
       "exact": 22,
@@ -64,8 +115,8 @@
   "vpk_round_trip": "all members byte-identical via pg9182/tf2vpk",
   "files": {
     "maps/mp_quake_e1m1.bsp": {
-      "bytes": 19490236,
-      "sha256": "c5961c6b4ebcedd55ecd89267c3b436ad536fdd3f4190322ba97919987ef6188"
+      "bytes": 21150324,
+      "sha256": "2bbfe36dd41ef1e52e3d76b0c528d9dad4ec756b2f72aa49dacf87a7d95bd0a8"
     },
     "maps/mp_quake_e1m1.stbsp": {
       "bytes": 7488,

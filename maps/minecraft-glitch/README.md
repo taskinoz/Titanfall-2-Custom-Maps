@@ -12,7 +12,7 @@ This conversion was produced with AI (see [AI.md](../../AI.md)).
 | --- | --- |
 | Mod | `MRVN.MinecraftGlitch` |
 | Level | `mp_minecraft_glitch` |
-| Current version | 0.5.1 |
+| Current version | 0.5.2 |
 | Status | Preview: pilot-only, single-player and local-server tested |
 
 ## Play
