@@ -12,8 +12,8 @@ disclosure and links to every original.
 
 | Map | Level | Version | Status |
 | --- | --- | --- | --- |
-| [UMA (Minecraft)](maps/minecraft-uma) | `mp_minecraft_uma` | 0.5.1 | Released preview |
-| [Glitch (Minecraft)](maps/minecraft-glitch) | `mp_minecraft_glitch` | 0.5.1 | Released preview |
+| [UMA (Minecraft)](maps/minecraft-uma) | `mp_minecraft_uma` | 0.5.2 | Released preview |
+| [Glitch (Minecraft)](maps/minecraft-glitch) | `mp_minecraft_glitch` | 0.5.2 | Released preview |
 | [Quake E1M1](maps/quake-e1m1) | `mp_quake_e1m1` | 0.4.0 | Released compiler test |
 | [Jump Academy 2 (TF2)](maps/source-academy2) | `mp_source_academy2` | 0.1.0 | Unreleased, local builds only |
 | [Nuke (CS2)](maps/source-nuke) | `mp_source_nuke` | 0.1.0 | Unreleased, local builds only |

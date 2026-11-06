@@ -1,6 +1,6 @@
 {
   "Name": "MRVN.MinecraftGlitch",
-  "Version": "0.5.1",
+  "Version": "0.5.2",
   "LoadPriority": 200,
   "RequiredOnClient": true,
   "Description": "Glitch (Minecraft). Original Minecraft build by Oblivering",

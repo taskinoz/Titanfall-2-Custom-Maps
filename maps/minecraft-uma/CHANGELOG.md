@@ -1,5 +1,9 @@
 # UMA (Minecraft) changelog
 
+## 0.5.2 (2026-11-06)
+
+Rebuilt with the latest MRVN-Radiant compiler. Character lighting now comes from light probes placed where players stand (about 86,000, up from a coarse grid), which keeps pilots lit like their surroundings instead of picking up a probe far away. Probe light visibility is measured over a character-sized volume. Geometry, spawns and world lighting are unchanged: 27 camera views match 0.5.1 apart from the HUD.
+
 ## 0.5.1 (2026-11-02)
 
 Glitch: fills the hole in the world's terrain at the south-west corner and restores the cut-off northern edge. UMA: version bump only.

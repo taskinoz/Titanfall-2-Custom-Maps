@@ -10,7 +10,7 @@ the editable `.map`.
 
 | Tool | Version | Used for |
 | --- | --- | --- |
-| [MRVN-Radiant fork](https://github.com/taskinoz/MRVN-Radiant) (`respawn-format-research` branch) | as of 2026-11-03 | Converters, `remap` compiler, VPK and STBSP writers |
+| [MRVN-Radiant fork](https://github.com/taskinoz/MRVN-Radiant) (`respawn-format-research` branch) | as of 2026-11-06 | Converters, `remap` compiler, VPK and STBSP writers |
 | Python | 3.10 or later, with Pillow and NumPy | Converters |
 | [RePak](https://github.com/r-ex/RePak) | commit `adc52f7` | Texture and material RPaks |
 | [tf2vpk](https://github.com/pg9182/tf2vpk) | commit `b73c54d` | Quake only: independent VPK check |
