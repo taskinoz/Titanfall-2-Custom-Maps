@@ -18,9 +18,9 @@
     "nuke_water": 1,
     "black_simple": 2
   },
-  "world_meshes": 626,
-  "mesh_cluster": 8192,
-  "luxel_size": 16.0,
+  "world_meshes": 772,
+  "mesh_cluster": 3072,
+  "luxel_size": 16,
   "lightmap_pages": 6,
   "teleports": 0,
   "kill_z": -1471.9998607183356,
