@@ -59,6 +59,7 @@ GitHub release. Each version is also a Git tag, `<map>-v<version>`.
 
 ## Documentation
 
+- [Converting a map](docs/converting.md): turning a Minecraft, Source or Counter-Strike 2 map into a Titanfall 2 map.
 - [Building a map](docs/building.md): toolchain, inputs and rebuild commands.
 - [Releasing](docs/releasing.md): GitHub releases and Thunderstore publishing.
 - [History](docs/history.md): how the version history was assembled.
