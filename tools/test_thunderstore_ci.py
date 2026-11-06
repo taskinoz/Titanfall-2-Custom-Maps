@@ -23,7 +23,8 @@ class CatalogTests(unittest.TestCase):
 
     def test_selection(self):
         self.assertEqual(len(ci.select(ci.catalog(), 'current')), len(ci.catalog()))
-        self.assertEqual([p['mod'] for p in ci.select(ci.catalog(), 'minecraft-uma-v0.5.1')], ['MRVN.MinecraftUma'])
+        uma = next(p for p in ci.catalog() if p['mod'] == 'MRVN.MinecraftUma')
+        self.assertEqual([p['mod'] for p in ci.select(ci.catalog(), uma['tag'])], ['MRVN.MinecraftUma'])
         self.assertEqual(ci.select(ci.catalog(), 'minecraft-uma-v0.1.0'), [])
 
 
