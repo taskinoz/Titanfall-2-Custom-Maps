@@ -2,6 +2,7 @@
 
 ## Unreleased (2026-11-07)
 
+- New loading screen and icon, captured with the joined glass panes.
 - Stained glass and panes are translucent; iron bars, levers, torches and lightning rods are cut out.
 - Glass panes join into continuous walls, as in Minecraft: each pane had a gap at its centre post and an edge strip at every block.
 

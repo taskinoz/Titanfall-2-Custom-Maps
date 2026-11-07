@@ -2,6 +2,7 @@
 
 ## Unreleased (2026-11-07)
 
+- Loading screen and icon recaptured from the current build.
 - Grey stained glass is translucent and trapdoors are cut out.
 - Water shows as a see-through surface; deep columns are kill zones.
 - The two one-block waterfalls no longer kill partway down: one-wide columns of water are drawn as see-through falls and pilots drop through them.

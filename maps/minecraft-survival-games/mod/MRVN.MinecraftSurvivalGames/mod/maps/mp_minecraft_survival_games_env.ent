@@ -523,7 +523,7 @@ ENTITIES01
 }
 {
 "classname" "light"
-"origin" "-5740.8 -1800 -1209.6"
+"origin" "-5736 -1996.8 -1161.6"
 "_light" "255 224 176 300"
 "realtime" "0"
 "_zero_percent_distance" "760"
@@ -635,7 +635,7 @@ ENTITIES01
 }
 {
 "classname" "light"
-"origin" "-5539.2 -2184 -1161.6"
+"origin" "-5544 -3043.2 278.4"
 "_light" "255 224 176 300"
 "realtime" "0"
 "_zero_percent_distance" "760"
@@ -643,7 +643,7 @@ ENTITIES01
 }
 {
 "classname" "light"
-"origin" "-5544 -3043.2 278.4"
+"origin" "-5491.2 -2232 -1161.6"
 "_light" "255 224 176 300"
 "realtime" "0"
 "_zero_percent_distance" "760"
@@ -715,14 +715,6 @@ ENTITIES01
 }
 {
 "classname" "light"
-"origin" "-5260.8 -2088 -1161.6"
-"_light" "255 224 176 300"
-"realtime" "0"
-"_zero_percent_distance" "760"
-"_fifty_percent_distance" "260"
-}
-{
-"classname" "light"
 "origin" "-5260.8 -2088 -537.6"
 "_light" "255 224 176 300"
 "realtime" "0"
@@ -772,6 +764,14 @@ ENTITIES01
 {
 "classname" "light"
 "origin" "-5116.8 -3000 -969.6"
+"_light" "255 224 176 300"
+"realtime" "0"
+"_zero_percent_distance" "760"
+"_fifty_percent_distance" "260"
+}
+{
+"classname" "light"
+"origin" "-5116.8 -2424 -441.6"
 "_light" "255 224 176 300"
 "realtime" "0"
 "_zero_percent_distance" "760"

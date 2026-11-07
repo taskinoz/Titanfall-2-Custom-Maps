@@ -2,6 +2,7 @@
 
 ## Unreleased (2026-11-07)
 
+- Loading screen of its own: the cornucopia ringed by the spawn pods.
 - Translucent glass and ice; cut-out levers, torches, doors and trapdoors.
 - Water: see-through surface over a kill zone where pilots would go under. One-block-wide
   waterfalls and fountain shafts never kill and are drawn as see-through columns.

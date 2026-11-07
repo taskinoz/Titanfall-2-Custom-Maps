@@ -1,8 +1,5 @@
 {
   "Aliases": {
     "mp_minecraft_uma.rpak": "mp_coliseum.rpak"
-  },
-  "Postload": {
-    "minecraft_uma.rpak": "mp_coliseum.rpak"
   }
 }

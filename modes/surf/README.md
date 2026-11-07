@@ -80,7 +80,8 @@ The site is plain PHP 8 with SQLite (`pdo_sqlite`):
    on nginx, deny `config.php`, `lib.php` and `data/` yourself.
 3. Open `https://your.site/surf/` for the leaderboard page.
 
-API (used by the mod):
+API (used by the mod; the full contract for reimplementing it in another language is in
+[leaderboard/API.md](leaderboard/API.md)):
 
 | Request | Purpose |
 | --- | --- |
