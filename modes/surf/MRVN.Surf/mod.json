@@ -5,17 +5,37 @@
     "LoadPriority": 2,
     "RequiredOnClient": true,
     "ConVars": [
-        { "Name": "surf_leaderboard_url", "DefaultValue": "" },
-        { "Name": "surf_leaderboard_key", "DefaultValue": "" },
-        { "Name": "surf_air_acceleration", "DefaultValue": "9000" },
-        { "Name": "surf_restore_wallrun", "DefaultValue": "0" }
+        {
+            "Name": "surf_leaderboard_url",
+            "DefaultValue": ""
+        },
+        {
+            "Name": "surf_leaderboard_key",
+            "DefaultValue": ""
+        },
+        {
+            "Name": "surf_save_scores",
+            "DefaultValue": "0"
+        },
+        {
+            "Name": "surf_air_acceleration",
+            "DefaultValue": "9000"
+        },
+        {
+            "Name": "surf_restore_wallrun",
+            "DefaultValue": "0"
+        }
     ],
     "Scripts": [
         {
             "Path": "gamemodes/sh_gamemode_surf.nut",
             "RunOn": "(SERVER || CLIENT) && MP",
-            "ServerCallback": { "Before": "Surf_Init" },
-            "ClientCallback": { "Before": "Surf_Init" }
+            "ServerCallback": {
+                "Before": "Surf_Init"
+            },
+            "ClientCallback": {
+                "Before": "Surf_Init"
+            }
         },
         {
             "Path": "gamemodes/_gamemode_surf.nut",

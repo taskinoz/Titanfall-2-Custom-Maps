@@ -27,6 +27,9 @@ A Northstar game mode for surf maps converted with MRVN-Radiant (so far
 - **Reset:** the boost key sends you back to the start.
 - **Web leaderboard:** finished times are sent to the PHP site in [leaderboard](leaderboard),
   and the map's top five are shown in chat when you join.
+- **Scores on disk** (`surf_save_scores 1`): each player's best time per map is kept in
+  `R2Northstar/save_data/MRVN.Surf/surf_<map>.json` (Northstar safe I/O), loaded at map start for
+  personal bests, and its top five are shown on joining when there is no web leaderboard.
 
 Ramp bugs (losing your speed at a seam between two ramp brushes) are left in, as in Counter-Strike.
 MRVN-Radiant's `--rampbug-fix` undoes them, as surf servers' rampbug plugins do.
@@ -42,14 +45,29 @@ map mp_source_surf_utopia
 
 or pick **Surf** in a private match.
 
-## Run a server with the leaderboard
+## Server settings
 
-Set, in the server's `autoexec_ns_server.cfg` or on its command line:
+Set in the server's `autoexec_ns_server.cfg` or on its command line:
 
-```text
-surf_leaderboard_url "https://your.site/surf"
-surf_leaderboard_key "<the key you added to the site's config.php>"
-```
+| ConVar | Default | Use |
+| --- | --- | --- |
+| `surf_leaderboard_url` | empty | The leaderboard site, e.g. `https://your.site/surf` |
+| `surf_leaderboard_key` | empty | This server's key from the site's `config.php` |
+| `surf_save_scores` | `0` | `1` saves best times per map to `save_data/MRVN.Surf/` |
+| `surf_air_acceleration` | `9000` | Pilots' air acceleration |
+
+Leaderboard problems are written to the server log as `[Surf] ERROR: ...` and shown in chat
+(to everyone once, and to each player who joins):
+
+| Setup | Result |
+| --- | --- |
+| No URL and no key | Not an error: the web leaderboard is off; joining players are told so |
+| URL without a key, or a key without a URL | Error; no times are sent |
+| URL with a key the site doesn't know | The key is checked at map start (`api.php?action=check`); error, no times are sent |
+| Site unreachable | Error at map start; later failures are logged |
+
+A failure to save scores to disk (Northstar safe I/O) is logged as `[Surf] ERROR`, and the game
+carries on without saving.
 
 ## Host the leaderboard
 
@@ -69,8 +87,14 @@ API (used by the mod):
 | `POST api.php?action=submit`, header `X-Surf-Key`, body `{"map","name","uid","time"}` | Store a run. Rejects unknown keys, times outside 5 s to 1 h and more than one run per player every 3 s. Replies with the run's rank. |
 | `GET api.php?action=top&map=<map>&limit=<n>` | Each player's best time on a map, fastest first |
 | `GET api.php?action=maps` | Maps with runs, players and records |
+| `POST api.php?action=check`, header `X-Surf-Key` | 200 if the key is known, 403 if not (servers check their key at map start) |
 
 ## Tested
+
+Leaderboard settings, in Northstar against a local copy of the site: no URL or key (notice in chat,
+log line), URL without a key (error), wrong key (rejected at the map-start check, error in log and
+chat, no times sent), good key (time stored); `surf_save_scores 1` wrote
+`surf_mp_source_surf_utopia.json` and a later match loaded it (2 scores, personal best kept).
 
 In Northstar, against a local copy of the leaderboard: a run timed from leaving Surf Utopia's start
 room to its end teleport, announced in chat, stored, and listed on the page; a pilot teleported

@@ -8,7 +8,12 @@ global function _Surf_Init
 // them back into it (the end of the course). Any other teleport (a fail floor, the jail) or a death
 // ends the run without a time. Maps tell the mode where the start room is through the root table
 // (MRVN_SurfMap, set by MRVN-Radiant's surf map scripts) and call MRVN_SurfTeleported on each
-// teleport. Finished times go to the web leaderboard when surf_leaderboard_url is set.
+// teleport.
+//
+// Scores: finished times go to the web leaderboard when surf_leaderboard_url and
+// surf_leaderboard_key are set (the key is checked at map start), and to
+// R2Northstar/save_data/MRVN.Surf/surf_<map>.json when surf_save_scores is 1 (Northstar safe I/O).
+// Configuration problems and rejected keys are logged as "[Surf] ERROR" and shown in chat.
 
 const float SURF_TICK = 0.05
 const int SURF_SCORES_SHOWN = 5
@@ -21,6 +26,13 @@ struct
 	vector startMins
 	vector startMaxs
 	bool haveMap = false
+	// Web leaderboard state: a problem to show players, and whether submitting is worth trying.
+	string webProblem = ""
+	bool webErrorShown = false
+	bool webUsable = false
+	// Saved scores: uid -> { name, time }.
+	table records = {}
+	bool recordsLoaded = false
 } file
 
 void function _Surf_Init()
@@ -43,7 +55,9 @@ void function _Surf_Init()
 
 	getroottable().MRVN_SurfTeleported <- Surf_MapTeleported
 	thread Surf_Tick()
-	thread Surf_FetchScores( null )
+	Surf_CheckLeaderboard()
+	if ( GetConVarBool( "surf_save_scores" ) )
+		Surf_LoadRecords()
 }
 
 void function Surf_OnClientConnected( entity player )
@@ -52,7 +66,10 @@ void function Surf_OnClientConnected( entity player )
 	file.inStart[player] <- true
 	// The boost key (default B... or whatever is bound to "Use boost") resets a run.
 	AddButtonPressedPlayerInputCallback( player, IN_OFFHAND4, Surf_Reset )
-	thread Surf_FetchScores( player )
+	string uid = player.GetUID()
+	if ( uid in file.records )
+		file.best[player] <- Surf_RecordTime( file.records[uid] )
+	thread Surf_Greet( player )
 }
 
 void function Surf_OnClientDisconnected( entity player )
@@ -168,6 +185,7 @@ void function Surf_OnTeleported( entity player, vector destination )
 	Remote_CallFunction_NonReplay( player, "ServerCallback_Surf_StopRun", time, isBest )
 	Chat_ServerBroadcast( format( "%s finished in %s%s", player.GetPlayerName(), Surf_FormatTime( time ), isBest ? " (personal best)" : "" ) )
 	Surf_SubmitScore( player, time )
+	Surf_SaveRecord( player, time )
 }
 
 void function Surf_Cancel( entity player )
@@ -188,11 +206,74 @@ string function Surf_FormatTime( float time )
 	return format( "%.3f s", seconds )
 }
 
+void function Surf_Log( string text )
+{
+	printl( "[Surf] " + text )
+}
+
+// Logged, told to everyone once, and to each player who joins later.
+void function Surf_WebError( string text )
+{
+	file.webProblem = text
+	file.webUsable = false
+	printl( "[Surf] ERROR: " + text )
+	if ( !file.webErrorShown )
+	{
+		file.webErrorShown = true
+		Chat_ServerBroadcast( "Leaderboard error: " + text )
+	}
+}
+
 // Web leaderboard (modes/surf/leaderboard in Titanfall-2-Custom-Maps).
-void function Surf_SubmitScore( entity player, float time )
+void function Surf_CheckLeaderboard()
 {
 	string url = GetConVarString( "surf_leaderboard_url" )
+	string key = GetConVarString( "surf_leaderboard_key" )
+	if ( url == "" && key == "" )
+	{
+		file.webProblem = "the web leaderboard is off (surf_leaderboard_url and surf_leaderboard_key are not set)"
+		Surf_Log( file.webProblem )
+		return
+	}
 	if ( url == "" )
+	{
+		Surf_WebError( "surf_leaderboard_key is set but surf_leaderboard_url is empty, so times are not sent anywhere" )
+		return
+	}
+	if ( key == "" )
+	{
+		Surf_WebError( "surf_leaderboard_url is set but surf_leaderboard_key is empty, so the leaderboard would reject every time" )
+		return
+	}
+	HttpRequest request
+	request.method = HttpRequestMethod.POST
+	request.url = url + "/api.php?action=check"
+	table<string, array<string> > headers
+	headers[ "x-surf-key" ] <- [ key ]
+	request.headers = headers
+	request.body = "{}"
+	NSHttpRequest( request,
+		void function( HttpRequestResponse response ) : ( url )
+		{
+			if ( response.statusCode == 200 )
+			{
+				file.webUsable = true
+				Surf_Log( "the leaderboard at " + url + " accepted this server's key" )
+			}
+			else if ( response.statusCode == 403 )
+				Surf_WebError( "the leaderboard at " + url + " rejected surf_leaderboard_key, so times are not saved there" )
+			else
+				Surf_WebError( "the leaderboard at " + url + " answered " + response.statusCode + " to a key check; is surf_leaderboard_url right?" )
+		},
+		void function( HttpRequestFailure failure ) : ( url )
+		{
+			Surf_WebError( "the leaderboard at " + url + " is unreachable (" + failure.errorMessage + ")" )
+		} )
+}
+
+void function Surf_SubmitScore( entity player, float time )
+{
+	if ( !file.webUsable )
 		return
 	table body = {}
 	body[ "map" ] <- GetMapName()
@@ -201,7 +282,7 @@ void function Surf_SubmitScore( entity player, float time )
 	body[ "time" ] <- time
 	HttpRequest request
 	request.method = HttpRequestMethod.POST
-	request.url = url + "/api.php?action=submit"
+	request.url = GetConVarString( "surf_leaderboard_url" ) + "/api.php?action=submit"
 	table<string, array<string> > headers
 	headers[ "x-surf-key" ] <- [ GetConVarString( "surf_leaderboard_key" ) ]
 	request.headers = headers
@@ -209,23 +290,37 @@ void function Surf_SubmitScore( entity player, float time )
 	NSHttpRequest( request,
 		void function( HttpRequestResponse response )
 		{
-			if ( response.statusCode != 200 )
-				printl( "[Surf] leaderboard rejected a time: " + response.statusCode + " " + response.body )
+			if ( response.statusCode == 403 )
+				Surf_WebError( "the leaderboard rejected surf_leaderboard_key, so times are not saved there" )
+			else if ( response.statusCode != 200 )
+				Surf_Log( "the leaderboard rejected a time: " + response.statusCode + " " + response.body )
 		},
 		void function( HttpRequestFailure failure )
 		{
-			printl( "[Surf] leaderboard unreachable: " + failure.errorMessage )
+			Surf_Log( "the leaderboard is unreachable: " + failure.errorMessage )
 		} )
 }
 
-// Shows the map's top times in chat: to one player when they join, or to everyone.
-void function Surf_FetchScores( entity player )
+// On joining: any leaderboard problem, then the map's top times (web if set up, else saved).
+void function Surf_Greet( entity player )
 {
-	string url = GetConVarString( "surf_leaderboard_url" )
-	if ( url == "" )
+	wait 5.0
+	if ( !IsValid( player ) )
 		return
-	if ( IsValid( player ) )
-		wait 5.0
+	if ( file.webProblem != "" )
+		Chat_ServerPrivateMessage( player, "Leaderboard: " + file.webProblem, false )
+	string url = GetConVarString( "surf_leaderboard_url" )
+	if ( url != "" )
+	{
+		Surf_ShowWebTop( player, url )
+		return
+	}
+	if ( file.recordsLoaded )
+		Chat_ServerPrivateMessage( player, Surf_LocalTopText(), false )
+}
+
+void function Surf_ShowWebTop( entity player, string url )
+{
 	HttpRequest request
 	request.method = HttpRequestMethod.GET
 	request.url = url + "/api.php"
@@ -237,7 +332,7 @@ void function Surf_FetchScores( entity player )
 	NSHttpRequest( request,
 		void function( HttpRequestResponse response ) : ( player )
 		{
-			if ( response.statusCode != 200 )
+			if ( response.statusCode != 200 || !IsValid( player ) )
 				return
 			table data = DecodeJSON( "{\"scores\":" + response.body + "}" )
 			array scores = expect array( data[ "scores" ] )
@@ -246,18 +341,105 @@ void function Surf_FetchScores( entity player )
 			foreach ( var value in scores )
 			{
 				table score = expect table( value )
-				text += format( "\n%d. %s  %s", rank, expect string( score[ "name" ] ), Surf_FormatTime( expect float( score[ "time" ] ) ) )
+				text += format( "\n%d. %s  %s", rank, expect string( score[ "name" ] ), Surf_FormatTime( Surf_RecordTime( score ) ) )
 				rank++
 			}
 			if ( scores.len() == 0 )
 				text += " none yet"
-			if ( IsValid( player ) )
-				Chat_ServerPrivateMessage( player, text, false )
-			else if ( player == null )
-				Chat_ServerBroadcast( text )
+			Chat_ServerPrivateMessage( player, text, false )
 		},
 		void function( HttpRequestFailure failure )
 		{
-			printl( "[Surf] leaderboard unreachable: " + failure.errorMessage )
+			Surf_Log( "the leaderboard is unreachable: " + failure.errorMessage )
 		} )
+}
+
+// Saved scores (surf_save_scores 1): Northstar safe I/O, in R2Northstar/save_data/MRVN.Surf/.
+string function Surf_RecordFile()
+{
+	return "surf_" + GetMapName() + ".json"
+}
+
+float function Surf_RecordTime( var record )
+{
+	return expect float( expect table( record ).time.tofloat() )
+}
+
+void function Surf_LoadRecords()
+{
+	string name = Surf_RecordFile()
+	bool exists = false
+	try
+	{
+		exists = NSDoesFileExist( name )
+	}
+	catch ( ex )
+	{
+		printl( "[Surf] ERROR: surf_save_scores is 1 but Northstar safe I/O failed checking save_data/MRVN.Surf/" + name + ": " + ex + "; scores are not saved to disk" )
+		return
+	}
+	if ( !exists )
+	{
+		file.recordsLoaded = true
+		Surf_Log( "no saved scores yet for this map; they will be saved to save_data/MRVN.Surf/" + name )
+		return
+	}
+	NSLoadJSONFile( name,
+		void function( table data ) : ( name )
+		{
+			if ( "scores" in data )
+				file.records = expect table( data.scores )
+			file.recordsLoaded = true
+			foreach ( entity player in GetPlayerArray() )
+				if ( player.GetUID() in file.records )
+					file.best[player] <- Surf_RecordTime( file.records[player.GetUID()] )
+			Surf_Log( "loaded " + file.records.len() + " saved scores from " + name )
+		},
+		void function() : ( name )
+		{
+			printl( "[Surf] ERROR: couldn't read saved scores " + name + " (missing or not JSON); starting this map's scores again" )
+			file.recordsLoaded = true
+		} )
+}
+
+void function Surf_SaveRecord( entity player, float time )
+{
+	if ( !GetConVarBool( "surf_save_scores" ) || !file.recordsLoaded )
+		return
+	string uid = player.GetUID()
+	if ( uid in file.records && Surf_RecordTime( file.records[uid] ) <= time )
+		return
+	file.records[uid] <- { name = player.GetPlayerName(), time = time }
+	table data = { version = 1, map = GetMapName(), scores = file.records }
+	try
+	{
+		NSSaveJSONFile( Surf_RecordFile(), data )
+	}
+	catch ( ex )
+	{
+		printl( "[Surf] ERROR: couldn't save scores to save_data/MRVN.Surf/" + Surf_RecordFile() + " (Northstar safe I/O): " + ex )
+	}
+}
+
+string function Surf_LocalTopText()
+{
+	array<table> scores
+	foreach ( uid, record in file.records )
+		scores.append( expect table( record ) )
+	scores.sort( int function( table a, table b )
+	{
+		float ta = expect float( a.time.tofloat() )
+		float tb = expect float( b.time.tofloat() )
+		if ( ta < tb )
+			return -1
+		if ( ta > tb )
+			return 1
+		return 0
+	} )
+	string text = "Server records on " + GetMapName() + ":"
+	for ( int i = 0; i < scores.len() && i < SURF_SCORES_SHOWN; i++ )
+		text += format( "\n%d. %s  %s", i + 1, expect string( scores[i].name ), Surf_FormatTime( expect float( scores[i].time.tofloat() ) ) )
+	if ( scores.len() == 0 )
+		text += " none yet"
+	return text
 }

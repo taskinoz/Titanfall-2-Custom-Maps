@@ -4,6 +4,7 @@
 //        body {"map": "mp_source_surf_utopia", "name": "Pilot", "uid": "1000123", "time": 83.25}
 //   GET  api.php?action=top&map=mp_source_surf_utopia&limit=10
 //   GET  api.php?action=maps
+//   POST api.php?action=check   header X-Surf-Key: <server key>   (200 if the key is known, else 403)
 require __DIR__ . '/lib.php';
 
 header('Content-Type: application/json; charset=utf-8');
@@ -28,7 +29,7 @@ try {
     if ($action === 'maps') {
         reply(200, surf_maps());
     }
-    if ($action !== 'submit') {
+    if ($action !== 'submit' && $action !== 'check') {
         reply(404, ['error' => 'unknown action']);
     }
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -45,6 +46,9 @@ try {
     }
     if ($server === null) {
         reply(403, ['error' => 'unknown server key']);
+    }
+    if ($action === 'check') {
+        reply(200, ['ok' => true, 'server' => $server]);
     }
 
     $body = json_decode(file_get_contents('php://input'), true);
