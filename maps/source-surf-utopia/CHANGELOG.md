@@ -7,8 +7,9 @@ First test conversion, of the Team Fortress 2 build of `surf_utopia_v3`.
 - Surfing works: on ramps steeper than Source's walkable limit (45.6°) pilots are crouched with no ground friction. Standing, Titanfall treats a 52° ramp as ground and stops a pilot within half a second; crouched, it doesn't, and pilots keep their speed along the ramp and slide down it as in Source.
 - Teleport triggers use their real shapes: many are thin slabs along slopes, and testing their
   bounding boxes sent pilots to jail while still riding the next ramp.
-- Ramp bugs at brush seams are undone: at the end of the curved ramp, pilots lost their forward
-  speed and shot straight up.
+- Ramp bugs at brush seams are left in, as in Counter-Strike (the converter's `--rampbug-fix` undoes them).
+- Works with the new Surf mode ([modes/surf](../../modes/surf)): the map tells the mode where its start
+  room is and reports teleports, so runs are timed.
 - Rising ramps launch you upward as in Source: Titanfall carried pilots up a ramp without giving
   them the upward speed, so they dropped onto the jail slope after the curved second ramp.
 - The sky no longer cuts through the ramps near the map's corners.

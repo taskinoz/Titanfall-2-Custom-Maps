@@ -21,6 +21,12 @@ disclosure and links to every original.
 | [Trainstation (HL2)](maps/source-trainstation02) | `mp_source_trainstation02` | 0.1.0 | Unreleased, local builds only |
 | [Surf Utopia](maps/source-surf-utopia) | `mp_source_surf_utopia` | 0.1.0 | Unreleased, local builds only |
 
+## Game modes
+
+| Mode | Mod | Status |
+| --- | --- | --- |
+| [Surf](modes/surf) | `MRVN.Surf` | Unreleased: timed runs on surf maps, with a PHP web leaderboard |
+
 All are pilot-only: there is no navmesh, so Titans and AI don't work. Only Pilot
 vs Pilot (`tdm`) has been tested, with one player on a local server, not in real
 multiplayer.

@@ -1,0 +1,57 @@
+playlists
+{
+	Gamemodes
+	{
+		surf
+		{
+			inherit defaults
+			vars
+			{
+				name "#GAMEMODE_SURF"
+				lobbytitle "#SURF_NAME_LOBBY"
+				description "#SURF_DESC"
+				hint "#SURF_DESC"
+				abbreviation "SURF"
+				max_players 16
+				max_teams 1
+				classic_mp 1
+				// Runs are timed by the mode; the match itself has no end.
+				scorelimit 100000
+				timelimit 600
+				gamemode_score_hint "#SURF_SCORE_HINT"
+			}
+		}
+	}
+	Playlists
+	{
+		surf
+		{
+			inherit defaults
+			vars
+			{
+				name "#GAMEMODE_SURF"
+				lobbytitle "#SURF_NAME_LOBBY"
+				description "#SURF_DESC"
+				hint "#SURF_DESC"
+				abbreviation "SURF"
+				image ffa
+				max_players 16
+				max_teams 1
+				classic_mp 1
+				scorelimit 100000
+				timelimit 600
+				gamemode_score_hint "#SURF_SCORE_HINT"
+			}
+			gamemodes
+			{
+				surf
+				{
+					maps
+					{
+						mp_source_surf_utopia 1
+					}
+				}
+			}
+		}
+	}
+}

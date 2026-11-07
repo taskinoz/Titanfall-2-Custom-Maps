@@ -1,0 +1,5 @@
+# Apache: keep the configuration, helpers and database private.
+<FilesMatch "^(config(\.example)?\.php|lib\.php)$">
+    Require all denied
+</FilesMatch>
+RedirectMatch 404 /data/

@@ -1,3 +1,4 @@
+untyped
 global function CodeCallback_MapInit
 struct
 {
@@ -829,6 +830,7 @@ void function CodeCallback_MapInit()
  AddBrush( [ < -1, 0, 0 >, < 1, 0, 0 >, < 0, -1, 0 >, < 0, 1, 0 >, < 0, 0, -1 >, < 0, 0, 1 > ], [ -1272.0, 1280.0, -1600.0, 1664.0, 9664.0, -9600.0 ] )
  AddPush( < 1272, 1600, -9664 >, < 1280, 1664, -9600 >, < 100, 0, -0 >, 145, 146 )
  thread KillFallenPilots()
+ getroottable().MRVN_SurfMap <- { startMins = < -14416, -1040, 12768 >, startMaxs = < -13456, 1040, 13344 >, startOrigin = < -13904, -528, 12832 >, startYaw = 2.0 }
  thread SurfRamps()
 }
 // A convex trigger brush: its planes, outward normals, in world space.
@@ -936,6 +938,8 @@ void function KillFallenPilots()
     player.SetOrigin( file.destinations[k] )
     player.SetAngles( <0, file.yaws[k], 0> )
     player.SetVelocity( <0, 0, 0> )
+    if ( "MRVN_SurfTeleported" in getroottable() )
+     getroottable().MRVN_SurfTeleported( player, file.destinations[k] )
     break
    }
   }
@@ -975,8 +979,6 @@ void function SurfRamps()
     continue
    }
    vector o = player.GetOrigin()
-   if ( surfing && player in file.lastVel )
-    FixRampBug( player, o )
    // A line from the feet: on a 52 degree ramp the surface under the centre is up to 21 units below them.
    TraceResults r = TraceLine( o + <0, 0, 4>, o - <0, 0, 40>, player, TRACE_MASK_SOLID, TRACE_COLLISION_GROUP_NONE )
    if ( r.fraction < 1.0 && r.surfaceNormal.z > 0.05 && r.surfaceNormal.z < 0.7 )
