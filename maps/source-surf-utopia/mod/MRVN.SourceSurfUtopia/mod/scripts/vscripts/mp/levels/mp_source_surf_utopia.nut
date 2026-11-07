@@ -982,6 +982,13 @@ void function SurfRamps()
      printl( "[surf] cancelled a slide boost at " + o )
      player.SetVelocity( file.rampVelocities[player] )
     }
+    if ( r.fraction * 44.0 - 4.0 < 24.0 )
+    {
+     vector v = player.GetVelocity()
+     float into = DotProduct( v, r.surfaceNormal )
+     if ( into < 0.0 )
+      player.SetVelocity( v - r.surfaceNormal * into )
+    }
     file.rampTimes[player] <- Time()
     file.rampVelocities[player] <- player.GetVelocity()
    }
