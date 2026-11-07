@@ -7,11 +7,13 @@ param(
     [Parameter(Mandatory)][string]$MaterialTemplate, # Native TF2 world material base path
     [string]$Loadscreen = "$PSScriptRoot/loadscreen.png",
     [string]$LoadscreenTemplate,                     # Retail loadscreen _gen .json/.uber base path
+    [string]$MaterialTemplates,                      # extract_material_templates.py output: glass, cutouts, water
     [string]$Output = "$PSScriptRoot/../../output/minecraft-glitch"
 )
 $ErrorActionPreference = 'Stop'
 $extra = @()
-if ($LoadscreenTemplate -and (Test-Path $Loadscreen)) { $extra = '--loadscreen', $Loadscreen, '--loadscreen-template', $LoadscreenTemplate }
+if ($MaterialTemplates) { $extra += '--material-templates', $MaterialTemplates }
+if ($LoadscreenTemplate -and (Test-Path $Loadscreen)) { $extra += '--loadscreen', $Loadscreen, '--loadscreen-template', $LoadscreenTemplate }
 # The 'glitch' preset holds the inspected settings: bounds, anchor, spawns, the death
 # pit at Z -192, native ziplines, open-sky spawns and the filled terrain corner.
 python "$Mrvn/tools/respawn/build_minecraft_ports.py" --name glitch `

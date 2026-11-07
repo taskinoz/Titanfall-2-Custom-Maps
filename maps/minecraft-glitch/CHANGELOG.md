@@ -1,5 +1,10 @@
 # Glitch (Minecraft) changelog
 
+## Unreleased (2026-11-07)
+
+- Grey stained glass is translucent and trapdoors are cut out.
+- Water shows as a see-through surface; deep columns are kill zones.
+
 ## 0.5.2 (2026-11-06)
 
 Rebuilt with the latest MRVN-Radiant compiler. Character lighting now comes from light probes placed where players stand (about 86,000, up from a coarse grid), which keeps pilots lit like their surroundings instead of picking up a probe far away. Probe light visibility is measured over a character-sized volume. Geometry, spawns and world lighting are unchanged: 27 camera views match 0.5.1 apart from the HUD.

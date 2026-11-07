@@ -1,5 +1,10 @@
 # Nuke (CS2) changelog
 
+## Unreleased (2026-11-07)
+
+- Chain-link fences, grates and railings are cut out; glass is translucent, faint where its texture is missing from the export.
+- Fences no longer cast solid baked shadows.
+
 ## 0.1.0 (2026-11-03, unreleased)
 
 First test conversion. It loads, 7 of 8 spawns are clear, and the yards, roofs, silo and props render with sun shadows. Collision matches the render from above and below.

@@ -5,11 +5,14 @@ param(
     [Parameter(Mandatory)][string]$Jar,              # Official Minecraft Java 1.20.6 client JAR
     [Parameter(Mandatory)][string]$Repak,            # RePak built from r-ex/RePak adc52f7
     [Parameter(Mandatory)][string]$MaterialTemplate, # Native TF2 world material base path
+    [string]$MaterialTemplates,                      # extract_material_templates.py output: glass, cutouts, water
     [string]$Output = "$PSScriptRoot/../../output/minecraft-survival-games"
 )
 $ErrorActionPreference = 'Stop'
+$extra = @()
+if ($MaterialTemplates) { $extra += '--material-templates', $MaterialTemplates }
 # The 'survival_games' preset holds the bounds around the cornucopia, the anchor,
-# spawns, terrain mode, 32-unit lightmap texels and the starting mesh cluster.
+# spawns, terrain mode, 48-unit lightmap texels, the starting mesh cluster and redstone.
 python "$Mrvn/tools/respawn/build_minecraft_ports.py" --name survival_games `
     --world $World --jar $Jar --output $Output --remap "$Mrvn/install/Release/remap.exe" `
-    --repak $Repak --material-template $MaterialTemplate
+    --repak $Repak --material-template $MaterialTemplate @extra

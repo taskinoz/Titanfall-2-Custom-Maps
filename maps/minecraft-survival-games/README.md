@@ -28,13 +28,22 @@ the island's east shore.
   are separate brushes: the textured blocks only draw, and the same space merged
   into 39,000 invisible boxes collides, within the engine's 65,535 collision
   brushes.
-- Lightmaps at 32 units per texel (16 lightmap pages) keep the map within the
+- Lightmaps at 48 units per texel (12 lightmap pages) keep the map within the
   1,000-mesh budget.
 - Four start and respawn sites for each team, north and south of the cornucopia.
+- With the see-through material templates: glass and ice are translucent, and
+  levers, torches, doors and trapdoors are cut out.
+- **Water** is a see-through surface. Titanfall 2 has no swimming, so as in its
+  campaign, deep water is a kill zone: you can wade where it is about a block
+  deep, and die where you would go under.
+- **Redstone** works as scripted movers: buttons and levers (use key), pressure
+  plates, piston doors and mechanisms, iron and wooden doors and the three TNT
+  traps. Everything in one circuit switches together, so timing and puzzle logic
+  are approximate.
 
-Not converted: water (lakes are dry hollows you can walk through), plants,
-redstone, chests and the glass dome, which lies outside the converted area.
-There is no navmesh, so Titans and AI don't work.
+Not converted: plants, chests, dispensers, lamps and note blocks (static), and
+the glass dome, which lies outside the converted area. There is no navmesh, so
+Titans and AI don't work.
 
 ## Build and play locally
 
@@ -47,7 +56,8 @@ python <MRVN-Radiant>/tools/respawn/upgrade_minecraft_world.py --world "The Orig
     --output survival-games-upgraded.zip --java "C:\Program Files\Java\jdk-26.0.1\bin\java.exe" --accept-eula
 ```
 
-Then run `build.ps1` with the upgraded ZIP (see [docs/converting.md](../../docs/converting.md)),
+Then run `build.ps1` with the upgraded ZIP and `-MaterialTemplates` (see
+[docs/converting.md](../../docs/converting.md)),
 copy the output's `MRVN.MinecraftSurvivalGames` folder into
 `Titanfall2/R2Northstar/mods`, and run:
 

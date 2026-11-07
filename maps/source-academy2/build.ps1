@@ -6,10 +6,13 @@ param(
     [Parameter(Mandatory)][string]$Hl2,              # Half-Life 2 'hl2' folder
     [Parameter(Mandatory)][string]$Repak,            # RePak built from r-ex/RePak adc52f7
     [Parameter(Mandatory)][string]$MaterialTemplate, # Native TF2 world material base path
+    [string]$MaterialTemplates,                      # extract_material_templates.py output: glass, cutouts, water
     [string]$Output = "$PSScriptRoot/../../output/source-academy2"
 )
 $ErrorActionPreference = 'Stop'
+$extra = @()
+if ($MaterialTemplates) { $extra += '--material-templates', $MaterialTemplates }
 $env:PYTHONPATH = "$Mrvn/tools/respawn"
 python "$Mrvn/tools/respawn/build_source_ports.py" --bsp $Bsp --game-dir $Tf2 --game-dir $Hl2 `
     --name academy2 --display-name 'Jump Academy 2 (TF2)' --output $Output `
-    --remap "$Mrvn/install/Release/remap.exe" --repak $Repak --material-template $MaterialTemplate
+    --remap "$Mrvn/install/Release/remap.exe" --repak $Repak --material-template $MaterialTemplate @extra

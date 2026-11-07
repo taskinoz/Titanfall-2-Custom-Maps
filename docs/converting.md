@@ -25,6 +25,13 @@ Conversions are pilot-only: there is no navmesh, so Titans and AI don't work.
   `--material-template` (the base path of a `_wld` and `_colpass_wld`
   `.json`/`.uber` pair). MRVN-Radiant's `build_box_genesis.py` writes one at
   `assets/material/world/box_genesis/white`.
+- **See-through material templates** (recommended), passed as
+  `--material-templates`. Without them glass is solid or invisible, fences and
+  bars are drawn on a solid backing, and Minecraft water is left out. Make them
+  once from your own Titanfall 2 install: decompress `r2/paks/Win64/mp_coliseum.rpak`
+  (a v7 pak; MRVN-Radiant's `docs/respawn/RESPAWN_MATERIAL_TEMPLATES.md` covers
+  the decoder), then run
+  `python tools/respawn/extract_material_templates.py mp_coliseum.rpak --output material-templates`.
 - **Titanfall 2 with Northstar** for testing.
 
 Run the converters from the MRVN-Radiant checkout (or set `PYTHONPATH` to its
@@ -88,9 +95,55 @@ Check these in game, then pin them on later builds:
 | `--fill-floor-notches` | Complete the main floor's rectangle where edge pieces are missing |
 | `--mesh-cluster N` | World units per render mesh cluster |
 | `--view-portals` | Experimental visibility culling; fails on very blocky maps |
+| `--terrain` | Natural worlds: fill sealed caves, hide buried faces, separate render and collision brushes |
+| `--luxel-size N` | World units per lightmap texel (default 16); raise it on large maps |
+| `--material-templates DIR` | Glass blends, bars and levers are cut out, water shows (see Before you start) |
+| `--cutout-leaves` | Leaves with holes instead of a solid backing (more to draw) |
+| `--redstone` | Piston doors, doors and TNT traps work, as scripted movers |
 
 Once settled, add the map to `PRESETS` in `build_minecraft_ports.py` so a plain
 `--name` rebuild reproduces it.
+
+### Large natural worlds (survival and hunger games maps)
+
+Maps built on generated terrain, like
+[Survival Games](../maps/minecraft-survival-games), break the defaults in three ways:
+
+1. **Size.** Keep the converted area within about 680 blocks across (32,768
+   units at 48 per block); a 300 to 350 block square is a large Titanfall map
+   already. Detection picks the whole island, so survey the world first and set
+   `--bounds` around the part that plays well, e.g. the cornucopia and what
+   surrounds it. Set the lower Y a few blocks below the lowest lake bed, not at
+   bedrock.
+2. **Collision brushes.** Pass `--terrain`. Without it, every exposed block
+   becomes its own brush and a forest island runs past the engine's 65,535
+   collision brushes ("Collision brush index exceeds 16 bits"). Terrain mode
+   fills caves sealed off from the sky, hides faces between blocks, makes the
+   textured brushes render-only and adds the same space merged into large
+   invisible boxes for collision. It also lets spawns use any ground height,
+   since terrain has no single main floor.
+3. **Meshes.** Every texture is split once per lightmap page, so a large map
+   runs past the 1,000-mesh budget even at the largest mesh cluster. Raise
+   `--luxel-size` (world units per lightmap texel, default 16): Survival Games
+   uses 32, which gives 16 pages. Starting with `--mesh-cluster 12288` skips
+   compiles that would be rejected anyway.
+
+Each compile of a map this size takes about ten minutes, and the BSP is several
+hundred megabytes (Survival Games: 385 MB, a 90 MB player ZIP). Water is not
+converted, so lakes become dry hollows.
+
+### Water and redstone
+
+Titanfall 2 has no swimming, so with `--material-templates` water is drawn as
+a see-through surface over a kill zone, as in Titanfall 2's own campaign: pilots
+wade through water up to about a block deep and die where they would go under.
+Lakes in a lobby or arena may need filling in or bridging for that reason.
+
+`--redstone` turns circuits into scripted movers: buttons and levers are used
+with the use key while looking at them, pressure plates trigger when stood on;
+pistons push or pull their block, doors swing open and TNT explodes after a
+short fuse. Everything in one circuit switches together, so timing, clocks and
+puzzle logic are not reproduced. The build prints how many circuits it found.
 
 ### 3. Loading screen
 
@@ -148,10 +201,12 @@ python tools/respawn/build_source_ports.py --bsp jump_academy2_rc9.bsp `
 | `trigger_teleport` | Teleports |
 | 3D skybox, sky faces | A sky dome |
 
+With `--material-templates`, `$translucent` materials (glass) blend and
+`$alphatest` ones (fences, foliage cards) are cut out, on brushes and props.
+
 **Not converted:** doors and other moving brushes, triggers (other than
-teleports), water, clear glass (kept solid but invisible), and cutout or
-translucent materials such as fences and foliage cards (there is no alpha-test
-material template yet).
+teleports) and water. Without `--material-templates`, clear glass is kept solid
+but invisible and cutout or translucent materials are drawn opaque or skipped.
 
 ### Check the report
 
@@ -209,8 +264,11 @@ What it does:
 - **Sky:** the `env_sky` panorama is exported from `pak01_dir.vpk` next to
   `gameinfo.gi` and mapped onto the sky dome. Without it the sky is the sun's
   flat sky colour.
-- **Not converted:** cutout and blended materials (fences, foliage, decals) are
-  skipped, as are normal maps.
+- **See-through materials:** with `--material-templates`, `MASK` materials
+  (fences, grates, foliage) are cut out and `BLEND` ones (glass) blend. Glass
+  whose texture is missing from the export is drawn as faint glass. Without
+  templates they are skipped.
+- **Not converted:** decals, overlays and normal maps.
 
 ## Test in Northstar
 
@@ -246,5 +304,9 @@ CHANGELOG, add the map to the catalog, tag and publish.
 | Grey surfaces, `missing_materials` in the report | Game content not found: add `--game-dir` or install the game |
 | Props missing, `unreadable model` in the report | Same as above, for models |
 | "world saved before Minecraft 1.13" | Run `upgrade_minecraft_world.py` |
+| "Collision brush index exceeds 16 bits" | Too many collision brushes: `--terrain` for natural worlds, or smaller `--bounds` |
+| "meshes exceed the budget of 1000" | Too many textures times lightmap pages: raise `--luxel-size` |
 | "Collision brush exceeds 255 non-axial sides" warning | Extra bevels on a very complex brush were dropped; harmless |
+| Glass solid or invisible, fences on a grey backing, Minecraft lakes dry | Build with `--material-templates` |
+| A fence casts a solid shadow band | Old remap: rebuild it; alpha-tested surfaces no longer cast baked shadows |
 | Pilots black in shaded areas | Old build: rebuild with MRVN-Radiant from 6 November 2026 or later (light probes where players stand) |
