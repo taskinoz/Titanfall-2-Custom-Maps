@@ -138,6 +138,8 @@ Titanfall 2 has no swimming, so with `--material-templates` water is drawn as
 a see-through surface over a kill zone, as in Titanfall 2's own campaign: pilots
 wade through water up to about a block deep and die where they would go under.
 Lakes in a lobby or arena may need filling in or bridging for that reason.
+One-block-wide columns (waterfalls, fountain shafts) never kill: pilots fall
+through them.
 
 `--redstone` turns circuits into scripted movers: buttons and levers are used
 with the use key while looking at them, pressure plates trigger when stood on;
@@ -186,6 +188,7 @@ python tools/respawn/build_source_ports.py --bsp jump_academy2_rc9.bsp `
 | `--luxel-size N` | World units per lightmap texel to start from; large maps raise it automatically |
 | `--mesh-cluster N` | World units per render mesh cluster |
 | `--no-props` | Leave static props out |
+| `--surf` / `--no-surf` | Surf ramps (on by default for `surf_` maps): pilots are crouched with no ground friction on slopes steeper than Source allows standing on, so they slide along ramps as in Source |
 
 ### What converts
 
@@ -198,14 +201,16 @@ python tools/respawn/build_source_ports.py --bsp jump_academy2_rc9.bsp `
 | Displacements | Patches, with a coarser invisible collision copy |
 | Static props | Render meshes, plus collision from their physics hulls |
 | Lights, `light_environment` | Baked lights and sun |
-| `trigger_teleport` | Teleports |
+| `trigger_teleport` | Teleports, including random destinations a `logic_case` picks |
+| `trigger_push` (players) | Pushes, by script |
+| Counter-Strike team spawns | Team spawns |
 | 3D skybox, sky faces | A sky dome |
 
 With `--material-templates`, `$translucent` materials (glass) blend and
 `$alphatest` ones (fences, foliage cards) are cut out, on brushes and props.
 
 **Not converted:** doors and other moving brushes, triggers (other than
-teleports) and water. Without `--material-templates`, clear glass is kept solid
+teleports and pushes), entity logic and water. Without `--material-templates`, clear glass is kept solid
 but invisible and cutout or translucent materials are drawn opaque or skipped.
 
 ### Check the report
@@ -309,4 +314,6 @@ CHANGELOG, add the map to the catalog, tag and publish.
 | "Collision brush exceeds 255 non-axial sides" warning | Extra bevels on a very complex brush were dropped; harmless |
 | Glass solid or invisible, fences on a grey backing, Minecraft lakes dry | Build with `--material-templates` |
 | A fence casts a solid shadow band | Old remap: rebuild it; alpha-tested surfaces no longer cast baked shadows |
+| Build stops with "Memory allocation failed" in `EmitLighting` | The map is too large for 16-unit lightmaps: start from `--luxel-size 40` or more |
+| Pilots stop dead on surf ramps | Build with `--surf` (default for `surf_` maps) |
 | Pilots black in shaded areas | Old build: rebuild with MRVN-Radiant from 6 November 2026 or later (light probes where players stand) |

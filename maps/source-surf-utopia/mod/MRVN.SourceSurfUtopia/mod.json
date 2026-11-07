@@ -1,0 +1,16 @@
+{
+  "Name": "MRVN.SourceSurfUtopia",
+  "Version": "0.1.0",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Surf Utopia. Local test port of a Source engine map",
+  "Localisation": [
+    "resource/mp_source_surf_utopia_%language%.txt"
+  ],
+  "Scripts": [
+    {
+      "Path": "mp/levels/mp_source_surf_utopia.nut",
+      "RunOn": "SERVER && MP && MAP_mp_source_surf_utopia"
+    }
+  ]
+}

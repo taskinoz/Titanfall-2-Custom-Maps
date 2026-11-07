@@ -1,0 +1,11 @@
+# Surf Utopia changelog
+
+## 0.1.0 (2026-11-07, unreleased)
+
+First test conversion, of the Team Fortress 2 build of `surf_utopia_v3`.
+
+- Surfing works: on ramps steeper than Source's walkable limit (45.6°) pilots are crouched with no ground friction. Standing, Titanfall treats a 52° ramp as ground and stops a pilot within half a second; crouched, it doesn't, and pilots keep their speed along the ramp and slide down it as in Source.
+- Falling off a stage sends you to the jail, to a random cell as in the original (its `logic_case` picks one of eight); the other teleports go to their fixed destinations.
+- The six `trigger_push` boosters and jail lifts push pilots by script.
+- Spawns are the map's Counter-Strike team spawns, in the start room.
+- Not converted: the jail's doors, buttons, crate traps and explosions (the cells are open), and the spinning `func_rotating` fans.

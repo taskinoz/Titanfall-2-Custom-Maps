@@ -21,6 +21,7 @@ built by people, and the originals are the place to see their work as intended:
 | Survival Games (Minecraft) | [Planet Minecraft](https://www.planetminecraft.com/project/the-original-survival-games-map/) | Vareide (unconfirmed) |
 | Quake E1M1 | [Map source](https://github.com/fzwoch/quake_map_source) | John Romero / id Software |
 | Jump Academy 2 (TF2) | [Tempus map server](https://static.tempus2.xyz/tempus/server/maps/jump_academy2_rc9.bsp.bz2) | Jump Academy community |
+| Surf Utopia (surf_utopia_v3, TF2 build) | [fastdl.me map mirror](https://main.fastdl.me/maps/surf_utopia_v3.bsp.bz2) | surf_utopia_v3 authors (in-map credits; unconfirmed) |
 | Nuke (CS2) | Counter-Strike 2 | Valve |
 | Trainstation (HL2) | Half-Life 2 | Valve |
 

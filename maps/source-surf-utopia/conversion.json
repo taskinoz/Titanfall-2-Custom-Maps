@@ -1,0 +1,32 @@
+{
+  "level": "mp_source_surf_utopia",
+  "source": "surf_utopia_v3.bsp",
+  "input_sha256": "66df8e0e6ef535cc10021910063a4e5bffa3896976c452fe5cf64727efefa1bb",
+  "brushes": 5130,
+  "displacements": 0,
+  "textures": 9,
+  "skipped": {
+    "contents 0x10000020": 30,
+    "trigger_teleport": 129,
+    "func_button": 8,
+    "func_door_rotating": 34,
+    "func_physbox": 8,
+    "trigger_push": 6,
+    "func_rotating": 4,
+    "trigger_multiple": 1
+  },
+  "invisible_glass": [],
+  "missing_materials": {},
+  "static_props": 6,
+  "prop_charts": 2553,
+  "prop_collision_brushes": 43,
+  "world_meshes": 519,
+  "mesh_cluster": 6144,
+  "luxel_size": 40.0,
+  "lightmap_pages": 4,
+  "teleports": 648,
+  "pushes": 6,
+  "surf": true,
+  "kill_z": -10528.0,
+  "engine_verified": false
+}

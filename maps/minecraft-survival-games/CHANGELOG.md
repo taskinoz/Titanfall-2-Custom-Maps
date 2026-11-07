@@ -3,7 +3,8 @@
 ## Unreleased (2026-11-07)
 
 - Translucent glass and ice; cut-out levers, torches, doors and trapdoors.
-- Water: see-through surface over a kill zone where pilots would go under.
+- Water: see-through surface over a kill zone where pilots would go under. One-block-wide
+  waterfalls and fountain shafts never kill and are drawn as see-through columns.
 - Redstone as scripted movers: buttons, levers, pressure plates, pistons, doors
   and TNT traps (10 circuits, 120 moving blocks).
 - Lightmaps at 48 units per texel (12 pages, 871 meshes): the extra materials
