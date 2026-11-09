@@ -3,7 +3,7 @@
   "Version": "0.1.0",
   "LoadPriority": 200,
   "RequiredOnClient": true,
-  "Description": "Surf Utopia. Local test port of a Source engine map",
+  "Description": "Surf Utopia: a Source surf map converted for Titanfall 2. Use the Surf mode for timed runs.",
   "Localisation": [
     "resource/mp_source_surf_utopia_%language%.txt"
   ],

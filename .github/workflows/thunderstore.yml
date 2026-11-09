@@ -1,4 +1,4 @@
-name: Publish maps to Thunderstore
+name: Publish maps and modes to Thunderstore
 
 on:
   release:

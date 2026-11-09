@@ -1,0 +1,13 @@
+"pilot_base"
+{
+	"global"
+	{
+		"ClassMods"
+		{
+			"surf_disable_doublejump"
+			{
+				"doublejump" "0"
+			}
+		}
+	}
+}

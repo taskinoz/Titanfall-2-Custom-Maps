@@ -1,5 +1,6 @@
 untyped
 global function _Surf_Init
+global function Surf_InitPlayerMovement
 
 // Surf: everyone on one side (no teams, no damage between players), no titans or boosts, no time
 // limit, surf movement settings applied on spawn, and timed runs.
@@ -26,6 +27,10 @@ struct
 	vector startMins
 	vector startMaxs
 	bool haveMap = false
+	array<vector> finishMins
+	array<vector> finishMaxs
+	string webUrl = ""
+	string webKey = ""
 	// Web leaderboard state: a problem to show players, and whether submitting is worth trying.
 	string webProblem = ""
 	bool webErrorShown = false
@@ -33,10 +38,13 @@ struct
 	// Saved scores: uid -> { name, time }.
 	table records = {}
 	bool recordsLoaded = false
+	bool pendingRecordSave = false
+	bool allowDoubleJump = true
 } file
 
 void function _Surf_Init()
 {
+	file.allowDoubleJump = GetCurrentPlaylistVarInt( "surf_double_jump", GetConVarInt( "surf_double_jump" ) ) != 0
 	ClassicMP_SetCustomIntro( ClassicMP_DefaultNoIntro_Setup, ClassicMP_DefaultNoIntro_GetLength() )
 	ClassicMP_ForceDisableEpilogue( true )
 	SetLoadoutGracePeriodEnabled( false )
@@ -45,19 +53,73 @@ void function _Surf_Init()
 	Riff_ForceBoostAvailability( eBoostAvailability.Disabled )
 
 	// Server-wide: restored by Surf_RestoreDefaults when another mode starts.
+	// The pilot keyvalue alone leaves the replicated server air control at its
+	// normal value. Preserve the original across consecutive Surf maps.
+	if ( GetConVarString( "surf_previous_air_accelerate" ) == "" )
+		SetConVarString( "surf_previous_air_accelerate", GetConVarString( "sv_airaccelerate" ) )
+	SetConVarFloat( "sv_airaccelerate", GetConVarFloat( "surf_air_acceleration" ) )
 	SetConVarInt( "wallrun_enable", 0 )
 	SetConVarInt( "surf_restore_wallrun", 1 )
 
 	AddCallback_OnClientConnected( Surf_OnClientConnected )
 	AddCallback_OnClientDisconnected( Surf_OnClientDisconnected )
-	AddCallback_OnPlayerRespawned( Surf_OnPlayerRespawned )
 	AddCallback_OnPlayerKilled( Surf_OnPlayerKilled )
+	AddClientCommandCallback( "surf_leaderboard", Surf_LeaderboardCommand )
 
 	getroottable().MRVN_SurfTeleported <- Surf_MapTeleported
 	thread Surf_Tick()
 	Surf_CheckLeaderboard()
 	if ( GetConVarBool( "surf_save_scores" ) )
 		Surf_LoadRecords()
+	else
+		file.recordsLoaded = true
+}
+
+// Northstar.Custom registers its movement callbacks in an After callback. Register
+// ours afterwards as well, so its default/playlist value cannot overwrite Surf.
+void function Surf_InitPlayerMovement()
+{
+	if ( GAMETYPE != GAMEMODE_SURF )
+		return
+
+	AddCallback_OnPlayerRespawned( Surf_OnPlayerRespawned )
+	AddCallback_OnPlayerGetsNewPilotLoadout( Surf_OnPlayerGetsNewPilotLoadout )
+	AddCallback_OnTitanBecomesPilot( Surf_OnPlayerChangesForm )
+	AddCallback_OnPilotBecomesTitan( Surf_OnPlayerChangesForm )
+}
+
+void function Surf_ApplyPlayerMovement( entity player )
+{
+	if ( !player.IsTitan() )
+	{
+		array<string> mods = UntypedArrayToStringArray( player.GetPlayerSettingsMods() )
+		int index = mods.find( "surf_disable_doublejump" )
+		bool changed = false
+		if ( !file.allowDoubleJump && index == -1 )
+		{
+			mods.append( "surf_disable_doublejump" )
+			changed = true
+		}
+		else if ( file.allowDoubleJump && index != -1 )
+		{
+			mods.remove( index )
+			changed = true
+		}
+		if ( changed )
+			player.SetPlayerSettingsWithMods( player.GetPlayerSettings(), mods )
+	}
+	// Settings changes can reset movement values, so apply air control last.
+	player.kv.airAcceleration = GetConVarFloat( "surf_air_acceleration" )
+}
+
+void function Surf_OnPlayerGetsNewPilotLoadout( entity player, PilotLoadoutDef loadout )
+{
+	Surf_ApplyPlayerMovement( player )
+}
+
+void function Surf_OnPlayerChangesForm( entity player, entity titan )
+{
+	Surf_ApplyPlayerMovement( player )
 }
 
 void function Surf_OnClientConnected( entity player )
@@ -68,7 +130,7 @@ void function Surf_OnClientConnected( entity player )
 	AddButtonPressedPlayerInputCallback( player, IN_OFFHAND4, Surf_Reset )
 	string uid = player.GetUID()
 	if ( uid in file.records )
-		file.best[player] <- Surf_RecordTime( file.records[uid] )
+		Surf_ApplySavedBest( player )
 	thread Surf_Greet( player )
 }
 
@@ -84,8 +146,7 @@ void function Surf_OnClientDisconnected( entity player )
 
 void function Surf_OnPlayerRespawned( entity player )
 {
-	// Pilots strafe on ramps much like Source players with a high sv_airaccelerate.
-	player.kv.airAcceleration = GetConVarFloat( "surf_air_acceleration" )
+	Surf_ApplyPlayerMovement( player )
 	foreach ( entity weapon in player.GetMainWeapons() )
 		player.TakeWeaponNow( weapon.GetWeaponClassName() )
 	foreach ( int slot in [ OFFHAND_ORDNANCE, OFFHAND_SPECIAL ] )
@@ -131,6 +192,15 @@ void function Surf_Tick()
 	table map = expect table( getroottable().MRVN_SurfMap )
 	file.startMins = expect vector( map.startMins )
 	file.startMaxs = expect vector( map.startMaxs )
+	if ( "finishZones" in map )
+	{
+		foreach ( var value in expect array( map.finishZones ) )
+		{
+			table zone = expect table( value )
+			file.finishMins.append( expect vector( zone.mins ) )
+			file.finishMaxs.append( expect vector( zone.maxs ) )
+		}
+	}
 	file.haveMap = true
 	while ( true )
 	{
@@ -138,7 +208,10 @@ void function Surf_Tick()
 		{
 			if ( !IsAlive( player ) )
 				continue
-			bool inside = Surf_InStart( player.GetOrigin() )
+			vector origin = player.GetOrigin()
+			if ( player in file.runStart && Surf_OnFinishPlatform( player, origin ) )
+				Surf_FinishRun( player )
+			bool inside = Surf_InStart( origin )
 			bool was = player in file.inStart ? file.inStart[player] : false
 			if ( was && !inside && !( player in file.runStart ) )
 			{
@@ -152,10 +225,35 @@ void function Surf_Tick()
 	}
 }
 
-// Called by the map script on every teleport (the root table only holds untyped functions).
-function Surf_MapTeleported( player, destination )
+// Feet must be grounded inside a map-authored finish zone: flying over it
+// or falling below its deck does not finish a run.
+bool function Surf_OnFinishPlatform( entity player, vector origin )
 {
-	Surf_OnTeleported( expect entity( player ), expect vector( destination ) )
+	return player.IsOnGround() && Surf_InFinishZone( origin )
+}
+
+bool function Surf_InFinishZone( vector origin )
+{
+	for ( int i = 0; i < file.finishMins.len(); i++ )
+	{
+		vector lo = file.finishMins[i]
+		vector hi = file.finishMaxs[i]
+		if ( origin.x >= lo.x && origin.y >= lo.y && origin.z >= lo.z &&
+		     origin.x <= hi.x && origin.y <= hi.y && origin.z <= hi.z )
+			return true
+	}
+	return false
+}
+
+// Called by the map script on every teleport (the root table only holds untyped functions).
+function Surf_MapTeleported( player, destination, source = null )
+{
+	entity pilot = expect entity( player )
+	// Classify the portal by its source, before considering its destination.
+	// End portals may lead to the start or the jail. Both finish an active run.
+	if ( source != null && Surf_InFinishZone( expect vector( source ) ) )
+		Surf_FinishRun( pilot )
+	Surf_OnTeleported( pilot, expect vector( destination ) )
 }
 
 void function Surf_OnTeleported( entity player, vector destination )
@@ -172,9 +270,22 @@ void function Surf_OnTeleported( entity player, vector destination )
 		file.inStart[player] <- true
 		return
 	}
+	// End portals already finished via their source zone. Other portals reset.
+	if ( file.finishMins.len() > 0 )
+	{
+		Surf_Cancel( player )
+		file.inStart[player] <- true
+		return
+	}
+	Surf_FinishRun( player )
+}
+
+void function Surf_FinishRun( entity player )
+{
+	if ( !( player in file.runStart ) ) return
 	float time = Time() - file.runStart[player]
 	delete file.runStart[player]
-	file.inStart[player] <- true
+	file.inStart[player] <- Surf_InStart( player.GetOrigin() )
 	bool isBest = !( player in file.best ) || time < file.best[player]
 	if ( isBest )
 	{
@@ -184,8 +295,10 @@ void function Surf_OnTeleported( entity player, vector destination )
 	player.SetPlayerGameStat( PGS_ASSAULT_SCORE, player.GetPlayerGameStat( PGS_ASSAULT_SCORE ) + 1 )
 	Remote_CallFunction_NonReplay( player, "ServerCallback_Surf_StopRun", time, isBest )
 	Chat_ServerBroadcast( format( "%s finished in %s%s", player.GetPlayerName(), Surf_FormatTime( time ), isBest ? " (personal best)" : "" ) )
+	Surf_Log( format( "completed: %s map=%s time=%.6f seconds double_jump=%d", player.GetPlayerName(), GetMapName(), time, file.allowDoubleJump ? 1 : 0 ) )
 	Surf_SubmitScore( player, time )
 	Surf_SaveRecord( player, time )
+	Surf_BroadcastLocalLeaderboard()
 }
 
 void function Surf_Cancel( entity player )
@@ -225,10 +338,22 @@ void function Surf_WebError( string text )
 }
 
 // Web leaderboard (modes/surf/leaderboard in Titanfall-2-Custom-Maps).
+bool function Surf_ValidLeaderboardUrl( string url )
+{
+	int prefix = url.find( "https://" ) == 0 ? 8 : ( url.find( "http://" ) == 0 ? 7 : 0 )
+	if ( prefix == 0 || url.len() <= prefix || url.find( " " ) != null || url.find( "\n" ) != null )
+		return false
+	string host = url.slice( prefix )
+	var slash = host.find( "/" )
+	if ( slash != null ) host = host.slice( 0, expect int( slash ) )
+	return host != "" && host.find( "@" ) == null && host.find( "?" ) == null && host.find( "#" ) == null
+}
+
 void function Surf_CheckLeaderboard()
 {
 	string url = GetConVarString( "surf_leaderboard_url" )
 	string key = GetConVarString( "surf_leaderboard_key" )
+	file.webKey = key
 	if ( url == "" && key == "" )
 	{
 		file.webProblem = "the web leaderboard is off (surf_leaderboard_url and surf_leaderboard_key are not set)"
@@ -243,6 +368,19 @@ void function Surf_CheckLeaderboard()
 	if ( key == "" )
 	{
 		Surf_WebError( "surf_leaderboard_url is set but surf_leaderboard_key is empty, so the leaderboard would reject every time" )
+		return
+	}
+	if ( !Surf_ValidLeaderboardUrl( url ) )
+	{
+		Surf_WebError( "surf_leaderboard_url must be a full quoted http:// or https:// URL with a hostname; no web requests will be sent" )
+		return
+	}
+	while ( url.slice( url.len() - 1 ) == "/" )
+		url = url.slice( 0, url.len() - 1 )
+	file.webUrl = url
+	if ( !NSIsHttpEnabled() )
+	{
+		Surf_WebError( "Northstar HTTP requests are disabled; remove -disablehttprequests from the launch arguments for the web leaderboard" )
 		return
 	}
 	HttpRequest request
@@ -276,21 +414,23 @@ void function Surf_SubmitScore( entity player, float time )
 	if ( !file.webUsable )
 		return
 	table body = {}
-	body[ "map" ] <- GetMapName()
+	body[ "map" ] <- Surf_RecordMap()
 	body[ "name" ] <- player.GetPlayerName()
 	body[ "uid" ] <- player.GetUID()
 	body[ "time" ] <- time
 	HttpRequest request
 	request.method = HttpRequestMethod.POST
-	request.url = GetConVarString( "surf_leaderboard_url" ) + "/api.php?action=submit"
+	request.url = file.webUrl + "/api.php?action=submit"
 	table<string, array<string> > headers
-	headers[ "x-surf-key" ] <- [ GetConVarString( "surf_leaderboard_key" ) ]
+	headers[ "x-surf-key" ] <- [ file.webKey ]
 	request.headers = headers
 	request.body = EncodeJSON( body )
 	NSHttpRequest( request,
 		void function( HttpRequestResponse response )
 		{
-			if ( response.statusCode == 403 )
+			if ( response.statusCode == 200 )
+				Surf_Log( "web leaderboard accepted the completed run" )
+			else if ( response.statusCode == 403 )
 				Surf_WebError( "the leaderboard rejected surf_leaderboard_key, so times are not saved there" )
 			else if ( response.statusCode != 200 )
 				Surf_Log( "the leaderboard rejected a time: " + response.statusCode + " " + response.body )
@@ -309,14 +449,13 @@ void function Surf_Greet( entity player )
 		return
 	if ( file.webProblem != "" )
 		Chat_ServerPrivateMessage( player, "Leaderboard: " + file.webProblem, false )
-	string url = GetConVarString( "surf_leaderboard_url" )
-	if ( url != "" )
-	{
-		Surf_ShowWebTop( player, url )
-		return
-	}
+	Chat_ServerPrivateMessage( player, "Press the scoreboard key (Tab by default) for this map's top times; surf_leaderboard in the console also lists them. Double jump " + ( file.allowDoubleJump ? "on" : "off" ) + ".", false )
+	Surf_SendLocalLeaderboard( player )
 	if ( file.recordsLoaded )
 		Chat_ServerPrivateMessage( player, Surf_LocalTopText(), false )
+	string url = file.webUrl
+	if ( url != "" && NSIsHttpEnabled() )
+		Surf_ShowWebTop( player, url )
 }
 
 void function Surf_ShowWebTop( entity player, string url )
@@ -326,7 +465,7 @@ void function Surf_ShowWebTop( entity player, string url )
 	request.url = url + "/api.php"
 	table<string, array<string> > query
 	query[ "action" ] <- [ "top" ]
-	query[ "map" ] <- [ GetMapName() ]
+	query[ "map" ] <- [ Surf_RecordMap() ]
 	query[ "limit" ] <- [ string( SURF_SCORES_SHOWN ) ]
 	request.queryParameters = query
 	NSHttpRequest( request,
@@ -355,9 +494,16 @@ void function Surf_ShowWebTop( entity player, string url )
 }
 
 // Saved scores (surf_save_scores 1): Northstar safe I/O, in R2Northstar/save_data/MRVN.Surf/.
+// Latch rules for the whole map. Runs without double jump never compete with
+// the existing double-jump records, locally or on the optional web leaderboard.
+string function Surf_RecordMap()
+{
+	return GetMapName() + ( file.allowDoubleJump ? "" : "__no_double_jump" )
+}
+
 string function Surf_RecordFile()
 {
-	return "surf_" + GetMapName() + ".json"
+	return "surf_" + Surf_RecordMap() + ".json"
 }
 
 float function Surf_RecordTime( var record )
@@ -388,32 +534,59 @@ void function Surf_LoadRecords()
 		void function( table data ) : ( name )
 		{
 			if ( "scores" in data )
-				file.records = expect table( data.scores )
+			{
+				table saved = expect table( data.scores )
+				foreach ( uid, record in saved )
+					if ( !( uid in file.records ) || Surf_RecordTime( record ) < Surf_RecordTime( file.records[uid] ) )
+						file.records[uid] <- record
+			}
 			file.recordsLoaded = true
 			foreach ( entity player in GetPlayerArray() )
 				if ( player.GetUID() in file.records )
-					file.best[player] <- Surf_RecordTime( file.records[player.GetUID()] )
+					Surf_ApplySavedBest( player )
+			if ( file.pendingRecordSave )
+				Surf_PersistRecords()
+			Surf_BroadcastLocalLeaderboard()
 			Surf_Log( "loaded " + file.records.len() + " saved scores from " + name )
 		},
 		void function() : ( name )
 		{
-			printl( "[Surf] ERROR: couldn't read saved scores " + name + " (missing or not JSON); starting this map's scores again" )
-			file.recordsLoaded = true
+			printl( "[Surf] ERROR: couldn't read saved scores " + name + " (missing or not JSON); existing file preserved, new records kept for this session" )
 		} )
+}
+
+void function Surf_ApplySavedBest( entity player )
+{
+	string uid = player.GetUID()
+	if ( !( uid in file.records ) )
+		return
+	float best = Surf_RecordTime( file.records[uid] )
+	if ( !( player in file.best ) || best < file.best[player] )
+		file.best[player] <- best
+	player.SetPlayerGameStat( PGS_DEFENSE_SCORE, int( file.best[player] + 0.5 ) )
 }
 
 void function Surf_SaveRecord( entity player, float time )
 {
-	if ( !GetConVarBool( "surf_save_scores" ) || !file.recordsLoaded )
-		return
 	string uid = player.GetUID()
 	if ( uid in file.records && Surf_RecordTime( file.records[uid] ) <= time )
 		return
 	file.records[uid] <- { name = player.GetPlayerName(), time = time }
-	table data = { version = 1, map = GetMapName(), scores = file.records }
+	if ( !GetConVarBool( "surf_save_scores" ) )
+		return
+	file.pendingRecordSave = true
+	if ( file.recordsLoaded )
+		Surf_PersistRecords()
+}
+
+void function Surf_PersistRecords()
+{
+	table data = { version = 1, map = GetMapName(), double_jump = file.allowDoubleJump, scores = file.records }
 	try
 	{
 		NSSaveJSONFile( Surf_RecordFile(), data )
+		file.pendingRecordSave = false
+		Surf_Log( "queued local record write: save_data/MRVN.Surf/" + Surf_RecordFile() )
 	}
 	catch ( ex )
 	{
@@ -421,22 +594,58 @@ void function Surf_SaveRecord( entity player, float time )
 	}
 }
 
-string function Surf_LocalTopText()
+array<table> function Surf_SortedRecords()
 {
 	array<table> scores
 	foreach ( uid, record in file.records )
 		scores.append( expect table( record ) )
 	scores.sort( int function( table a, table b )
 	{
-		float ta = expect float( a.time.tofloat() )
-		float tb = expect float( b.time.tofloat() )
-		if ( ta < tb )
-			return -1
-		if ( ta > tb )
-			return 1
+		float ta = Surf_RecordTime( a )
+		float tb = Surf_RecordTime( b )
+		if ( ta < tb ) return -1
+		if ( ta > tb ) return 1
 		return 0
 	} )
-	string text = "Server records on " + GetMapName() + ":"
+	return scores
+}
+
+void function Surf_SendLocalLeaderboard( entity player )
+{
+	if ( !IsValid( player ) )
+		return
+	string kind = GetConVarBool( "surf_save_scores" ) && file.recordsLoaded ? "local" : "session"
+	ServerToClientStringCommand( player, "SurfLeaderboard begin " + kind + " " + ( file.allowDoubleJump ? "1" : "0" ) )
+	array<table> scores = Surf_SortedRecords()
+	for ( int i = 0; i < scores.len() && i < SURF_SCORES_SHOWN; i++ )
+	{
+		table score = scores[i]
+		string name = expect string( score.name )
+		if ( name.len() > 64 ) name = name.slice( 0, 64 )
+		if ( name == "" ) name = "Player"
+		ServerToClientStringCommand( player, format( "SurfLeaderboard row %d %.6f %s", i + 1, Surf_RecordTime( score ), Surf_EncodeText( name ) ) )
+	}
+}
+
+void function Surf_BroadcastLocalLeaderboard()
+{
+	foreach ( entity player in GetPlayerArray() )
+		Surf_SendLocalLeaderboard( player )
+}
+
+bool function Surf_LeaderboardCommand( entity player, array<string> args )
+{
+	Surf_SendLocalLeaderboard( player )
+	Chat_ServerPrivateMessage( player, Surf_LocalTopText(), false )
+	string url = file.webUrl
+	if ( url != "" && NSIsHttpEnabled() ) Surf_ShowWebTop( player, url )
+	return true
+}
+
+string function Surf_LocalTopText()
+{
+	array<table> scores = Surf_SortedRecords()
+	string text = "Server records on " + GetMapName() + " (double jump " + ( file.allowDoubleJump ? "on" : "off" ) + "):"
 	for ( int i = 0; i < scores.len() && i < SURF_SCORES_SHOWN; i++ )
 		text += format( "\n%d. %s  %s", i + 1, expect string( scores[i].name ), Surf_FormatTime( expect float( scores[i].time.tofloat() ) ) )
 	if ( scores.len() == 0 )

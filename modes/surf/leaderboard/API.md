@@ -1,7 +1,7 @@
 # Surf leaderboard API, version 1
 
 The contract between the `MRVN.Surf` Northstar mod (game servers) and a leaderboard
-server. `api.php` in this folder is the reference implementation (PHP 8 + SQLite); any server
+server. `api.php` in this folder is the reference implementation (PHP 8 + PDO SQLite); any server
 that follows this document works with the mod, in any language.
 
 ## Overview

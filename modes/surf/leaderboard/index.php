@@ -3,9 +3,20 @@
 require __DIR__ . '/lib.php';
 
 $config = surf_config();
-$maps = surf_maps();
-$map = (string) ($_GET['map'] ?? ($maps[0]['map'] ?? ''));
-$scores = surf_valid_map($map) ? surf_top($map, 100) : [];
+$db_error = null;
+$maps = [];
+$map = (string) ($_GET['map'] ?? '');
+$scores = [];
+try {
+    $maps = surf_maps();
+    if ($map === '') {
+        $map = (string) ($maps[0]['map'] ?? '');
+    }
+    $scores = surf_valid_map($map) ? surf_top($map, 100) : [];
+} catch (RuntimeException $e) {
+    error_log('surf leaderboard: ' . $e->getMessage());
+    $db_error = $e->getMessage();
+}
 $e = fn ($s) => htmlspecialchars((string) $s, ENT_QUOTES, 'UTF-8');
 ?><!doctype html>
 <html lang="en">
@@ -47,7 +58,9 @@ $e = fn ($s) => htmlspecialchars((string) $s, ENT_QUOTES, 'UTF-8');
     <?php endforeach; ?>
   </nav>
   <?php endif; ?>
-  <?php if ($scores): ?>
+  <?php if ($db_error !== null): ?>
+  <div class="empty"><?= $e($db_error) ?></div>
+  <?php elseif ($scores): ?>
   <div class="wrap">
   <table>
     <thead><tr><th class="n">#</th><th>Pilot</th><th class="n">Time</th><th>Date</th><th>Server</th></tr></thead>

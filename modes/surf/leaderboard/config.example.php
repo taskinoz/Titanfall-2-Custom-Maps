@@ -2,6 +2,7 @@
 // Copy to config.php and edit. Keep config.php and the database out of version control.
 return [
     // SQLite database file. Put it outside the web root if you can.
+    // Requires the pdo_sqlite PHP extension (Windows php.ini: extension=php_pdo_sqlite).
     'database' => __DIR__ . '/data/surf.sqlite',
 
     // One key per game server allowed to submit times. Set the same key on that server with

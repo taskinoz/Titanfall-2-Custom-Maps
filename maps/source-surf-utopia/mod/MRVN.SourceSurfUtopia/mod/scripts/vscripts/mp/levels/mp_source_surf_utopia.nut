@@ -830,7 +830,7 @@ void function CodeCallback_MapInit()
  AddBrush( [ < -1, 0, 0 >, < 1, 0, 0 >, < 0, -1, 0 >, < 0, 1, 0 >, < 0, 0, -1 >, < 0, 0, 1 > ], [ -1272.0, 1280.0, -1600.0, 1664.0, 9664.0, -9600.0 ] )
  AddPush( < 1272, 1600, -9664 >, < 1280, 1664, -9600 >, < 100, 0, -0 >, 145, 146 )
  thread KillFallenPilots()
- getroottable().MRVN_SurfMap <- { startMins = < -14416, -1040, 12768 >, startMaxs = < -13456, 1040, 13344 >, startOrigin = < -13904, -528, 12832 >, startYaw = 2.0 }
+ getroottable().MRVN_SurfMap <- { startMins = < -14416, -1040, 12768 >, startMaxs = < -13456, 1040, 13344 >, startOrigin = < -13904, -528, 12832 >, startYaw = 2.0, finishZones = [ { mins = < -14352, -1024, -7700 >, maxs = < -13824, 1024, -6088 > }, { mins = < -14352, -2048, -4484 >, maxs = < -13952, 2048, -4100 > } ] }
  thread SurfRamps()
 }
 // A convex trigger brush: its planes, outward normals, in world space.
@@ -939,7 +939,7 @@ void function KillFallenPilots()
     player.SetAngles( <0, file.yaws[k], 0> )
     player.SetVelocity( <0, 0, 0> )
     if ( "MRVN_SurfTeleported" in getroottable() )
-     getroottable().MRVN_SurfTeleported( player, file.destinations[k] )
+     getroottable().MRVN_SurfTeleported( player, file.destinations[k], o )
     break
    }
   }

@@ -1,6 +1,6 @@
 # Releasing
 
-Each map version is released on its own: one Git tag, one GitHub release and one
+Each map or mode version is released on its own: one Git tag, one GitHub release and one
 Thunderstore version.
 
 | | Format | Example |
@@ -81,3 +81,10 @@ The packaging and upload scripts are adapted from
 [apex-to-titanfall-2](https://github.com/taskinoz/apex-to-titanfall-2). Its
 [notes on Thunderstore publishing](https://github.com/taskinoz/apex-to-titanfall-2/blob/main/docs/thunderstore-ci.md)
 explain why uploads use the multipart, background-submission protocol.
+
+## Game modes
+
+Mode entries use `kind: mode` and `source_path` pointing to the runtime mod folder.
+They contain scripts and may contain Northstar `keyvalues` patches; they do not
+require a BSP or RPak. Maps can list Thunderstore `dependencies` in the catalog.
+Surf and Surf Utopia are separate releases; Surf Utopia depends on Surf 0.1.0.

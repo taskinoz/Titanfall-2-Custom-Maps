@@ -15,7 +15,7 @@
         },
         {
             "Name": "surf_save_scores",
-            "DefaultValue": "0"
+            "DefaultValue": "1"
         },
         {
             "Name": "surf_air_acceleration",
@@ -24,6 +24,14 @@
         {
             "Name": "surf_restore_wallrun",
             "DefaultValue": "0"
+        },
+        {
+            "Name": "surf_previous_air_accelerate",
+            "DefaultValue": ""
+        },
+        {
+            "Name": "surf_double_jump",
+            "DefaultValue": "1"
         }
     ],
     "Scripts": [
@@ -39,7 +47,10 @@
         },
         {
             "Path": "gamemodes/_gamemode_surf.nut",
-            "RunOn": "SERVER && MP"
+            "RunOn": "SERVER && MP",
+            "ServerCallback": {
+                "After": "Surf_InitPlayerMovement"
+            }
         },
         {
             "Path": "gamemodes/cl_gamemode_surf.nut",

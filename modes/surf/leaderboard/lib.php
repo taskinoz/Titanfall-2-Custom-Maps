@@ -17,6 +17,12 @@ function surf_db(): PDO
     if ($db !== null) {
         return $db;
     }
+    $drivers = class_exists('PDO') ? PDO::getAvailableDrivers() : [];
+    if (!in_array('sqlite', $drivers, true)) {
+        throw new RuntimeException(
+            'Missing PDO SQLite driver. Enable the pdo_sqlite extension in php.ini (Windows: php_pdo_sqlite).'
+        );
+    }
     $path = surf_config()['database'];
     if (!is_dir(dirname($path))) {
         mkdir(dirname($path), 0770, true);

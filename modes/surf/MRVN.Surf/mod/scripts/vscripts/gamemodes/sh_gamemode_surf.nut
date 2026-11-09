@@ -1,9 +1,12 @@
 global function Surf_Init
+global function Surf_EncodeText
+global function Surf_DecodeText
 
 global const GAMEMODE_SURF = "surf"
 
 void function Surf_Init()
 {
+	AddPrivateMatchModeSettingEnum( "#MODE_SETTING_CATEGORY_PILOT", "surf_double_jump", [ "#SETTING_DISABLED", "#SETTING_ENABLED" ], "1", "#SURF_DOUBLE_JUMP" )
 	AddCallback_OnCustomGamemodesInit( CreateGamemode )
 	AddCallback_OnRegisteringCustomNetworkVars( SurfRegisterNetworkVars )
 }
@@ -48,9 +51,42 @@ void function SurfRegisterNetworkVars()
 #if SERVER
 void function Surf_RestoreDefaults()
 {
-	if ( GAMETYPE == GAMEMODE_SURF || GetConVarInt( "surf_restore_wallrun" ) == 0 )
+	if ( GAMETYPE == GAMEMODE_SURF )
 		return
-	SetConVarInt( "wallrun_enable", 1 )
-	SetConVarInt( "surf_restore_wallrun", 0 )
+	if ( GetConVarInt( "surf_restore_wallrun" ) != 0 )
+	{
+		SetConVarInt( "wallrun_enable", 1 )
+		SetConVarInt( "surf_restore_wallrun", 0 )
+	}
+	string previousAirAccelerate = GetConVarString( "surf_previous_air_accelerate" )
+	if ( previousAirAccelerate != "" )
+	{
+		SetConVarString( "sv_airaccelerate", previousAirAccelerate )
+		SetConVarString( "surf_previous_air_accelerate", "" )
+	}
 }
 #endif
+
+// Console-safe transport for names: never put player-supplied console syntax on
+// the command line. Hex also preserves UTF-8 names and embedded spaces.
+string function Surf_EncodeText( string text )
+{
+	string encoded = ""
+	for ( int i = 0; i < text.len(); i++ )
+		encoded += format( "%02x", expect int( text[i] ) & 255 )
+	return encoded
+}
+
+string function Surf_DecodeText( string encoded )
+{
+	string digits = "0123456789abcdef"
+	string text = ""
+	for ( int i = 0; i + 1 < encoded.len(); i += 2 )
+	{
+		int hi = expect int( digits.find( encoded.slice( i, i + 1 ) ) )
+		int lo = expect int( digits.find( encoded.slice( i + 1, i + 2 ) ) )
+		int character = hi * 16 + lo
+		text += character < 32 ? " " : format( "%c", character )
+	}
+	return text
+}

@@ -18,12 +18,12 @@ class CatalogTests(unittest.TestCase):
                 self.assertEqual(p['tag'], f'{p["slug"]}-v{p["version"]}')
                 self.assertEqual(p['asset'], f'{p["mod"]}-{p["version"]}.zip')
                 self.assertTrue((ci.ROOT/'thunderstore/icons'/f'{p["name"]}.png').exists())
-                info = json.loads((ci.ROOT/'maps'/p['slug']/'mod'/p['mod']/'mod.json').read_text(encoding='utf-8-sig'))
+                info = json.loads((ci.ROOT/Path(p.get('source_path', f'maps/{p["slug"]}/mod/{p["mod"]}'))/'mod.json').read_text(encoding='utf-8-sig'))
                 self.assertEqual((info['Name'], info['Version']), (p['mod'], p['version']))
 
     def test_selection(self):
         self.assertEqual(len(ci.select(ci.catalog(), 'current')), len(ci.catalog()))
-        self.assertEqual([p['mod'] for p in ci.select(ci.catalog(), 'minecraft-uma-v0.5.1')], ['MRVN.MinecraftUma'])
+        self.assertEqual([p['mod'] for p in ci.select(ci.catalog(), next(p['tag'] for p in ci.catalog() if p['mod'] == 'MRVN.MinecraftUma'))], ['MRVN.MinecraftUma'])
         self.assertEqual(ci.select(ci.catalog(), 'minecraft-uma-v0.1.0'), [])
 
 
@@ -79,6 +79,20 @@ class PackagingTests(unittest.TestCase):
                      mod+'\\mod.json', '/'+mod+'/mod.json', 'Other/mod.json'):
             with self.subTest(name=name), self.assertRaises(ValueError):
                 ci.build(self.package, self.source(extra=name), self.root/'built')
+
+    def test_mode_package_keeps_keyvalues_without_requiring_map_assets(self):
+        self.package.update(mod='MRVN.Surf', name='Surf', kind='mode')
+        source = self.root/'mode.zip'
+        with zipfile.ZipFile(source, 'w') as z:
+            z.writestr('MRVN.Surf/mod.json', json.dumps({'Name': 'MRVN.Surf', 'Version': self.package['version']}))
+            z.writestr('MRVN.Surf/README.md', 'Surf mode instructions')
+            z.writestr('MRVN.Surf/mod/scripts/vscripts/surf.nut', 'scripts')
+            z.writestr('MRVN.Surf/keyvalues/scripts/players/mp/pilot_base.set', 'doublejump settings')
+        self.package.update(bytes=source.stat().st_size, sha256=ci.digest(source))
+        receipt = ci.build(self.package, source, self.root/'mode-built')
+        with zipfile.ZipFile(receipt['path']) as z:
+            self.assertEqual(z.read('mods/taskinoz.MRVN.Surf/keyvalues/scripts/players/mp/pilot_base.set'), b'doublejump settings')
+            self.assertIn('written with AI', z.read('README.md').decode())
 
     def test_publish_requires_secret_before_network(self):
         with patch.dict(ci.os.environ, {}, clear=True), self.assertRaisesRegex(ValueError, 'TS_KEY'):

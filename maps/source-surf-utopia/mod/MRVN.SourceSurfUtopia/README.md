@@ -1,11 +1,23 @@
-# Surf Utopia: Source engine to Titanfall 2 test port
+# Surf Utopia 0.1.0
 
-Source map: surf_utopia_v3.bsp. Original game assets belong to their owners (Valve).
-Local conversion by MRVN-Radiant, for local testing only: no redistribution licence is granted.
+Titanfall 2 / Northstar conversion of the Source map surf_utopia_v3.
+Install the separate Surf game mode for timed runs, optional double jump and
+leaderboards, then run:
 
-Extract MRVN.SourceSurfUtopia into R2Northstar/mods and run `map mp_source_surf_utopia tdm`.
+```
+mp_gamemode surf
+map mp_source_surf_utopia
+```
 
-Brush geometry, displacements (as patches), static props with their physics
-collision, textures, lights and the 2D skybox are converted. Dynamic and physics
-props, cutout or translucent prop parts (foliage, wires), the 3D skybox, water,
-doors, breakables, decals, overlays and normal maps are not.
+Landing on any of the three end platforms, or entering their end portals,
+finishes an active run. The boost key resets the run. Jail doors, buttons,
+crate traps, explosions and spinning fans are not reproduced.
+
+Manual install: place MRVN.SourceSurfUtopia in R2Northstar/mods and restart
+Northstar. Everyone in the match needs the same map and mode versions.
+
+Original map and game assets belong to their respective authors. Source map:
+https://main.fastdl.me/maps/surf_utopia_v3.bsp.bz2
+
+Conversion produced with AI; see:
+https://github.com/taskinoz/Titanfall-2-Custom-Maps/blob/main/AI.md

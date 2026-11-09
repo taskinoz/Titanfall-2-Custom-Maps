@@ -19,13 +19,13 @@ disclosure and links to every original.
 | [Jump Academy 2 (TF2)](maps/source-academy2) | `mp_source_academy2` | 0.1.0 | Unreleased, local builds only |
 | [Nuke (CS2)](maps/source-nuke) | `mp_source_nuke` | 0.1.0 | Unreleased, local builds only |
 | [Trainstation (HL2)](maps/source-trainstation02) | `mp_source_trainstation02` | 0.1.0 | Unreleased, local builds only |
-| [Surf Utopia](maps/source-surf-utopia) | `mp_source_surf_utopia` | 0.1.0 | Unreleased, local builds only |
+| [Surf Utopia](maps/source-surf-utopia) | `mp_source_surf_utopia` | 0.1.0 | Released preview |
 
 ## Game modes
 
 | Mode | Mod | Status |
 | --- | --- | --- |
-| [Surf](modes/surf) | `MRVN.Surf` | Unreleased: timed runs on surf maps, with a PHP web leaderboard |
+| [Surf](modes/surf) | `MRVN.Surf` | 0.1.0: timed runs, speedometer and leaderboards |
 
 All are pilot-only: there is no navmesh, so Titans and AI don't work. Only Pilot
 vs Pilot (`tdm`) has been tested, with one player on a local server, not in real

@@ -24,7 +24,7 @@ REPO = 'taskinoz/Titanfall-2-Custom-Maps'
 WEBSITE = 'https://github.com/' + REPO
 USER_AGENT = 'CustomMapPublisher/1.0 (+https://github.com/taskinoz/Titanfall-2-Custom-Maps)'
 # Top-level folders and files a player package may contain.
-FOLDERS = ('mod', 'paks', 'vpk', 'source')
+FOLDERS = ('mod', 'paks', 'vpk', 'source', 'keyvalues')
 FILE = re.compile(r'(mod\.json|README\.md|COPYING|LICENSE[-\w]*\.txt|materials\.json|verification\.json)')
 
 
@@ -80,6 +80,12 @@ def entries(archive, mod):
 
 
 def readme(package, original):
+    if package.get('kind') == 'mode':
+        return (f'# {package["title"]}\n\n{package["description"]}\n\n'
+                'This mode was written with AI; see '
+                f'[the disclosure]({WEBSITE}/blob/main/AI.md).\n\n'
+                'Everyone in the match needs the same version. Remove manually installed '
+                'copies of MRVN.Surf before enabling the managed version.\n\n' + original)
     return (f'# {package["title"]}\n\n{package["description"]}\n\n'
             f'Original human-built map: [{package["original_title"]}]({package["original_url"]}). '
             'This conversion was produced with AI; see '
@@ -107,16 +113,19 @@ def build(package, source, out, namespace='taskinoz'):
     if raw[:8] != b'\x89PNG\r\n\x1a\n' or struct.unpack('>II', raw[16:24]) != (256, 256):
         raise ValueError('Expected 256x256 PNG icon')
     manifest = dict(name=name, version_number=version, website_url=WEBSITE,
-                    description=package['description'], dependencies=[])
+                    description=package['description'], dependencies=package.get('dependencies', []))
     hashes = {}
     with zipfile.ZipFile(source) as old:
         members = entries(old, mod)
         info = json.loads(old.read(mod+'/mod.json').decode('utf-8-sig'))
         if (info['Name'], info['Version']) != (mod, version):
             raise ValueError('Runtime mod identity/version disagrees with catalog')
-        if not any(r.startswith('paks/') and r.endswith('.rpak') for _, r in members):
+        if package.get('kind') == 'mode':
+            if not any(r.startswith('mod/scripts/') and r.endswith(('.nut', '.gnut')) for _, r in members):
+                raise ValueError('Missing game mode scripts')
+        elif not any(r.startswith('paks/') and r.endswith('.rpak') for _, r in members):
             raise ValueError('Missing native asset pack')
-        if not any(r.startswith('mod/maps/') and r.endswith('.bsp') for _, r in members):
+        if package.get('kind') != 'mode' and not any(r.startswith('mod/maps/') and r.endswith('.bsp') for _, r in members):
             raise ValueError('Missing map payload')
         text = readme(package, old.read(mod+'/README.md').decode('utf-8-sig'))
         (folder/'README.md').write_text(text, encoding='utf-8')

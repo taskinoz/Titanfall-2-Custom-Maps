@@ -20,3 +20,14 @@ First test conversion, of the Team Fortress 2 build of `surf_utopia_v3`.
 - The six `trigger_push` boosters and jail lifts push pilots by script.
 - Spawns are the map's Counter-Strike team spawns, in the start room.
 - Not converted: the jail's doors, buttons, crate traps and explosions (the cells are open), and the spinning `func_rotating` fans.
+
+- Surf timing now ends on landing on the final platform assembly (both decks and
+  the lower deck's roof), rather than waiting for a return teleport. Flying past
+  the platform does not finish; reset portals cancel unfinished runs.
+
+- End teleports also finish and submit active runs, including end portals leading
+  to the jail. Their pre-teleport position distinguishes them from other resets;
+  a run already finished on landing cannot be submitted twice.
+
+- Added the upper END platform and its jail-control-room portal to the finish
+  zones. The existing two lower platforms and their portals remain finish zones.

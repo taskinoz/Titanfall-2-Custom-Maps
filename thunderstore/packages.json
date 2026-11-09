@@ -43,5 +43,38 @@
     "original_title": "E1M1 by John Romero / id Software (GPL map source)",
     "original_url": "https://github.com/fzwoch/quake_map_source",
     "description": "Quake's E1M1, The Slipgate Complex, compiled for Titanfall 2 with LibreQuake textures and baked lighting. Geometry test: no doors, lifts or Quake gameplay."
+  },
+  {
+    "slug": "surf",
+    "mod": "MRVN.Surf",
+    "name": "Surf",
+    "title": "Surf",
+    "version": "0.1.0",
+    "tag": "surf-v0.1.0",
+    "asset": "MRVN.Surf-0.1.0.zip",
+    "bytes": 12867,
+    "sha256": "b5e8ba06627e955baa344aaf27e3656f5999eb241f79c991f10122e1d7ecb814",
+    "command": "mp_gamemode surf; map mp_source_surf_utopia",
+    "description": "Surf game mode: timed runs, uncapped speedometer, saved personal bests, scoreboard leaderboard, optional double jump and optional web leaderboard.",
+    "kind": "mode",
+    "source_path": "modes/surf/MRVN.Surf"
+  },
+  {
+    "slug": "source-surf-utopia",
+    "mod": "MRVN.SourceSurfUtopia",
+    "name": "Surf_Utopia",
+    "title": "Surf Utopia",
+    "version": "0.1.0",
+    "tag": "source-surf-utopia-v0.1.0",
+    "asset": "MRVN.SourceSurfUtopia-0.1.0.zip",
+    "bytes": 25369898,
+    "sha256": "0a34fe0db0c32a7b6735fef20adfefaf3668858d529ec3defa73ad78a4642d15",
+    "command": "mp_gamemode surf; map mp_source_surf_utopia",
+    "description": "Surf Utopia for Titanfall 2: surf movement, converted ramps and textures, with all three end platforms and portals supported by the separate Surf mode.",
+    "original_title": "Surf Utopia v3 (original authors credited in-map)",
+    "original_url": "https://main.fastdl.me/maps/surf_utopia_v3.bsp.bz2",
+    "dependencies": [
+      "taskinoz-Surf-0.1.0"
+    ]
   }
 ]

@@ -14,7 +14,7 @@ confirmed) and is not included here; this conversion was produced with AI (see
 | Mod | `MRVN.SourceSurfUtopia` |
 | Level | `mp_source_surf_utopia` |
 | Version | 0.1.0 |
-| Status | Work in progress, **not released**: the source map's assets are not ours to redistribute |
+| Status | Released preview |
 
 ## Surfing in Titanfall 2
 
@@ -26,7 +26,8 @@ while they are on any surface steeper than Source's limit, and lets them stand a
 quarter second after they leave it. Tested in Northstar: pushed along the longest
 ramp, a pilot kept a steady ~700 units/s along it while sliding down it.
 
-Wallrunning, double jumps and grapples still work, so some stages can be skipped.
+Use the separate Surf mode for timed runs, surf air control, a speedometer and
+leaderboards. Double jump can be disabled in its private-match settings.
 
 ## Status
 
