@@ -1,4 +1,4 @@
-# Surf Utopia 0.1.0
+# Surf Utopia 0.1.1
 
 Titanfall 2 / Northstar conversion of the Source map surf_utopia_v3.
 Install the separate Surf game mode for timed runs, optional double jump and

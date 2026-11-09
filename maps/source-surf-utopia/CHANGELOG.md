@@ -1,5 +1,10 @@
 # Surf Utopia changelog
 
+## 0.1.1 - 2026-11-09
+
+- Thunderstore image updated to the latest END-platform screenshot.
+- Map assets and gameplay scripts are unchanged from 0.1.0.
+
 ## 0.1.0 (2026-11-07, unreleased)
 
 First test conversion, of the Team Fortress 2 build of `surf_utopia_v3`.
