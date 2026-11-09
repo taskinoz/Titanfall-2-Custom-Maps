@@ -128,6 +128,13 @@ The site is plain PHP 8 with SQLite (`pdo_sqlite`):
    on nginx, deny `config.php`, `lib.php` and `data/` yourself.
 3. Open `https://your.site/surf/` for the leaderboard page.
 
+The public leaderboard supports pilot-name search, a map/rule dropdown and
+pagination. Global positions are computed for the entire map category before
+searching, across all servers contributing to this site. Equal best times share
+the same position. Searching does not reset a pilot's position to 1. The page
+shows the server of the actual best run; it does not combine rankings between
+separate leaderboard installations.
+
 API (used by the mod; the full contract for reimplementing it in another language is in
 [leaderboard/API.md](leaderboard/API.md)):
 

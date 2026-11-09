@@ -46,29 +46,54 @@ function surf_db(): PDO
     return $db;
 }
 
-// Each player's best time on a map, fastest first.
+// Rank all pilots before filtering, so a name search retains the global map rank.
+// Pick an actual best run deterministically; its server and date stay together.
+function surf_ranked_query(): string
+{
+    return 'WITH candidates AS (
+        SELECT *, ROW_NUMBER() OVER (
+            PARTITION BY map, uid ORDER BY time, created, id
+        ) AS personal_run FROM runs
+    ), ranked AS (
+        SELECT *, RANK() OVER (PARTITION BY map ORDER BY time) AS global_rank
+        FROM candidates WHERE personal_run = 1
+    ) ';
+}
+
+function surf_leaderboard(string $map, string $search, int $limit = 50, int $offset = 0): array
+{
+    $where = "WHERE (:map = '' OR map = :map)
+        AND (:search = '' OR INSTR(LOWER(name), LOWER(:search)) > 0)";
+    $db = surf_db();
+    $count = $db->prepare(surf_ranked_query() . 'SELECT COUNT(*) FROM ranked ' . $where);
+    $count->execute([':map' => $map, ':search' => $search]);
+    $stmt = $db->prepare(surf_ranked_query() . 'SELECT * FROM ranked ' . $where . '
+        ORDER BY map, time, created, uid LIMIT :limit OFFSET :offset');
+    $stmt->bindValue(':map', $map);
+    $stmt->bindValue(':search', $search);
+    $stmt->bindValue(':limit', max(1, min(100, $limit)), PDO::PARAM_INT);
+    $stmt->bindValue(':offset', max(0, $offset), PDO::PARAM_INT);
+    $stmt->execute();
+    $rows = array_map(fn ($row) => [
+        'name' => $row['name'], 'uid' => $row['uid'], 'map' => $row['map'],
+        'rank' => (int) $row['global_rank'], 'time' => (float) $row['time'],
+        'date' => gmdate('c', (int) $row['created']), 'server' => $row['server'],
+    ], $stmt->fetchAll());
+    return ['scores' => $rows, 'total' => (int) $count->fetchColumn()];
+}
+
+// Existing game-server API: each pilot's best time on one map.
 function surf_top(string $map, int $limit): array
 {
-    $stmt = surf_db()->prepare(
-        'SELECT r.name, r.uid, MIN(r.time) AS time, MIN(r.created) AS created, r.server
-         FROM runs r
-         JOIN (SELECT uid, MIN(time) AS best FROM runs WHERE map = :map GROUP BY uid) b
-           ON r.uid = b.uid AND r.time = b.best
-         WHERE r.map = :map
-         GROUP BY r.uid
-         ORDER BY time ASC, created ASC
-         LIMIT :limit'
-    );
-    $stmt->bindValue(':map', $map);
-    $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
-    $stmt->execute();
-    return array_map(fn ($row) => [
-        'name' => $row['name'],
-        'uid' => $row['uid'],
-        'time' => (float) $row['time'],
-        'date' => gmdate('c', (int) $row['created']),
-        'server' => $row['server'],
-    ], $stmt->fetchAll());
+    return surf_leaderboard($map, '', $limit)['scores'];
+}
+
+function surf_map_label(string $map): string
+{
+    $no_jump = str_ends_with($map, '__no_double_jump');
+    $name = preg_replace('/__no_double_jump$/', '', $map);
+    $name = preg_replace('/^mp_(source_|minecraft_)?/', '', $name);
+    return ucwords(str_replace('_', ' ', $name)) . ($no_jump ? ' (double jump off)' : '');
 }
 
 function surf_maps(): array

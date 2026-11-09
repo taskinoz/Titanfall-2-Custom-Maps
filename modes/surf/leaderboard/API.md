@@ -190,3 +190,13 @@ curl -s "$B/api.php?action=maps"
 
 Names are user input: a leaderboard page must escape them (the reference page shows
 `<b>Viper</b>` as text).
+
+### Website search and positions
+
+The HTML page accepts `?q=<pilot name>&map=<map key>&page=<page number>`.
+An empty map selects all maps; each result retains its rank within its own map
+and double-jump category. Name search is a literal, case-insensitive substring
+(for ASCII names); `%` and `_` are not wildcards. Pages contain 50 results and
+searches include pilots outside the first 100 records. Tied times share a rank.
+The `top` response also includes `rank` (global within that map on this site) and
+`map`, in addition to the existing fields.
