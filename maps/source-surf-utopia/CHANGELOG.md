@@ -1,5 +1,10 @@
 # Surf Utopia changelog
 
+## 0.1.2 - 2026-11-09
+
+- Corrected the package image to the supplied ramp screenshot.
+- Map assets and gameplay scripts are unchanged.
+
 ## 0.1.1 - 2026-11-09
 
 - Thunderstore image updated to the latest END-platform screenshot.
