@@ -1,23 +1,21 @@
-# Surf Utopia 0.1.2
+# Surf Utopia 0.1.3
 
-Titanfall 2 / Northstar conversion of the Source map surf_utopia_v3.
-Install the separate Surf game mode for timed runs, optional double jump and
-leaderboards, then run:
+Surf Utopia v3 converted for Titanfall 2 / Northstar. Original human-built map:
+https://main.fastdl.me/maps/surf_utopia_v3.bsp.bz2 (authors credited in-map).
+Conversion source and AI disclosure: https://github.com/taskinoz/Titanfall-2-Custom-Maps
 
-```
-mp_gamemode surf
-map mp_source_surf_utopia
-```
+Install MRVN.SourceSurfUtopia alongside MRVN.Surf 0.1.0, then run:
 
-Landing on any of the three end platforms, or entering their end portals,
-finishes an active run. The boost key resets the run. Jail doors, buttons,
-crate traps, explosions and spinning fans are not reproduced.
+    mp_gamemode surf
+    map mp_source_surf_utopia
 
-Manual install: place MRVN.SourceSurfUtopia in R2Northstar/mods and restart
-Northstar. Everyone in the match needs the same map and mode versions.
+Everyone in the match needs the same map version. Do not enable duplicate manual
+and Thunderstore installations of this mod.
 
-Original map and game assets belong to their respective authors. Source map:
-https://main.fastdl.me/maps/surf_utopia_v3.bsp.bz2
+0.1.3 repairs the jail exit threshold and improves baked lighting in shadowed areas.
+The original floor stripes and the existing ramp package image are retained.
+Reset teleports use swept hull checks, including compiled bevel planes and a small
+contact tolerance. All three end platforms and end portals still use Surf's finish hooks.
 
-Conversion produced with AI; see:
-https://github.com/taskinoz/Titanfall-2-Custom-Maps/blob/main/AI.md
+This is a converted preview: original doors/buttons and spinning fan logic are not
+implemented. The jail cells and exit remain open.

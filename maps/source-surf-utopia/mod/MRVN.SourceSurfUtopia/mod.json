@@ -1,6 +1,6 @@
 {
   "Name": "MRVN.SourceSurfUtopia",
-  "Version": "0.1.2",
+  "Version": "0.1.3",
   "LoadPriority": 200,
   "RequiredOnClient": true,
   "Description": "Surf Utopia: a Source surf map converted for Titanfall 2. Use the Surf mode for timed runs.",

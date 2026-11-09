@@ -1,5 +1,13 @@
 # Surf Utopia changelog
 
+## 0.1.3 - 2026-11-09
+
+- Repaired the jail exit threshold left exposed by the omitted rotating door, preserving the original paving and red stripes.
+- Improved baked shadows with one indirect bounce, 256 sky samples, a diffuse sky visibility floor and 32-unit lightmap texels.
+- Swept teleport checks catch thin reset floors, with compiled bevel planes and a small contact tolerance.
+- Retained the ramp screenshot package image.
+- Verified the reported jail view and collision/clearance across all five repaired floor bands in the Northstar client.
+
 ## 0.1.2 - 2026-11-09
 
 - Corrected the package image to the supplied ramp screenshot.

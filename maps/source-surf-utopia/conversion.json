@@ -2,7 +2,7 @@
   "level": "mp_source_surf_utopia",
   "source": "surf_utopia_v3.bsp",
   "input_sha256": "66df8e0e6ef535cc10021910063a4e5bffa3896976c452fe5cf64727efefa1bb",
-  "brushes": 5130,
+  "brushes": 5135,
   "displacements": 0,
   "textures": 9,
   "skipped": {
@@ -17,16 +17,40 @@
   },
   "invisible_glass": [],
   "missing_materials": {},
+  "geometry_repairs": 5,
   "static_props": 6,
   "prop_charts": 2553,
   "prop_collision_brushes": 43,
-  "world_meshes": 519,
+  "world_meshes": 555,
   "mesh_cluster": 6144,
-  "luxel_size": 40.0,
-  "lightmap_pages": 4,
+  "luxel_size": 32.0,
+  "lightmap_pages": 6,
   "teleports": 648,
   "pushes": 6,
   "surf": true,
   "kill_z": -10528.0,
-  "engine_verified": false
+  "engine_verified": true,
+  "verification": {
+    "version": "0.1.3",
+    "source_sha256": "66df8e0e6ef535cc10021910063a4e5bffa3896976c452fe5cf64727efefa1bb",
+    "source_brushes": 5135,
+    "added_jail_floor_bands": 5,
+    "floor_bounds": {
+      "mins": [
+        0,
+        1152,
+        -10256
+      ],
+      "maxs": [
+        192,
+        1216,
+        -10240
+      ]
+    },
+    "native_client_jail_render": true,
+    "native_floor_band_probes": 5,
+    "native_floor_clearance_passed": true,
+    "bsp_validation_issues": [],
+    "human_full_course_completion": false
+  }
 }

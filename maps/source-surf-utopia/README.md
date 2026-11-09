@@ -13,7 +13,7 @@ confirmed) and is not included here; this conversion was produced with AI (see
 | --- | --- |
 | Mod | `MRVN.SourceSurfUtopia` |
 | Level | `mp_source_surf_utopia` |
-| Version | 0.1.2 |
+| Version | 0.1.3 |
 | Status | Released preview |
 
 ## Surfing in Titanfall 2
@@ -57,5 +57,13 @@ map mp_source_surf_utopia tdm
 | `build.ps1` | The exact converter command for this map |
 | `CHANGELOG.md` | Version history |
 
-The generated `.map` and the compiled mod stay local because they are derived
-from the original map's assets.
+The compiled map and editable generated source are attached to the GitHub release.
+Original game/BSP input files are not stored in this repository.
+
+## 0.1.3 fixes
+
+The jail exit threshold is now a flush, textured floor with the original bands.
+Lighting uses one indirect bounce, 256 sky samples, a diffuse sky visibility floor
+and 32-unit texels. Thin teleport volumes use swept checks with a contact tolerance.
+The existing ramp icon is unchanged. The reported jail view and all five threshold
+bands were validated in the native client before publishing.

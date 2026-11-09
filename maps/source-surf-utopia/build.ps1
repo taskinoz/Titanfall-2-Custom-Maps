@@ -16,8 +16,8 @@ if ($MaterialTemplates) { $extra += '--material-templates', $MaterialTemplates }
 if ($LoadscreenTemplate -and (Test-Path $Loadscreen)) { $extra += '--loadscreen', $Loadscreen, '--loadscreen-template', $LoadscreenTemplate }
 $env:PYTHONPATH = "$Mrvn/tools/respawn"
 # The map spans the whole Source world: 16 units per luxel runs out of memory baking light,
-# 40 fits in four lightmap pages. surf_ maps get the surf-ramp script by default (--surf).
+# 32 gives the lighting preview finer shadow detail. surf_ maps get the surf-ramp script by default (--surf).
 python "$Mrvn/tools/respawn/build_source_ports.py" --bsp $Bsp --game-dir $Hl2 `
     --name surf_utopia --display-name 'Surf Utopia' `
-    --description 'A classic Counter-Strike surf map. Slide along the ramps, strafe into them to hold your line, and reach the end of the course. Fall off and you are sent to the jail. Play it in the Surf mode for timed runs.' --luxel-size 40 --output $Output `
+    --description 'A classic Counter-Strike surf map. Slide along the ramps, strafe into them to hold your line, and reach the end of the course. Fall off and you are sent to the jail. Play it in the Surf mode for timed runs.' --luxel-size 32 --output $Output `
     --remap "$Mrvn/install/Release/remap.exe" --repak $Repak --material-template $MaterialTemplate @extra
