@@ -27,13 +27,15 @@ disclosure and links to every original.
 | --- | --- | --- |
 | [Surf](modes/surf) | `MRVN.Surf` | 0.1.0: timed runs, speedometer and leaderboards |
 
-All are pilot-only: there is no navmesh, so Titans and AI don't work. Only Pilot
-vs Pilot (`tdm`) has been tested, with one player on a local server, not in real
-multiplayer.
+All are pilot-only: there is no navmesh, so Titans and AI don't work. The other map ports were tested with one player in Pilot vs Pilot (`tdm`).
+Surf mode was tested on Surf Utopia, including saved times and all three end
+platforms and portals.
 
 ## Install
 
-**With a mod manager:** install [UMA](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_UMA/), [Glitch](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_Glitch/) or [Quake E1M1](https://thunderstore.io/c/northstar/p/taskinoz/Quake_E1M1/) from
+**With a mod manager:** install [Surf](https://thunderstore.io/c/northstar/p/taskinoz/Surf/)
+and [Surf Utopia](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Utopia/) for surf races.
+Surf Utopia installs the Surf mode as a dependency. Other maps include [UMA](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_UMA/), [Glitch](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_Glitch/) or [Quake E1M1](https://thunderstore.io/c/northstar/p/taskinoz/Quake_E1M1/) from
 [Thunderstore](https://thunderstore.io/c/northstar/p/taskinoz/).
 
 **By hand:** download a map's ZIP from
