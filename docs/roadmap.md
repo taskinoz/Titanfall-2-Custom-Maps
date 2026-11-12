@@ -15,7 +15,7 @@ mode, and the converter, compiler and testing work they depend on in
 | surf_beginner, surf_kitsune, surf_cyberwave | Source BSPs downloaded and checksummed; not converted |
 | Other Source ports (Nuke, Academy, Trainstation) | Local only; Valve assets mean they aren't released |
 | Minecraft and Quake ports | Released |
-| Leaderboard site | Search, map filter and global rank are live at titanfall.rocks/surf; no runs recorded on the live site yet |
+| Leaderboard site | Search, map filter and global rank are live at titanfall.rocks/surf, with four public Surf Utopia runs |
 | Testing | ARES map harness (PR #2) runs maps and mods in Northstar, TFO, R1Delta and R5Reloaded unattended |
 | Titanfall 1 / TFO | Compiled v29 maps load in TFO and R1Delta; collision matches TFO; lighting, water and packaging incomplete (Phase 2) |
 | Apex / R5Reloaded | Season 3 only: a TF2 → Apex port loads on the dedicated server; the client crashes on sign-on; S0–S2 untested (Phase 3) |
@@ -53,13 +53,15 @@ mode, and the converter, compiler and testing work they depend on in
 4. **Release Surf Me 0.1.0.** This needs its own load screen (it still uses the
    Coliseum one), a description and a Thunderstore package. Add it to the server
    rotation.
-5. **Investigate the empty-server crash.** On 11 November the dedicated server
-   died when its last player disconnected (`attempted to write pdata of size 0!`),
-   leaving a zombie launcher. Reproduce it with a harness client that joins and
-   leaves. Then decide on a fix (game-side, or a watchdog in
-   `Start-TitanfallSurf.ps1` that restarts the server and clears the stuck process).
-6. **Confirm live leaderboard submissions.** Finish one run on the public server
-   and check that it appears on titanfall.rocks/surf with the right rank.
+5. ~~**Investigate the empty-server crash.**~~ Done 13 November: no crash
+   happened. `attempted to write pdata of size 0!` is logged on every disconnect,
+   including on servers that keep running. Windows recorded no crash or hang for
+   the server process; the four Northstar crash events since 9 November are all
+   from other processes (three in the client-only `materialsystem_dx11.dll`). The
+   log simply goes quiet when nobody is connected. See `docs/dedicated-server.md`.
+6. ~~**Confirm live leaderboard submissions.**~~ Done: titanfall.rocks/surf lists
+   four Surf Utopia runs from 10–11 November. Follow-up: the Server column says
+   "My server" for every run, so give the server key a proper label on the site.
 
 ## Phase 1 — Next: grow the collection
 

@@ -39,6 +39,23 @@ leaderboard check. Empty-server hibernation is also explicitly disabled.
 The actual Surf playlist is selected so it is advertised as `surf`, rather than
 `Load a map on the command line`.
 
+## A quiet log is not a crash (checked 2026-11-13)
+
+`attempted to write pdata of size 0!` follows every disconnect. The server has no
+persistence backend, so it's harmless. After the last player leaves, the log
+can stay silent for hours while the server keeps running and stays listed. To
+tell a healthy idle server from a dead one, check:
+
+- the server is still on the live master list;
+- `Get-WinEvent` (Application log, IDs 1000/1002) has no crash or hang event for
+  the server's process ID. Crashes in `materialsystem_dx11.dll` belong to game
+  clients, not the dedicated server;
+- the process isn't stuck: an idle 60 FPS server averages about 1% of one core,
+  with its main thread sleeping between frames.
+
+Don't kill a quiet server just because its log stopped. The 11 November
+"zombie" was a healthy idle server, as far as the evidence shows.
+
 When verifying a restart, check the live master list repeatedly for at least two
 minutes and reload https://northstar.tf/servers/?filter=surf. A process, bound
 UDP socket or one successful registration is not sufficient proof of a healthy

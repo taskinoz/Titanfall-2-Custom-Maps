@@ -1,4 +1,4 @@
-# Surf 0.1.0
+# Surf 0.2.0
 
 A Northstar game mode for surf maps. Install the Surf Utopia map separately, select
 Surf in a private match, or use `mp_gamemode surf` before loading a surf map.

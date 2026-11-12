@@ -1,5 +1,15 @@
 # Surf changelog
 
+## 0.2.0 - unreleased
+
+- Multi-stage maps: a map can list its stage start points (`checkpointOrigins`).
+  Stages must be completed in order; a reset to the current stage keeps the
+  timer running, and skipping or going back a stage cancels the run. The finish
+  only counts after the last stage. Maps without stages work exactly as before.
+- Teleports and cancelled runs are written to the server log (`[surf]` lines)
+  to diagnose unexpected resets.
+- Native rule checks for any surf map: `tests/surf_native_test.py`.
+
 ## 0.1.0 - 2026-11-09
 
 - First public release of the Surf game mode for Northstar.
