@@ -1,0 +1,141 @@
+{
+  "level": "mp_source_surf_me",
+  "source": "surf_me.bsp",
+  "input_sha256": "0c871708f167cf073210ddc1ea5dc68bf5e03f887f61c9fdfef47b742dec374f",
+  "brushes": 6105,
+  "displacements": 24,
+  "textures": 55,
+  "skipped": {
+    "contents 0x10000020": 8,
+    "3D skybox": 6,
+    "trigger_teleport": 47,
+    "trigger_multiple": 15,
+    "func_illusionary": 4,
+    "3D skybox prop": 3
+  },
+  "invisible_glass": [],
+  "missing_materials": {},
+  "static_props": 604,
+  "prop_charts": 20874,
+  "prop_collision_brushes": 537,
+  "world_meshes": 688,
+  "mesh_cluster": 12288,
+  "luxel_size": 48.0,
+  "lightmap_pages": 6,
+  "teleports": 47,
+  "pushes": 0,
+  "surf": true,
+  "kill_z": -16512.0,
+  "engine_verified": true,
+  "surf_config": {
+    "startMins": [
+      -13678.5,
+      -3584,
+      -960
+    ],
+    "startMaxs": [
+      -12398.5,
+      -2560,
+      -384
+    ],
+    "startOrigin": [
+      -12782.5,
+      -3072,
+      -768
+    ],
+    "startYaw": 0,
+    "finishZones": [
+      {
+        "mins": [
+          -11728,
+          11888,
+          -1280
+        ],
+        "maxs": [
+          -6736,
+          13584,
+          -192
+        ]
+      }
+    ],
+    "checkpointOrigins": [
+      [
+        2687.7,
+        3104,
+        14592
+      ],
+      [
+        -15022.5,
+        -11775.5,
+        2144
+      ],
+      [
+        -15104,
+        5120,
+        2528
+      ],
+      [
+        -12240,
+        12736,
+        13092
+      ]
+    ],
+    "spawns": {
+      "2": [
+        [
+          -13102.5,
+          -3232,
+          -768
+        ],
+        [
+          -13102.5,
+          -2912,
+          -768
+        ],
+        [
+          -12782.5,
+          -3232,
+          -768
+        ],
+        [
+          -12782.5,
+          -2912,
+          -768
+        ]
+      ],
+      "3": [
+        [
+          -13262.5,
+          -3232,
+          -768
+        ],
+        [
+          -13262.5,
+          -2912,
+          -768
+        ],
+        [
+          -12942.5,
+          -3232,
+          -768
+        ],
+        [
+          -12942.5,
+          -2912,
+          -768
+        ]
+      ]
+    },
+    "teleportTargetOverrides": {
+      "InstanceAuto11-tele4": "tele5"
+    }
+  },
+  "native_validation": {
+    "swept_trigger_cases": 2,
+    "real_player_fast_fall_resets": 2,
+    "native_checkpoint_assertions": true,
+    "client_render": true,
+    "map_switch_to_utopia": true,
+    "human_course_completion": false
+  }
+}

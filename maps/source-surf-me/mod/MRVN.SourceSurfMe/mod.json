@@ -1,0 +1,16 @@
+{
+  "Name": "MRVN.SourceSurfMe",
+  "Version": "0.1.0",
+  "LoadPriority": 200,
+  "RequiredOnClient": true,
+  "Description": "Surf Me. Local test port of a Source engine map",
+  "Localisation": [
+    "resource/mp_source_surf_me_%language%.txt"
+  ],
+  "Scripts": [
+    {
+      "Path": "mp/levels/mp_source_surf_me.nut",
+      "RunOn": "SERVER && MP && MAP_mp_source_surf_me"
+    }
+  ]
+}

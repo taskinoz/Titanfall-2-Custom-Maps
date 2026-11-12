@@ -1,0 +1,51 @@
+{
+  "article": "https://refrag.gg/blog/best-surf-maps-in-cs2/",
+  "note": "Original Source 1 counterparts, not the CS2 remakes. Utopia v3 matches the existing converted map.",
+  "maps": [
+    {
+      "name": "surf_beginner",
+      "url": "https://main.fastdl.me/maps/surf_beginner.bsp.bz2",
+      "bytes": 17958137,
+      "sha1": "812ca2188ed4ea7578d51268020d1363ea4155fa",
+      "sha256": "c7679bbb68829273c7ab86c7404096b65f4ef8f94ab09433da987c8f474e8d8d",
+      "bsp_version": 20
+    },
+    {
+      "name": "surf_me",
+      "url": "https://main.fastdl.me/maps/surf_me.bsp.bz2",
+      "bytes": 97524590,
+      "sha1": "19e43d7f714c94214b4ebd2fde92ffd679aa0a1a",
+      "sha256": "0c871708f167cf073210ddc1ea5dc68bf5e03f887f61c9fdfef47b742dec374f",
+      "bsp_version": 20,
+      "author": "not_a_zombie",
+      "author_page": "https://gamebanana.com/mods/122524",
+      "author_archive": "https://gamebanana.com/dl/277744",
+      "author_archive_md5": "3c1a51e6ad92033f6838ac9746c92402"
+    },
+    {
+      "name": "surf_utopia_v3",
+      "url": "https://main.fastdl.me/maps/surf_utopia_v3.bsp.bz2",
+      "bytes": 35648722,
+      "sha1": "af15e10499388490a71281756d777bb7c8c2b05c",
+      "sha256": "66df8e0e6ef535cc10021910063a4e5bffa3896976c452fe5cf64727efefa1bb",
+      "bsp_version": 20
+    },
+    {
+      "name": "surf_kitsune",
+      "url": "https://main.fastdl.me/maps/surf_kitsune.bsp.bz2",
+      "bytes": 19370618,
+      "sha1": "41ff082a485d5b4a306589205187bc730ca4b2ac",
+      "sha256": "1c0d3c7b3c08581180da3efc4512068b03023340ffd744eb0ab86c7ec214e77f",
+      "bsp_version": 20
+    },
+    {
+      "name": "surf_cyberwave",
+      "url": "https://main.fastdl.me/maps/surf_cyberwave.bsp.bz2",
+      "bytes": 95669906,
+      "sha1": "96df9092d09eab0f15bfb29cb3ef75fcbbd620f7",
+      "sha256": "0ecb42a50257e5c0f764714dfa78a9b95c187918a3a8730e7d944a892b43c0b3",
+      "bsp_version": 20
+    }
+  ],
+  "downloaded_on": "2026-11-09"
+}
