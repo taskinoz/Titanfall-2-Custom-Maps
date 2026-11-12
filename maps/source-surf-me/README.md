@@ -10,10 +10,8 @@ BSP SHA-256: `0c871708f167cf073210ddc1ea5dc68bf5e03f887f61c9fdfef47b742dec374f`.
 
 ## Play
 
-Install `MRVN.SourceSurfMe` and the accompanying **checkpoint-capable development
-build of MRVN.Surf** into your Northstar profile's `mods` folder. The released Surf
-0.1.0 cancels runs on stage transitions, so use the included development copy for
-this preview. Back up your existing Surf folder before replacing it.
+Install `MRVN.SourceSurfMe` and **Surf 0.2.0 or later** into your Northstar
+profile's `mods` folder. Surf 0.1.0 cancels runs on stage transitions.
 
 Start a local Surf match and run:
 
@@ -77,3 +75,18 @@ touch ... v ...`, and the Surf mode writes `[surf] teleport ... checkpoint=...
 running=... current=...` plus `[surf] run cancelled for ... at ...`. When a
 stage resets unexpectedly, those lines identify the trigger and destination
 that fired without needing in-game coordinates.
+
+## Rebuild and native checks (2026-11-13)
+
+The copies of this map in the local preview profile and in the earlier build
+folders had been truncated to zero bytes (BSP, RPak and VPKs shared hard links).
+The map was rebuilt with the current converter, which includes the
+trigger-transform fix (MRVN-Radiant `184ddec`). The level script in this folder now
+matches that build. Record validation found no issues, and all 688 world meshes
+are reachable.
+
+`modes/surf/tests/surf_native_test.py` passed natively on this build: fail
+teleports cancel, an early end portal records nothing, skipping or going back a
+stage cancels, each of stages 2–5 advances once and keeps the timer through a
+reset, and the end portal then records the time. Two spawn probes have floor and
+pilot clearance. A full human run is still needed before release.
