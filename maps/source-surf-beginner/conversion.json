@@ -1,0 +1,157 @@
+{
+  "level": "mp_source_surf_beginner",
+  "source": "surf_beginner.bsp",
+  "input_sha256": "c7679bbb68829273c7ab86c7404096b65f4ef8f94ab09433da987c8f474e8d8d",
+  "brushes": 709,
+  "displacements": 6,
+  "textures": 14,
+  "skipped": {
+    "contents 0x10000020": 19,
+    "trigger_teleport": 40,
+    "trigger_multiple": 1,
+    "trigger_hurt": 1,
+    "func_precipitation": 1,
+    "unreadable model": 2
+  },
+  "invisible_glass": [],
+  "missing_materials": {
+    "cs_havana/woodm": 2003,
+    "de_dust/rockwall01": 174,
+    "cs_italy/black": 5,
+    "cs_italy/stonewall02": 61,
+    "de_piranesi/marblefloor06": 9,
+    "cs_havana/white": 215,
+    "cs_havana/ground01grass": 2
+  },
+  "geometry_repairs": 0,
+  "static_props": 2,
+  "prop_charts": 716,
+  "prop_collision_brushes": 0,
+  "world_meshes": 115,
+  "mesh_cluster": 3072,
+  "luxel_size": 32.0,
+  "lightmap_pages": 1,
+  "teleports": 40,
+  "pushes": 0,
+  "surf": true,
+  "kill_z": -1088.0,
+  "engine_verified": false,
+  "surf_config": {
+    "startMins": [
+      -480,
+      -32,
+      300
+    ],
+    "startMaxs": [
+      224,
+      288,
+      700
+    ],
+    "startOrigin": [
+      -128,
+      128,
+      320
+    ],
+    "startYaw": 90,
+    "finishZones": [
+      {
+        "mins": [
+          -5456,
+          5200,
+          -296
+        ],
+        "maxs": [
+          -5168,
+          5272,
+          8
+        ]
+      }
+    ],
+    "checkpointOrigins": [
+      [
+        2528,
+        2240,
+        672
+      ],
+      [
+        1456,
+        272,
+        928
+      ],
+      [
+        2720,
+        5888,
+        832
+      ],
+      [
+        -5792,
+        -1632,
+        2736
+      ],
+      [
+        -2320,
+        104,
+        2392
+      ],
+      [
+        -5312,
+        640,
+        2784
+      ]
+    ],
+    "spawns": {
+      "2": [
+        [
+          -320,
+          96,
+          320
+        ],
+        [
+          -192,
+          96,
+          320
+        ],
+        [
+          -320,
+          224,
+          320
+        ],
+        [
+          -192,
+          224,
+          320
+        ]
+      ],
+      "3": [
+        [
+          -64,
+          96,
+          320
+        ],
+        [
+          64,
+          96,
+          320
+        ],
+        [
+          -64,
+          224,
+          320
+        ],
+        [
+          64,
+          224,
+          320
+        ]
+      ]
+    }
+  },
+  "native_validation": {
+    "native_surf_rule_checks": true,
+    "stage_destinations_match_triggers": true,
+    "finish_trigger_in_zone": true,
+    "spawn_and_stage_clearance": true,
+    "client_render": false,
+    "human_course_completion": false
+  }
+}

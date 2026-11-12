@@ -11,8 +11,9 @@ mode, and the converter, compiler and testing work they depend on in
 | --- | --- |
 | Surf Utopia | Released, 0.1.3. Runs on the public `Titanfall Surf` dedicated server with web leaderboard submissions |
 | Surf mode | Released, 0.1.0. Checkpoint (staged-map) support exists only as uncommitted development code |
-| Surf Me | Local preview: compiles, loads, five-stage timer passes native tests. No full human run yet; not released |
-| surf_beginner, surf_kitsune, surf_cyberwave | Source BSPs downloaded and checksummed; not converted |
+| Surf Me | Local preview, rebuilt 13 Nov with its own loading screen; five-stage rules pass native tests. No full human run yet; not released |
+| Surf Beginner | Local seven-stage preview (13 Nov); rules pass native tests; CS:S textures missing until CS:S is installed |
+| surf_kitsune, surf_cyberwave | Source BSPs downloaded and checksummed; not converted |
 | Other Source ports (Nuke, Academy, Trainstation) | Local only; Valve assets mean they aren't released |
 | Minecraft and Quake ports | Released |
 | Leaderboard site | Search, map filter and global rank are live at titanfall.rocks/surf, with four public Surf Utopia runs |
@@ -39,7 +40,8 @@ mode, and the converter, compiler and testing work they depend on in
 
 ## Phase 1 — Now: finish what's in progress
 
-1. **Commit the Surf Me and checkpoint work.** The working tree holds the
+1. ~~**Commit the Surf Me and checkpoint work.**~~ Done 13 November (branch
+   `surf-stages-and-surf-me`). The working tree holds the
    checkpoint-capable `_gamemode_surf.nut`, the Surf README update,
    `maps/source-surf-me/`, `maps/surf-map-sources.json`, `docs/surf-map-collection.md`
    and `docs/dedicated-server.md`. Commit them on a branch so they aren't lost.
@@ -47,11 +49,13 @@ mode, and the converter, compiler and testing work they depend on in
    with deliberate fails on each stage. Confirm the timer survives resets,
    that skipping a stage cancels the run, and that the finish records locally and
    on the web.
-3. **Release Surf 0.2.0** with staged-map support. Check first that Utopia, which
-   has no checkpoints, behaves exactly as in 0.1.0. Then update the server's
+3. **Release Surf 0.2.0** with staged-map support. Version bumped and changelog
+   written; Utopia 0.1.3 passes every non-staged rule check natively under it
+   (13 November). Waiting on item 2 before tagging. Then update the server's
    installed mod (one version per identity: see `docs/dedicated-server.md`).
-4. **Release Surf Me 0.1.0.** This needs its own load screen (it still uses the
-   Coliseum one), a description and a Thunderstore package. Add it to the server
+4. **Release Surf Me 0.1.0.** Ready apart from item 2: rebuilt with the current
+   converter, its own loading screen and native checks (13 November). Still
+   needed: the Thunderstore package, the catalog entry and a place in the server
    rotation.
 5. ~~**Investigate the empty-server crash.**~~ Done 13 November: no crash
    happened. `attempted to write pdata of size 0!` is logged on every disconnect,
@@ -65,8 +69,12 @@ mode, and the converter, compiler and testing work they depend on in
 
 ## Phase 1 — Next: grow the collection
 
-7. **Convert surf_beginner.** It should be the simplest of the three; use it to
-   make the recipe from the Surf Me conversion repeatable.
+7. ~~**Convert surf_beginner.**~~ Local preview done 13 November: seven stages,
+   rules pass natively. Remaining: install Counter-Strike: Source for its seven
+   missing textures, check its dark lighting against the original, a loading
+   screen and a human run. The recipe (measure the start platform with harness
+   traces, take checkpoints from the stage teleport destinations, pad the last
+   end trigger into a finish zone) is in its README.
 8. **Bonus courses as leaderboard categories.** Surf Me has four bonus areas that
    are converted but untimed. Add per-category start and finish zones to
    `surf.json`, a category field in submissions, and a category filter on the site.

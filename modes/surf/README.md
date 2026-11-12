@@ -4,7 +4,7 @@
 
 A Northstar game mode for surf maps converted with MRVN-Radiant (so far
 [Surf Utopia](../../maps/source-surf-utopia), plus the local
-[Surf Me preview](../../maps/source-surf-me)). Written with AI (see [AI.md](../../AI.md)).
+[Surf Me](../../maps/source-surf-me) and [Surf Beginner](../../maps/source-surf-beginner) previews). Written with AI (see [AI.md](../../AI.md)).
 
 | | |
 | --- | --- |
