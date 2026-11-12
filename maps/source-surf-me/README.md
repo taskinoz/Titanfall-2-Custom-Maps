@@ -44,8 +44,9 @@ The main five-stage timed course is the target of this build. Bonus areas are
 converted geometrically but have no separate bonus timers or leaderboard categories.
 Original player-targetname filters and arbitrary entity outputs are not emulated;
 bonus gating can therefore differ. Animated flames, smoke particles, overlays,
-normal maps and water volumes are not reproduced. The loading screen still aliases
-Coliseum. A complete human surf run is still required before treating this as a release candidate.
+normal maps and water volumes are not reproduced. The map has its own loading
+screen (`loadscreen.png`, captured in game from the stage-1 corridor). A complete
+human surf run is still required before treating this as a release candidate.
 Both maps have now been rendered and inspected in the client.
 
 The conversion and timing support are local development work. No new Thunderstore
