@@ -73,6 +73,7 @@ GitHub release. Each version is also a Git tag, `<map>-v<version>`.
 - [Building a map](docs/building.md): toolchain, inputs and rebuild commands.
 - [Releasing](docs/releasing.md): GitHub releases and Thunderstore publishing.
 - [History](docs/history.md): how the version history was assembled.
+- [Roadmap](docs/roadmap.md): current status, goals and planned map work.
 
 ## Credits and licences
 
