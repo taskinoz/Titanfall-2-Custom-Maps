@@ -80,13 +80,22 @@ mode, and the converter, compiler and testing work they depend on in
    `surf.json`, a category field in submissions, and a category filter on the site.
 9. **Map rotation on the server.** Switch maps by playlist or vote, keep each map's
    records separate, and make sure every map in the rotation is installed and enabled.
-10. **Assess surf_kitsune and surf_cyberwave.** List the entity logic each one
-    relies on (filters, outputs, moving parts) before converting. Leave out any map
-    whose course depends on behaviour the converter can't reproduce.
-11. **Automated surf checks in ARES.** Turn the Surf Me native tests (stage
-    arrivals, reset floors, spawn clearance, checkpoint order) into a reusable
-    `checks.json` + Session script. Every surf map can then be checked the same way
-    before release.
+10. ~~**Assess surf_kitsune and surf_cyberwave.**~~ Done 13 November.
+    - **surf_cyberwave: convert next.** Two stages (`s1_start`, `s2_start`), one
+      bonus (`b1_start`) and a spawn; 12 plain teleports. Its only scripting is a
+      `logic_auto` that runs `sv_maxvelocity 7500`. Its 95 MB BSP probably embeds
+      its own textures. Check that the Surf mode's speed cap allows 7,500 u/s.
+    - **surf_kitsune: needs converter work first.** Its secret colour route is
+      gated by player names: `trigger_multiple` sets `!activator`'s targetname
+      (`AddOutput targetname X1`…), and teleports with `filter_activator_name`
+      fire only for matching names. The converter ignores filters, so those
+      teleports would fire for everyone and pull normal runs into the secret
+      route. Emulate per-player names and filtered teleports in the generated
+      level script (roadmap item 12), or drop the filtered teleports.
+11. **Automated surf checks.** Started 13 November: `modes/surf/tests/surf_native_test.py`
+    checks the Surf rules on any map natively, through the ARES harness. Still
+    to add: reset-floor sweeps, and each stage's real triggers fired in game
+    rather than called from script.
 
 ## Phase 1 — Later: conversion quality
 
