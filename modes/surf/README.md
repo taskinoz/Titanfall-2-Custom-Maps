@@ -3,7 +3,8 @@
 ![AI generated](../../.github/badges/ai-generated.svg)
 
 A Northstar game mode for surf maps converted with MRVN-Radiant (so far
-[Surf Utopia](../../maps/source-surf-utopia)). Written with AI (see [AI.md](../../AI.md)).
+[Surf Utopia](../../maps/source-surf-utopia), plus the local
+[Surf Me preview](../../maps/source-surf-me)). Written with AI (see [AI.md](../../AI.md)).
 
 | | |
 | --- | --- |
@@ -35,6 +36,11 @@ A Northstar game mode for surf maps converted with MRVN-Radiant (so far
   without a time. The run timer, uncapped speed in km/h and best time show on the HUD,
   finished runs are announced in chat, and the scoreboard shows runs, best time
   (seconds) and resets.
+- **Staged maps (development):** maps can export ordered `checkpointOrigins`.
+  A transition to the next stage advances the run; a reset to the same stage keeps
+  elapsed time. Skipping a stage or going backwards cancels it. The finish unlocks
+  only after every checkpoint. Returning to the main start cancels the run.
+  Surf Me uses this for its five-stage course; bonus categories are not timed.
 - **Reset:** the boost key sends you back to the start.
 - **Web leaderboard:** finished times are sent to the PHP site in [leaderboard](leaderboard),
   and the map's top five are shown in chat when you join.

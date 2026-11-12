@@ -9,7 +9,7 @@ global function Surf_InitPlayerMovement
 // them back into it (the end of the course). Any other teleport (a fail floor, the jail) or a death
 // ends the run without a time. Maps tell the mode where the start room is through the root table
 // (MRVN_SurfMap, set by MRVN-Radiant's surf map scripts) and call MRVN_SurfTeleported on each
-// teleport.
+// teleport. Optional checkpointOrigins lists the stage destinations in course order.
 //
 // Scores: finished times go to the web leaderboard when surf_leaderboard_url and
 // surf_leaderboard_key are set (the key is checked at map start), and to
@@ -22,11 +22,13 @@ const int SURF_SCORES_SHOWN = 5
 struct
 {
 	table<entity, bool> inStart
+	table<entity, int> runCheckpoint
 	table<entity, float> runStart
 	table<entity, float> best
 	vector startMins
 	vector startMaxs
 	bool haveMap = false
+	array<vector> checkpointOrigins
 	array<vector> finishMins
 	array<vector> finishMaxs
 	string webUrl = ""
@@ -136,6 +138,8 @@ void function Surf_OnClientConnected( entity player )
 
 void function Surf_OnClientDisconnected( entity player )
 {
+	if ( player in file.runCheckpoint )
+		delete file.runCheckpoint[player]
 	if ( player in file.inStart )
 		delete file.inStart[player]
 	if ( player in file.runStart )
@@ -184,12 +188,11 @@ bool function Surf_InStart( vector o )
 	return o.x >= lo.x && o.y >= lo.y && o.z >= lo.z && o.x <= hi.x && o.y <= hi.y && o.z <= hi.z
 }
 
-// Starts a run when a pilot leaves the start room.
-void function Surf_Tick()
+void function Surf_LoadMap( table map )
 {
-	while ( !( "MRVN_SurfMap" in getroottable() ) )
-		wait 1.0
-	table map = expect table( getroottable().MRVN_SurfMap )
+	file.finishMins.clear()
+	file.finishMaxs.clear()
+	file.checkpointOrigins.clear()
 	file.startMins = expect vector( map.startMins )
 	file.startMaxs = expect vector( map.startMaxs )
 	if ( "finishZones" in map )
@@ -201,7 +204,20 @@ void function Surf_Tick()
 			file.finishMaxs.append( expect vector( zone.maxs ) )
 		}
 	}
+	if ( "checkpointOrigins" in map )
+	{
+		foreach ( var value in expect array( map.checkpointOrigins ) )
+			file.checkpointOrigins.append( expect vector( value ) )
+	}
 	file.haveMap = true
+}
+
+// Starts a run when a pilot leaves the start room.
+void function Surf_Tick()
+{
+	while ( !( "MRVN_SurfMap" in getroottable() ) )
+		wait 1.0
+	Surf_LoadMap( expect table( getroottable().MRVN_SurfMap ) )
 	while ( true )
 	{
 		foreach ( entity player in GetPlayerArray() )
@@ -209,12 +225,13 @@ void function Surf_Tick()
 			if ( !IsAlive( player ) )
 				continue
 			vector origin = player.GetOrigin()
-			if ( player in file.runStart && Surf_OnFinishPlatform( player, origin ) )
+			if ( player in file.runStart && Surf_CompletedCheckpoints( player ) && Surf_OnFinishPlatform( player, origin ) )
 				Surf_FinishRun( player )
 			bool inside = Surf_InStart( origin )
 			bool was = player in file.inStart ? file.inStart[player] : false
 			if ( was && !inside && !( player in file.runStart ) )
 			{
+				file.runCheckpoint[player] <- 0
 				file.runStart[player] <- Time()
 				float best = player in file.best ? file.best[player] : -1.0
 				Remote_CallFunction_NonReplay( player, "ServerCallback_Surf_StartRun", Time(), best )
@@ -251,13 +268,50 @@ function Surf_MapTeleported( player, destination, source = null )
 	entity pilot = expect entity( player )
 	// Classify the portal by its source, before considering its destination.
 	// End portals may lead to the start or the jail. Both finish an active run.
-	if ( source != null && Surf_InFinishZone( expect vector( source ) ) )
+	if ( source != null && Surf_CompletedCheckpoints( pilot ) && Surf_InFinishZone( expect vector( source ) ) )
 		Surf_FinishRun( pilot )
 	Surf_OnTeleported( pilot, expect vector( destination ) )
 }
 
+// Checkpoint indices are one-based; zero is the main start room. A stage reset
+// keeps the elapsed time, but jumping ahead or going back invalidates the run.
+int function Surf_CheckpointAt( vector destination )
+{
+	for ( int i = 0; i < file.checkpointOrigins.len(); i++ )
+		if ( Distance( destination, file.checkpointOrigins[i] ) <= 8.0 )
+			return i + 1
+	return -1
+}
+
+bool function Surf_IsCheckpointTransition( int current, int checkpoint )
+{
+	return checkpoint > 0 && ( checkpoint == current || checkpoint == current + 1 )
+}
+
+bool function Surf_CompletedCheckpoints( entity player )
+{
+	if ( file.checkpointOrigins.len() == 0 )
+		return true
+	return player in file.runCheckpoint && file.runCheckpoint[player] == file.checkpointOrigins.len()
+}
+
 void function Surf_OnTeleported( entity player, vector destination )
 {
+	int checkpoint = Surf_CheckpointAt( destination )
+	printl( "[surf] teleport " + player.GetPlayerName() + " -> " + destination + " checkpoint=" + checkpoint + " running=" + ( player in file.runStart ) + " current=" + ( player in file.runCheckpoint ? file.runCheckpoint[player] : 0 ) )
+	if ( checkpoint > 0 )
+	{
+		if ( player in file.runStart )
+		{
+			int current = player in file.runCheckpoint ? file.runCheckpoint[player] : 0
+			if ( Surf_IsCheckpointTransition( current, checkpoint ) )
+				file.runCheckpoint[player] <- checkpoint
+			else
+				Surf_Cancel( player )
+		}
+		file.inStart[player] <- false
+		return
+	}
 	// Teleported out of the start room's reach (a fail floor, the jail): not a run start.
 	if ( !Surf_InStart( destination ) )
 	{
@@ -282,9 +336,11 @@ void function Surf_OnTeleported( entity player, vector destination )
 
 void function Surf_FinishRun( entity player )
 {
-	if ( !( player in file.runStart ) ) return
+	if ( !( player in file.runStart ) || !Surf_CompletedCheckpoints( player ) ) return
 	float time = Time() - file.runStart[player]
 	delete file.runStart[player]
+	if ( player in file.runCheckpoint )
+		delete file.runCheckpoint[player]
 	file.inStart[player] <- Surf_InStart( player.GetOrigin() )
 	bool isBest = !( player in file.best ) || time < file.best[player]
 	if ( isBest )
@@ -303,8 +359,11 @@ void function Surf_FinishRun( entity player )
 
 void function Surf_Cancel( entity player )
 {
+	if ( player in file.runCheckpoint )
+		delete file.runCheckpoint[player]
 	if ( !( player in file.runStart ) )
 		return
+	printl( "[surf] run cancelled for " + player.GetPlayerName() + " at " + player.GetOrigin() )
 	delete file.runStart[player]
 	if ( IsValid( player ) )
 		Remote_CallFunction_NonReplay( player, "ServerCallback_Surf_CancelRun" )
