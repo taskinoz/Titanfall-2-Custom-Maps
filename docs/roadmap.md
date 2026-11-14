@@ -1,6 +1,6 @@
 # Map development roadmap
 
-Status as of 12 November 2026. This covers the maps in this repository, the Surf
+Status as of 15 November 2026. This covers the maps in this repository, the Surf
 mode, and the converter, compiler and testing work they depend on in
 [MRVN-Radiant](https://github.com/taskinoz/MRVN-Radiant) and
 [ARES](https://github.com/taskinoz/ARES). Update it when an item ships or changes.
@@ -10,7 +10,7 @@ mode, and the converter, compiler and testing work they depend on in
 | Area | State |
 | --- | --- |
 | Surf Utopia | Released, 0.1.3. Runs on the public `Titanfall Surf` dedicated server with web leaderboard submissions |
-| Surf mode | Released, 0.1.0. Checkpoint (staged-map) support exists only as uncommitted development code |
+| Surf mode | Public release 0.1.0; checkpoint support and 0.2.0 release preparation committed locally on `surf-stages-and-surf-me`, not released |
 | Surf Me | Local preview, rebuilt 13 Nov with its own loading screen; five-stage rules pass native tests. No full human run yet; not released |
 | Surf Beginner | Local seven-stage preview (13 Nov); rules pass native tests; CS:S textures missing until CS:S is installed |
 | surf_kitsune, surf_cyberwave | Source BSPs downloaded and checksummed; not converted |
@@ -20,6 +20,37 @@ mode, and the converter, compiler and testing work they depend on in
 | Testing | ARES map harness (PR #2) runs maps and mods in Northstar, TFO, R1Delta and R5Reloaded unattended |
 | Titanfall 1 / TFO | Compiled v29 maps load in TFO and R1Delta; collision matches TFO; lighting, water and packaging incomplete (Phase 2) |
 | Apex / R5Reloaded | Season 3 only: a TF2 → Apex port loads on the dedicated server; the client crashes on sign-on; S0–S2 untested (Phase 3) |
+
+## Phase 1 checkpoint: 14 November 2026
+
+Phase 1 is **partially verified, not finished**. Utopia 0.1.3 and Surf 0.1.0
+remain the public releases. The local branch contains the staged Surf 0.2.0
+preparation, Surf Me's rebuilt five-stage preview and loading screen, Surf
+Beginner's seven-stage preview, native rule tests and the source-map assessment.
+The checkpoint implementation is committed; the latest crouch recovery changes
+in the three level scripts and MRVN-Radiant's converter template are uncommitted.
+
+The 13 November native tests passed the timed-run rules on Utopia, Me and
+Beginner, and spawn clearance at Beginner's seven stage starts. The separate
+Surf Me crouch check observed crouching on a ramp, recovery after leaving it,
+and standing after a fail teleport. Recovery checks headroom and resets the
+forced slide at teleports. These are recorded results from the previous work;
+no Northstar test was rerun on 14 November.
+
+Release gates remain: a human run of all five Me stages with deliberate fails
+and a finish recorded locally and online; then Surf 0.2.0 and Me packages,
+catalog updates and server rotation. Beginner still needs seven CS:S materials,
+lighting comparison, its own loading screen and a human run. Bonus categories,
+real-trigger/reset-floor automation and Kitsune filter emulation remain open.
+The empty-server crash investigation was closed without evidence of a server
+crash; the leaderboard server label still needs correcting.
+
+At the user's request, Phase 2 has begun alongside these outstanding release
+gates. Initial runtime work used TFO while another system used EA/Origin.
+After EA sign-in was available, R1Delta 3.0.5 also passed the six shared
+baseline collision checks, matching TFO exactly. Broader acceptance in both
+runtimes remains outstanding. See MRVN-Radiant's
+[Phase 2 checklist](https://github.com/taskinoz/MRVN-Radiant/blob/9fd8bddb6e16f3e8e69dd8215e2a5db1484e9392/docs/respawn/RESPAWN_TF1_PHASE2.md).
 
 ## Goals
 
@@ -41,10 +72,11 @@ mode, and the converter, compiler and testing work they depend on in
 ## Phase 1 — Now: finish what's in progress
 
 1. ~~**Commit the Surf Me and checkpoint work.**~~ Done 13 November (branch
-   `surf-stages-and-surf-me`). The working tree holds the
+   `surf-stages-and-surf-me`). The branch includes the
    checkpoint-capable `_gamemode_surf.nut`, the Surf README update,
    `maps/source-surf-me/`, `maps/surf-map-sources.json`, `docs/surf-map-collection.md`
-   and `docs/dedicated-server.md`. Commit them on a branch so they aren't lost.
+   and `docs/dedicated-server.md`. The later crouch recovery fix remains
+   uncommitted; see the checkpoint above.
 2. **Do a full human run of Surf Me.** Start to finish through all five stages,
    with deliberate fails on each stage. Confirm the timer survives resets,
    that skipping a stage cancels the run, and that the finish records locally and
@@ -114,7 +146,8 @@ mode, and the converter, compiler and testing work they depend on in
 
 ## Phase 2 — Titanfall 1 and Titanfall Online full support
 
-Starts after the surf collection ships. "Full support" means an authored or
+Started 14 November by user request while Phase 1 release gates remain open.
+"Full support" means an authored or
 converted map compiles for BSP v29, is packaged for each runtime, and passes the
 same harness checks plus a human playtest in **both** Titanfall Online (TFORevive)
 and Titanfall 1 (R1Delta). Track the two runtimes separately even though they share
@@ -129,7 +162,17 @@ are written. The remaining work, in order:
 1. **Compiler parity checklist.** Go through every v29 lump the compiler writes
    and mark it verified or unverified against retail Angel City, Colony and TFO's
    own maps. Use ARES `validate_records.py` and record-level comparisons. Turn
-   each gap into its own task below.
+   each gap into its own task below. Started 14 November: reproducible inventory
+   of all 70 writer lump types against Angel City, Colony and TFO lobby; 52 have
+   record schemas and 18 need separate validation (updated 15 November). Matching directory versions
+   and passing static checks do not establish semantic parity. Evidence and
+   follow-up tasks are in MRVN-Radiant's `RESPAWN_TF1_PHASE2.md`.
+   A new authored brush/flat-patch fixture also completed two TFO sessions:
+   all 12 ray/hull checks passed; one of four crate-height expectations failed
+   with the crate resting higher on the brush. Orientation/contact diagnostics
+   are needed before interpreting that discrepancy. After EA sign-in,
+   R1Delta 3.0.5 passed the same six collision checks with identical results;
+   the crate probes were omitted because that small prop is removed in R1Delta.
 2. **Collision completeness.** Finish the unresolved patch and dome triangle hull
    cases. Check titan hulls, projectiles and grenades as well as pilots, and
    triggers. Use paired TFO and R1Delta harness runs with the same `checks.json`.
@@ -137,7 +180,10 @@ are written. The remaining work, in order:
    Cover more shapes, speeds and stacking, and confirm buoyancy against a retail
    water control.
 4. **Water.** Give water its own visibility cells and verify underwater rendering,
-   fog and the transitions into and out of water.
+   fog and the transitions into and out of water. The opt-in portal path already
+   preserves water boundaries and assigns water cells; convex/sloped compiler
+   cases pass. Cell water-index ranges are now validated (15 November).
+   Underwater rendering/fog and paired buoyancy acceptance remain open.
 5. **Lighting.** Decode the real-time light (RTL) texel format. Bake world
    lightmaps and ambient probes so characters are lit like on retail maps. Compare
    paired screenshots of a retail map and its decompiled-and-rebuilt copy.
@@ -146,7 +192,10 @@ are written. The remaining work, in order:
    Use r1-model-compiler (MDL v52) for new models.
 7. **Gameplay entities.** Spawns for every TF1 mode (attrition, hardpoint, CTF, last
    titan standing), objectives, drop-ship and titan-fall paths, ziplines, and an
-   `info_intermission` added automatically when missing.
+   `info_intermission` added automatically when missing. Camera fallback is done
+   15 November: copied from a located pilot spawn, preserving authored cameras;
+   four compiler cases and an R1Delta native startup check pass. Other gameplay
+   entities remain open.
 8. **Navigation.** AI meshes for grunts and spectres. This is version 2 work in
    MRVN-Radiant's plan, so attrition maps will have no AI until it's done.
 9. **Packaging and release.** Produce a TFO mod and an R1Delta addon from one
@@ -229,7 +278,7 @@ because they limit what a converted map can contain.
 
 ## Housekeeping
 
-- Merge ARES PR #2 and use its harnesses for future testing. Then retire the
+- ARES PR #2 is merged; use its harnesses for future testing. Then retire the
   one-off `run.py` controllers under MRVN-Radiant `.local/respawn/`.
 - Keep `maps/surf-map-sources.json` as the record of the downloaded inputs. Never
   commit or release the Source BSPs or Valve assets themselves.
