@@ -289,6 +289,9 @@ void function KillFallenPilots()
     player.SetAngles( <0, file.yaws[k], 0> )
     player.SetVelocity( <0, 0, 0> )
     file.teleportOrigins[player] <- file.destinations[k]
+    // A teleport ends any surf: stand the pilot up at the destination.
+    if ( player in file.rampTimes )
+     StopSurfing( player )
     if ( "MRVN_SurfTeleported" in getroottable() )
      getroottable().MRVN_SurfTeleported( player, file.destinations[k], touchOrigin )
    }
@@ -414,4 +417,16 @@ void function StopSurfing( entity player )
  }
  player.UnforceCrouch()
  player.SetGroundFrictionScale( 1.0 )
+ // Lifting the forced crouch leaves a Titanfall pilot crouched until they jump or crouch
+ // again, so stand them up as Northstar's bleedout does, if there is headroom to stand.
+ TraceResults h = TraceHull( player.GetOrigin(), player.GetOrigin() + <0, 0, 1>, < -16, -16, 0 >, < 16, 16, 72 >, player, TRACE_MASK_PLAYERSOLID, TRACE_COLLISION_GROUP_PLAYER )
+ if ( !h.startSolid )
+  thread StandUp( player )
+}
+void function StandUp( entity player )
+{
+ player.EndSignal( "OnDestroy" )
+ player.ForceStand()
+ WaitFrame()
+ player.UnforceStand()
 }
