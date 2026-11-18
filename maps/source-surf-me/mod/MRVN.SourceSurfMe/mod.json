@@ -3,7 +3,7 @@
   "Version": "0.1.0",
   "LoadPriority": 200,
   "RequiredOnClient": true,
-  "Description": "Surf Me. Local test port of a Source engine map",
+  "Description": "Surf Me: a five-stage Source surf map by not_a_zombie converted for Titanfall 2. Use the Surf mode for timed runs.",
   "Localisation": [
     "resource/mp_source_surf_me_%language%.txt"
   ],

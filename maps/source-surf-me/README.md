@@ -1,4 +1,14 @@
-# Surf Me - local Titanfall 2 preview
+# Surf Me
+
+![AI generated](../../.github/badges/ai-generated.svg)
+
+| | |
+| --- | --- |
+| Mod | `MRVN.SourceSurfMe` |
+| Level | `mp_source_surf_me` |
+| Version | 0.1.0 ([changelog](CHANGELOG.md)) |
+| Status | Released preview |
+| Thunderstore | [taskinoz/Surf_Me](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Me/) |
 
 Original map: **surf_me**, by **not_a_zombie**. Bonus 1 by Xtra_Festive;
 bonus 2 by Malt; bonuses 3 and 4 by not_a_zombie.
@@ -45,12 +55,10 @@ converted geometrically but have no separate bonus timers or leaderboard categor
 Original player-targetname filters and arbitrary entity outputs are not emulated;
 bonus gating can therefore differ. Animated flames, smoke particles, overlays,
 normal maps and water volumes are not reproduced. The map has its own loading
-screen (`loadscreen.png`, captured in game from the stage-1 corridor). A complete
-human surf run is still required before treating this as a release candidate.
-Both maps have now been rendered and inspected in the client.
+screen (`loadscreen.png`, captured in game from the stage-1 corridor).
 
-The conversion and timing support are local development work. No new Thunderstore
-package or GitHub release has been published for Surf Me.
+Released as 0.1.0 on 18 November 2026 after a play-through in the Northstar
+client. Wall tops that can be stood on in the original can be stood on here too.
 
 ## Lighting and reset fixes (2026-11-09)
 
@@ -67,9 +75,7 @@ The bake uses one indirect bounce, 256 sky samples and a 20% minimum diffuse sky
 visibility. Direct sun shadows are preserved. Surf Me uses 48-unit lightmap texels;
 the accompanying Utopia lighting preview uses 32-unit texels.
 
-The revised map is installed in the local `R2SurfMeTest` profile. Use the preview
-launchers; these builds have not been published to Thunderstore. The public
-server continues using the published map/mod packages.
+These fixes were first tested in the local `R2SurfMeTest` profile.
 
 Every map teleport now writes `[surf] teleport <from> -> <to> trigger N brush B
 touch ... v ...`, and the Surf mode writes `[surf] teleport ... checkpoint=...

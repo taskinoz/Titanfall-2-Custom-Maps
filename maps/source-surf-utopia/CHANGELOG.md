@@ -1,5 +1,12 @@
 # Surf Utopia changelog
 
+## 0.1.4 - 2026-11-18
+
+- Pilots stand back up after leaving a ramp and when a teleport moves them; they
+  were left crouched until they jumped or crouched. Standing is skipped where
+  there is no headroom.
+- Requires Surf 0.2.0. Map geometry, lighting and assets are unchanged from 0.1.3.
+
 ## 0.1.3 - 2026-11-09
 
 - Repaired the jail exit threshold left exposed by the omitted rotating door, preserving the original paving and red stripes.

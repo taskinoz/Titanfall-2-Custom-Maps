@@ -19,13 +19,14 @@ disclosure and links to every original.
 | [Jump Academy 2 (TF2)](maps/source-academy2) | `mp_source_academy2` | 0.1.0 | Unreleased, local builds only |
 | [Nuke (CS2)](maps/source-nuke) | `mp_source_nuke` | 0.1.0 | Unreleased, local builds only |
 | [Trainstation (HL2)](maps/source-trainstation02) | `mp_source_trainstation02` | 0.1.0 | Unreleased, local builds only |
-| [Surf Utopia](maps/source-surf-utopia) | `mp_source_surf_utopia` | 0.1.3 | Released preview |
+| [Surf Utopia](maps/source-surf-utopia) | `mp_source_surf_utopia` | 0.1.4 | Released preview |
+| [Surf Me](maps/source-surf-me) | `mp_source_surf_me` | 0.1.0 | Released preview |
 
 ## Game modes
 
 | Mode | Mod | Status |
 | --- | --- | --- |
-| [Surf](modes/surf) | `MRVN.Surf` | 0.1.0: timed runs, speedometer and leaderboards |
+| [Surf](modes/surf) | `MRVN.Surf` | 0.2.0: timed runs, staged maps, speedometer and leaderboards |
 
 All are pilot-only: there is no navmesh, so Titans and AI don't work. The other map ports were tested with one player in Pilot vs Pilot (`tdm`).
 Surf mode was tested on Surf Utopia, including saved times and all three end
@@ -34,8 +35,8 @@ platforms and portals.
 ## Install
 
 **With a mod manager:** install [Surf](https://thunderstore.io/c/northstar/p/taskinoz/Surf/)
-and [Surf Utopia](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Utopia/) for surf races.
-Surf Utopia installs the Surf mode as a dependency. Other maps include [UMA](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_UMA/), [Glitch](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_Glitch/) or [Quake E1M1](https://thunderstore.io/c/northstar/p/taskinoz/Quake_E1M1/) from
+and [Surf Utopia](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Utopia/) or [Surf Me](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Me/) for surf races.
+Both maps install the Surf mode as a dependency. Other maps include [UMA](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_UMA/), [Glitch](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_Glitch/) or [Quake E1M1](https://thunderstore.io/c/northstar/p/taskinoz/Quake_E1M1/) from
 [Thunderstore](https://thunderstore.io/c/northstar/p/taskinoz/).
 
 **By hand:** download a map's ZIP from

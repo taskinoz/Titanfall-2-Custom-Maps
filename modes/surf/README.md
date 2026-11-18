@@ -10,7 +10,7 @@ A Northstar game mode for surf maps converted with MRVN-Radiant (so far
 | --- | --- |
 | Mod | `MRVN.Surf` |
 | Mode | `surf` |
-| Version | 0.1.0 |
+| Version | 0.2.0 |
 | Status | Released preview |
 
 ## What it does

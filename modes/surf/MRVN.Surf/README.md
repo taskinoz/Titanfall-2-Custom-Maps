@@ -1,6 +1,6 @@
 # Surf 0.2.0
 
-A Northstar game mode for surf maps. Install the Surf Utopia map separately, select
+A Northstar game mode for surf maps. Install a surf map (Surf Utopia or Surf Me) separately, select
 Surf in a private match, or use `mp_gamemode surf` before loading a surf map.
 
 - Uncapped speed display, run timer, personal best and finish announcement.
@@ -8,6 +8,8 @@ Surf in a private match, or use `mp_gamemode surf` before loading a surf map.
 - Best times save locally by default. A hosted PHP leaderboard is optional.
 - Double jump is optional in Pilot / Surf: double jump, or `surf_double_jump 0`
   before loading the map. Each rule has separate records.
+- Staged maps such as Surf Me: stages count in order, a reset to the current stage
+  keeps the timer, and the finish counts only after the last stage.
 - Surf Utopia finishes on any of the three end platforms or their end teleports.
 - The boost key resets a run. Wallrunning, titans and boosts are disabled.
 

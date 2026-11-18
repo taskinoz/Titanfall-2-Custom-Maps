@@ -1,6 +1,6 @@
 # Map development roadmap
 
-Status as of 15 November 2026. This covers the maps in this repository, the Surf
+Status as of 18 November 2026. This covers the maps in this repository, the Surf
 mode, and the converter, compiler and testing work they depend on in
 [MRVN-Radiant](https://github.com/taskinoz/MRVN-Radiant) and
 [ARES](https://github.com/taskinoz/ARES). Update it when an item ships or changes.
@@ -9,9 +9,9 @@ mode, and the converter, compiler and testing work they depend on in
 
 | Area | State |
 | --- | --- |
-| Surf Utopia | Released, 0.1.3. Runs on the public `Titanfall Surf` dedicated server with web leaderboard submissions |
-| Surf mode | Public release 0.1.0; checkpoint support and 0.2.0 release preparation committed locally on `surf-stages-and-surf-me`, not released |
-| Surf Me | Local preview, rebuilt 13 Nov with its own loading screen; five-stage rules pass native tests. No full human run yet; not released |
+| Surf Utopia | Released, 0.1.4 (18 Nov: pilots stand up after ramps and teleports). The public `Titanfall Surf` server still runs 0.1.3 with Surf 0.1.0 until it is updated |
+| Surf mode | Released, 0.2.0 (18 Nov): staged maps with in-order checkpoints |
+| Surf Me | Released, 0.1.0 (18 Nov) after a play-through; five-stage rules pass native tests. Red-lit stage-3 room and bonus timers remain open |
 | Surf Beginner | Local seven-stage preview (13 Nov); rules pass native tests; CS:S textures missing until CS:S is installed |
 | surf_kitsune, surf_cyberwave | Source BSPs downloaded and checksummed; not converted |
 | Other Source ports (Nuke, Academy, Trainstation) | Local only; Valve assets mean they aren't released |

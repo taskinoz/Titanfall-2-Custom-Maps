@@ -1,6 +1,6 @@
 # Surf changelog
 
-## 0.2.0 - unreleased
+## 0.2.0 - 2026-11-18
 
 - Multi-stage maps: a map can list its stage start points (`checkpointOrigins`).
   Stages must be completed in order; a reset to the current stage keeps the

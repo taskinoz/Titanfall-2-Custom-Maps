@@ -49,13 +49,13 @@
     "mod": "MRVN.Surf",
     "name": "Surf",
     "title": "Surf",
-    "version": "0.1.0",
-    "tag": "surf-v0.1.0",
-    "asset": "MRVN.Surf-0.1.0.zip",
-    "bytes": 12867,
-    "sha256": "b5e8ba06627e955baa344aaf27e3656f5999eb241f79c991f10122e1d7ecb814",
+    "version": "0.2.0",
+    "tag": "surf-v0.2.0",
+    "asset": "MRVN.Surf-0.2.0.zip",
+    "bytes": 13423,
+    "sha256": "c73533f91c452130b17115fa027cdb995050a5625b831a184bd9a39b4049722f",
     "command": "mp_gamemode surf; map mp_source_surf_utopia",
-    "description": "Surf game mode: timed runs, uncapped speedometer, saved personal bests, scoreboard leaderboard, optional double jump and optional web leaderboard.",
+    "description": "Surf game mode: timed runs, staged maps with in-order checkpoints, uncapped speedometer, saved personal bests, scoreboard leaderboard, optional double jump and optional web leaderboard.",
     "kind": "mode",
     "source_path": "modes/surf/MRVN.Surf"
   },
@@ -64,17 +64,35 @@
     "mod": "MRVN.SourceSurfUtopia",
     "name": "Surf_Utopia",
     "title": "Surf Utopia",
-    "version": "0.1.3",
-    "tag": "source-surf-utopia-v0.1.3",
-    "asset": "MRVN.SourceSurfUtopia-0.1.3.zip",
-    "bytes": 49923815,
-    "sha256": "77290f36f52a62360ae8f272a72afc4b67d8ab20c73499f562c542006237bdae",
+    "version": "0.1.4",
+    "tag": "source-surf-utopia-v0.1.4",
+    "asset": "MRVN.SourceSurfUtopia-0.1.4.zip",
+    "bytes": 49924037,
+    "sha256": "4dd1bc9a962f19f679bb06ce9131176b2565d843b9108cc84b2331059d78b683",
     "command": "mp_gamemode surf; map mp_source_surf_utopia",
-    "description": "Surf Utopia for Titanfall 2 with smoother baked lighting and a repaired jail exit floor. Requires Surf mode for timed runs.",
+    "description": "Surf Utopia for Titanfall 2. Pilots now stand back up after leaving a ramp or teleporting. Requires Surf mode for timed runs.",
     "original_title": "Surf Utopia v3 (original authors credited in-map)",
     "original_url": "https://main.fastdl.me/maps/surf_utopia_v3.bsp.bz2",
     "dependencies": [
-      "taskinoz-Surf-0.1.0"
+      "taskinoz-Surf-0.2.0"
+    ]
+  },
+  {
+    "slug": "source-surf-me",
+    "mod": "MRVN.SourceSurfMe",
+    "name": "Surf_Me",
+    "title": "Surf Me",
+    "version": "0.1.0",
+    "tag": "source-surf-me-v0.1.0",
+    "asset": "MRVN.SourceSurfMe-0.1.0.zip",
+    "bytes": 78152876,
+    "sha256": "6372ace20e90ca90f9cfc056983df87ade68310a99ce58e4f069f39fbdc9f42c",
+    "command": "mp_gamemode surf; map mp_source_surf_me",
+    "description": "Surf Me for Titanfall 2: five timed Egyptian-themed stages by not_a_zombie, with stage checkpoints. Requires Surf mode 0.2.0 for timed runs.",
+    "original_title": "surf_me by not_a_zombie",
+    "original_url": "https://gamebanana.com/mods/122524",
+    "dependencies": [
+      "taskinoz-Surf-0.2.0"
     ]
   }
 ]
