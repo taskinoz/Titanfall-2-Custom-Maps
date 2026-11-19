@@ -1,5 +1,9 @@
 # Quake E1M1 changelog
 
+## 0.4.2 (2026-11-19)
+
+- Exclude the sky dome from dynamic sun shadows, removing false shadow edges.
+
 ## 0.4.1 (2026-11-06)
 
 Rebuilt with the latest MRVN-Radiant compiler: light probes where players stand (6,824, up from 1,180 on a grid) and probe light visibility over a character-sized volume, so pilots pick up nearby lights more consistently. Some spots beside lights in enclosed corridors are darker than before, because the nearest probe no longer sees lights the player can't. Geometry and world lighting are unchanged.

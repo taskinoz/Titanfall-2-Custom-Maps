@@ -1,5 +1,9 @@
 # Glitch (Minecraft) changelog
 
+## 0.5.3 (2026-11-19)
+
+- Exclude the sky dome from dynamic sun shadows, removing false shadow edges.
+
 ## Unreleased (2026-11-07)
 
 - Loading screen and icon recaptured from the current build.

@@ -11,7 +11,7 @@ this conversion was produced with AI (see [AI.md](../../AI.md)).
 | --- | --- |
 | Mod | `MRVN.MinecraftUma` |
 | Level | `mp_minecraft_uma` |
-| Current version | 0.5.2 |
+| Current version | 0.5.3 |
 | Status | Preview: pilot-only, single-player and local-server tested |
 
 ## Play

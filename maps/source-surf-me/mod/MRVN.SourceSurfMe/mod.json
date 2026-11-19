@@ -1,6 +1,6 @@
 {
   "Name": "MRVN.SourceSurfMe",
-  "Version": "0.1.0",
+  "Version": "0.1.1",
   "LoadPriority": 200,
   "RequiredOnClient": true,
   "Description": "Surf Me: a five-stage Source surf map by not_a_zombie converted for Titanfall 2. Use the Surf mode for timed runs.",

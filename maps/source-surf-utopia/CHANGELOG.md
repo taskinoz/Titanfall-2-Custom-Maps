@@ -1,5 +1,9 @@
 # Surf Utopia changelog
 
+## 0.1.5 (2026-11-19)
+
+- Exclude the sky dome from dynamic sun shadows, removing false shadow edges. Rebake lighting with the corrected compiler.
+
 ## 0.1.4 - 2026-11-18
 
 - Pilots stand back up after leaving a ramp and when a teleport moves them; they

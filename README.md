@@ -12,15 +12,15 @@ disclosure and links to every original.
 
 | Map | Level | Version | Status |
 | --- | --- | --- | --- |
-| [UMA (Minecraft)](maps/minecraft-uma) | `mp_minecraft_uma` | 0.5.2 | Released preview |
-| [Glitch (Minecraft)](maps/minecraft-glitch) | `mp_minecraft_glitch` | 0.5.2 | Released preview |
+| [UMA (Minecraft)](maps/minecraft-uma) | `mp_minecraft_uma` | 0.5.3 | Released preview |
+| [Glitch (Minecraft)](maps/minecraft-glitch) | `mp_minecraft_glitch` | 0.5.3 | Released preview |
 | [Survival Games (Minecraft)](maps/minecraft-survival-games) | `mp_minecraft_survival_games` | 0.5.2 | Unreleased, local builds only |
-| [Quake E1M1](maps/quake-e1m1) | `mp_quake_e1m1` | 0.4.1 | Released compiler test |
+| [Quake E1M1](maps/quake-e1m1) | `mp_quake_e1m1` | 0.4.2 | Released compiler test |
 | [Jump Academy 2 (TF2)](maps/source-academy2) | `mp_source_academy2` | 0.1.0 | Unreleased, local builds only |
 | [Nuke (CS2)](maps/source-nuke) | `mp_source_nuke` | 0.1.0 | Unreleased, local builds only |
 | [Trainstation (HL2)](maps/source-trainstation02) | `mp_source_trainstation02` | 0.1.0 | Unreleased, local builds only |
-| [Surf Utopia](maps/source-surf-utopia) | `mp_source_surf_utopia` | 0.1.4 | Released preview |
-| [Surf Me](maps/source-surf-me) | `mp_source_surf_me` | 0.1.0 | Released preview |
+| [Surf Utopia](maps/source-surf-utopia) | `mp_source_surf_utopia` | 0.1.5 | Released preview |
+| [Surf Me](maps/source-surf-me) | `mp_source_surf_me` | 0.1.1 | Released preview |
 
 ## Game modes
 

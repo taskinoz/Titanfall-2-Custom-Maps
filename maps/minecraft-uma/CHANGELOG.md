@@ -1,5 +1,9 @@
 # UMA (Minecraft) changelog
 
+## 0.5.3 (2026-11-19)
+
+- Exclude the sky dome from dynamic sun shadows, removing false shadow edges.
+
 ## Unreleased (2026-11-07)
 
 - New loading screen and icon, captured with the joined glass panes.

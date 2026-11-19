@@ -6,7 +6,7 @@
 | --- | --- |
 | Mod | `MRVN.SourceSurfMe` |
 | Level | `mp_source_surf_me` |
-| Version | 0.1.0 ([changelog](CHANGELOG.md)) |
+| Version | 0.1.1 ([changelog](CHANGELOG.md)) |
 | Status | Released preview |
 | Thunderstore | [taskinoz/Surf_Me](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Me/) |
 
