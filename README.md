@@ -21,6 +21,7 @@ disclosure and links to every original.
 | [Trainstation (HL2)](maps/source-trainstation02) | `mp_source_trainstation02` | 0.1.0 | Unreleased, local builds only |
 | [Surf Utopia](maps/source-surf-utopia) | `mp_source_surf_utopia` | 0.1.5 | Released preview |
 | [Surf Me](maps/source-surf-me) | `mp_source_surf_me` | 0.1.1 | Released preview |
+| [Surf Beginner](maps/source-surf-beginner) | `mp_source_surf_beginner` | 0.2.0 | Released preview |
 
 ## Game modes
 
@@ -35,8 +36,10 @@ platforms and portals.
 ## Install
 
 **With a mod manager:** install [Surf](https://thunderstore.io/c/northstar/p/taskinoz/Surf/)
-and [Surf Utopia](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Utopia/) or [Surf Me](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Me/) for surf races.
-Both maps install the Surf mode as a dependency. Other maps include [UMA](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_UMA/), [Glitch](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_Glitch/) or [Quake E1M1](https://thunderstore.io/c/northstar/p/taskinoz/Quake_E1M1/) from
+and [Surf Utopia](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Utopia/),
+[Surf Me](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Me/) or
+[Surf Beginner](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Beginner/) for surf races.
+All three maps install the Surf mode as a dependency. Other maps include [UMA](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_UMA/), [Glitch](https://thunderstore.io/c/northstar/p/taskinoz/Minecraft_Glitch/) or [Quake E1M1](https://thunderstore.io/c/northstar/p/taskinoz/Quake_E1M1/) from
 [Thunderstore](https://thunderstore.io/c/northstar/p/taskinoz/).
 
 **By hand:** download a map's ZIP from

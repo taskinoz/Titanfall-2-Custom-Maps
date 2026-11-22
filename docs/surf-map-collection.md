@@ -9,7 +9,7 @@ The exact URLs, sizes, BSP versions and SHA-1/SHA-256 checksums are in
 
 | Article map | Downloaded input | Conversion status |
 | --- | --- | --- |
-| surf_beginner | surf_beginner.bsp | Local seven-stage preview; see its [map README](../maps/source-surf-beginner/README.md) |
+| surf_beginner | surf_beginner.bsp | Released preview (0.2.0); see its [map README](../maps/source-surf-beginner/README.md) |
 | surf_me | surf_me.bsp | First local Titanfall 2 preview; see its map README |
 | surf_utopia | surf_utopia_v3.bsp | Matches the existing Surf Utopia conversion |
 | surf_kitsune | surf_kitsune.bsp | Downloaded and verified; not converted yet |

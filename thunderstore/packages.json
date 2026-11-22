@@ -94,5 +94,23 @@
     "dependencies": [
       "taskinoz-Surf-0.2.0"
     ]
+  },
+  {
+    "slug": "source-surf-beginner",
+    "mod": "MRVN.SourceSurfBeginner",
+    "name": "Surf_Beginner",
+    "title": "Surf Beginner",
+    "version": "0.2.0",
+    "tag": "source-surf-beginner-v0.2.0",
+    "asset": "MRVN.SourceSurfBeginner-0.2.0.zip",
+    "bytes": 10421976,
+    "sha256": "4f592a87f58a0f3d2ec42e480d57a5c499cd167a248e62deea7076b9d468576e",
+    "command": "mp_gamemode surf; map mp_source_surf_beginner",
+    "description": "Seven-stage beginner surf map for Titanfall 2, with its own loading screen and 11 localisations. Requires Surf mode.",
+    "original_title": "surf_beginner (original author unconfirmed)",
+    "original_url": "https://main.fastdl.me/maps/surf_beginner.bsp.bz2",
+    "dependencies": [
+      "taskinoz-Surf-0.2.0"
+    ]
   }
 ]

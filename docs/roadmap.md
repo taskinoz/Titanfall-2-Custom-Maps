@@ -12,7 +12,7 @@ mode, and the converter, compiler and testing work they depend on in
 | Surf Utopia | Released, 0.1.4 (18 Nov: pilots stand up after ramps and teleports). The public `Titanfall Surf` server still runs 0.1.3 with Surf 0.1.0 until it is updated |
 | Surf mode | Released, 0.2.0 (18 Nov): staged maps with in-order checkpoints |
 | Surf Me | Released, 0.1.0 (18 Nov) after a play-through; five-stage rules pass native tests. Red-lit stage-3 room and bonus timers remain open |
-| Surf Beginner | Local seven-stage preview (13 Nov); rules pass native tests; CS:S textures missing until CS:S is installed |
+| Surf Beginner | Released, 0.2.0 (22 Nov): seven-stage course with its own loading screen and 11 localisations. CS:S textures remain grey until CS:S is installed |
 | surf_kitsune, surf_cyberwave | Source BSPs downloaded and checksummed; not converted |
 | Other Source ports (Nuke, Academy, Trainstation) | Local only; Valve assets mean they aren't released |
 | Minecraft and Quake ports | Released |
@@ -101,12 +101,12 @@ runtimes remains outstanding. See MRVN-Radiant's
 
 ## Phase 1 — Next: grow the collection
 
-7. ~~**Convert surf_beginner.**~~ Local preview done 13 November: seven stages,
-   rules pass natively. Remaining: install Counter-Strike: Source for its seven
-   missing textures, check its dark lighting against the original, a loading
-   screen and a human run. The recipe (measure the start platform with harness
-   traces, take checkpoints from the stage teleport destinations, pad the last
-   end trigger into a finish zone) is in its README.
+7. ~~**Convert surf_beginner.**~~ Released as 0.2.0 on 22 November: seven stages,
+   its own loading screen and 11 localisations. Remaining: install
+   Counter-Strike: Source for its seven missing textures, check its dark lighting
+   against the original, and a human run. The recipe (measure the start platform
+   with harness traces, take checkpoints from the stage teleport destinations,
+   pad the last end trigger into a finish zone) is in its README.
 8. **Bonus courses as leaderboard categories.** Surf Me has four bonus areas that
    are converted but untimed. Add per-category start and finish zones to
    `surf.json`, a category field in submissions, and a category filter on the site.

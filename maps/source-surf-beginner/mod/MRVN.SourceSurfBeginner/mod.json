@@ -1,9 +1,9 @@
 {
   "Name": "MRVN.SourceSurfBeginner",
-  "Version": "0.1.0",
+  "Version": "0.2.0",
   "LoadPriority": 200,
   "RequiredOnClient": true,
-  "Description": "Surf Beginner. Local test port of a Source engine map",
+  "Description": "Surf Beginner - a seven-stage beginner surf course",
   "Localisation": [
     "resource/mp_source_surf_beginner_%language%.txt"
   ],

@@ -1,4 +1,12 @@
-# Surf Beginner - local Titanfall 2 preview
+# Surf Beginner
+
+| | |
+| --- | --- |
+| Mod | `MRVN.SourceSurfBeginner` |
+| Level | `mp_source_surf_beginner` |
+| Version | 0.2.0 ([changelog](CHANGELOG.md)) |
+| Status | Released preview |
+| Thunderstore | [taskinoz/Surf_Beginner](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Beginner/) |
 
 Original map: **surf_beginner**, a Counter-Strike: Source surf map (BSP v20).
 The original author isn't confirmed. The BSP carries no author credit, and no
@@ -20,6 +28,10 @@ stages: each stage's end teleport moves you to the next stage, and a fail on a
 later stage returns you to that stage's start without stopping the timer.
 Skipping or going back a stage cancels the run. Stage 7's end doorway (into the
 original's toilet end room) finishes the run.
+
+The map ships its own loading screen and translated lobby names and descriptions
+for English, French, German, Italian, Spanish, Russian, Japanese, Polish,
+Portuguese, Traditional Chinese and Simplified Chinese.
 
 ## Conversion details
 
@@ -54,7 +66,7 @@ original's toilet end room) finishes the run.
   `-Css <path>/cstrike`.
 - **Dark lighting.** The map uses the dusk `sky47` sky and renders dark. Compare
   it with the original before tuning.
-- **Not yet done:** a human run through all seven stages, and a loading screen
-  (it still uses Coliseum's).
+- **Not yet done:** a human run through all seven stages.
 
-No GitHub release or Thunderstore package has been published for Surf Beginner.
+Released as 0.2.0 on 22 November 2026 for Northstar, with its own loading screen
+and 11 localisations.
