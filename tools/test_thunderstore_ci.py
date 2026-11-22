@@ -21,6 +21,17 @@ class CatalogTests(unittest.TestCase):
                 info = json.loads((ci.ROOT/Path(p.get('source_path', f'maps/{p["slug"]}/mod/{p["mod"]}'))/'mod.json').read_text(encoding='utf-8-sig'))
                 self.assertEqual((info['Name'], info['Version']), (p['mod'], p['version']))
 
+    def test_surf_beginner_ships_its_own_loading_screen_and_all_translations(self):
+        folder = ci.ROOT/'maps/source-surf-beginner'
+        mod = folder/'mod/MRVN.SourceSurfBeginner'
+        self.assertTrue((folder/'loadscreen.png').is_file())
+        translations = sorted((mod/'mod/resource').glob('mp_source_surf_beginner_*.txt'))
+        self.assertEqual(len(translations), 11)
+        info = json.loads((mod/'mod.json').read_text(encoding='utf-8-sig'))
+        self.assertEqual(info['Localisation'], ['resource/mp_source_surf_beginner_%language%.txt'])
+        aliases = json.loads((mod/'paks/rpak.json').read_text(encoding='utf-8-sig'))['Aliases']
+        self.assertNotIn('mp_source_surf_beginner_loadscreen.rpak', aliases)
+
     def test_selection(self):
         self.assertEqual(len(ci.select(ci.catalog(), 'current')), len(ci.catalog()))
         uma = next(p for p in ci.catalog() if p['mod'] == 'MRVN.MinecraftUma')
