@@ -110,8 +110,10 @@ runtimes remains outstanding. See MRVN-Radiant's
 8. **Bonus courses as leaderboard categories.** Surf Me has four bonus areas that
    are converted but untimed. Add per-category start and finish zones to
    `surf.json`, a category field in submissions, and a category filter on the site.
-9. **Map rotation on the server.** Switch maps by playlist or vote, keep each map's
-   records separate, and make sure every map in the rotation is installed and enabled.
+9. **Map rotation on the server.** All three released maps are installed and in the
+   `surf` playlist (22 November); each loads with the leaderboard key accepted and
+   keeps its own records. Remaining: watch a real end-of-match rotation, or add a
+   vote/changelevel command for switching on demand.
 10. ~~**Assess surf_kitsune and surf_cyberwave.**~~ Done 13 November.
     - **surf_cyberwave: convert next.** Two stages (`s1_start`, `s2_start`), one
       bonus (`b1_start`) and a spawn; 12 plain teleports. Its only scripting is a

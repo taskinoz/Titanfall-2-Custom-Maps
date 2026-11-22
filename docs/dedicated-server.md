@@ -4,10 +4,11 @@ The local public server uses `C:/Games/Titanfall2/R2Surf`, separate from client
 mod-manager profiles. Start it with `C:/Games/Titanfall2/Start-TitanfallSurf.ps1`.
 The launcher prevents duplicate instances of this exact profile.
 
-Current packages: Surf 0.1.0, Surf Utopia 0.1.3 and Northstar 1.31.15.
-Both Surf packages are installed from their actual Thunderstore ZIPs under
-`R2Surf/mods/taskinoz.MRVN.Surf` and `taskinoz.MRVN.SourceSurfUtopia`.
-Their mod.json identities, not folder names, are the enabledmods.json keys.
+Current packages: Surf 0.2.0, Surf Utopia 0.1.5, Surf Me 0.1.1, Surf Beginner
+0.2.1 and Northstar 1.31.15. The four Surf packages are installed from their
+actual Thunderstore ZIPs under `R2Surf/mods/taskinoz.MRVN.*`. Their mod.json
+identities, not folder names, are the enabledmods.json keys. The previous Surf
+0.1.0 and Utopia 0.1.3 folders are kept in `R2Surf/mods.backup-20261122`.
 
 Keep exactly one copy of each mod. Northstar also loads `R2Surf/packages/*/mods/*`,
 so a Thunderstore download left in `packages/` alongside the unpacked copy in
@@ -27,7 +28,25 @@ NorthstarLauncher.exe -dedicated -multiple -profile=R2Surf -console +hostport 37
 
 The server config repeats `fps_max 60`, disables empty-server hibernation and
 keeps the standard 5000 ms presence-update interval. The leaderboard URL and
-private key remain in the profile's server config; never copy that key into docs.
+private key are set in both `mods/Northstar.CustomServers/mod/cfg/autoexec_ns_server.cfg`
+and `ns_startup_args_dedi.txt`; never copy the key into docs. The log confirms
+`[Surf] the leaderboard at https://titanfall.rocks/surf accepted this server's key`
+at each map start.
+
+## All three surf maps
+
+The `surf` playlist lists `mp_source_surf_utopia`, `mp_source_surf_me` and
+`mp_source_surf_beginner` with equal weight in
+`R2Surf/mods/taskinoz.MRVN.Surf/keyvalues/playlists_v2.txt`. With the playlist's
+600-second time limit and `ns_should_return_to_lobby 0`, a finished match moves
+to the next map instead of returning to the lobby. The playlist lives inside the
+Surf mod, so re-add the Surf Me and Surf Beginner lines after updating Surf.
+Northstar's compiled copy is under `R2Surf/runtime/compiled/mod_patch_*_playlists_v2.txt`.
+
+On 22 November 2026 each map was started in turn and verified: `GAMETYPE: surf`,
+the map VPK mounted, the leaderboard accepted the key, no `[Surf] ERROR`, and
+the server registered to the master server. An actual end-of-match rotation has
+not been observed yet.
 
 ## Visibility regression diagnosed 2026-11-09
 
