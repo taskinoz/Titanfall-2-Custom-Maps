@@ -1,5 +1,9 @@
 # Surf Beginner changelog
 
+## 0.2.1 (2026-11-22)
+
+- Thunderstore listing text cleanup; the runtime package is unchanged.
+
 ## 0.2.0 (2026-11-22)
 
 - First release: the original surf_beginner converted for Titanfall 2.

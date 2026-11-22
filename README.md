@@ -21,7 +21,7 @@ disclosure and links to every original.
 | [Trainstation (HL2)](maps/source-trainstation02) | `mp_source_trainstation02` | 0.1.0 | Unreleased, local builds only |
 | [Surf Utopia](maps/source-surf-utopia) | `mp_source_surf_utopia` | 0.1.5 | Released preview |
 | [Surf Me](maps/source-surf-me) | `mp_source_surf_me` | 0.1.1 | Released preview |
-| [Surf Beginner](maps/source-surf-beginner) | `mp_source_surf_beginner` | 0.2.0 | Released preview |
+| [Surf Beginner](maps/source-surf-beginner) | `mp_source_surf_beginner` | 0.2.1 | Released preview |
 
 ## Game modes
 

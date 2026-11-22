@@ -1,6 +1,6 @@
 {
   "Name": "MRVN.SourceSurfBeginner",
-  "Version": "0.2.0",
+  "Version": "0.2.1",
   "LoadPriority": 200,
   "RequiredOnClient": true,
   "Description": "Surf Beginner - a seven-stage beginner surf course",

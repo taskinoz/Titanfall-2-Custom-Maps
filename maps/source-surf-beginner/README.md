@@ -4,7 +4,7 @@
 | --- | --- |
 | Mod | `MRVN.SourceSurfBeginner` |
 | Level | `mp_source_surf_beginner` |
-| Version | 0.2.0 ([changelog](CHANGELOG.md)) |
+| Version | 0.2.1 ([changelog](CHANGELOG.md)) |
 | Status | Released preview |
 | Thunderstore | [taskinoz/Surf_Beginner](https://thunderstore.io/c/northstar/p/taskinoz/Surf_Beginner/) |
 
@@ -69,4 +69,4 @@ Portuguese, Traditional Chinese and Simplified Chinese.
 - **Not yet done:** a human run through all seven stages.
 
 Released as 0.2.0 on 22 November 2026 for Northstar, with its own loading screen
-and 11 localisations.
+and 11 localisations. 0.2.1 updates the Thunderstore listing text.

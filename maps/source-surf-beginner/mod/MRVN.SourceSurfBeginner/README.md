@@ -1,4 +1,4 @@
-# Surf Beginner 0.2.0
+# Surf Beginner 0.2.1
 
 surf_beginner, a Counter-Strike: Source surf map by an unconfirmed author,
 converted for Titanfall 2 / Northstar. Original BSP source:
@@ -14,10 +14,6 @@ Seven timed stages. Each stage's end teleport takes you to the next stage; a fai
 a later stage returns you to that stage's start without stopping the timer.
 Skipping or going back a stage cancels the run. The boost key resets to stage 1.
 The finish counts at the stage-7 end doorway.
-
-The map has its own loading screen and translated lobby names and descriptions for
-English, French, German, Italian, Spanish, Russian, Japanese, Polish, Portuguese,
-Traditional Chinese and Simplified Chinese.
 
 Everyone in the match needs the same map version. Do not enable duplicate manual
 and Thunderstore installations of this mod.

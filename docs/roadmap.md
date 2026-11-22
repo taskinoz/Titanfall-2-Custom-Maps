@@ -12,7 +12,7 @@ mode, and the converter, compiler and testing work they depend on in
 | Surf Utopia | Released, 0.1.4 (18 Nov: pilots stand up after ramps and teleports). The public `Titanfall Surf` server still runs 0.1.3 with Surf 0.1.0 until it is updated |
 | Surf mode | Released, 0.2.0 (18 Nov): staged maps with in-order checkpoints |
 | Surf Me | Released, 0.1.0 (18 Nov) after a play-through; five-stage rules pass native tests. Red-lit stage-3 room and bonus timers remain open |
-| Surf Beginner | Released, 0.2.0 (22 Nov): seven-stage course with its own loading screen and 11 localisations. CS:S textures remain grey until CS:S is installed |
+| Surf Beginner | Released, 0.2.1 (22 Nov): seven-stage course. CS:S textures remain grey until CS:S is installed |
 | surf_kitsune, surf_cyberwave | Source BSPs downloaded and checksummed; not converted |
 | Other Source ports (Nuke, Academy, Trainstation) | Local only; Valve assets mean they aren't released |
 | Minecraft and Quake ports | Released |
